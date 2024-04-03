@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+
+/* =======================================================================================================================
+ *  2022.7.13 ~ 2022.10.10 최초 작성
+ *	2023.12.01 ~ 2024.00.00 이정민 수정
+ *  Defult Reset CSS
+ *  font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif;
+ *  CSS 작성 규칙 : {기준속성, 크기속성, 위치속성, 라인속성, 서체속성, Etc속성, 백그라운드 속성} 으로 순서대로 나열해서 적는다.
+ * ======================================================================================================================= */
+
+
+/* ========================================
+										Font
+======================================== */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src:local('Noto Sans KR'),
+      url('../font/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../font/NotoSansKR-Bold.woff2') format('woff2'),
+      url('../font/NotoSansKR-Bold.woff') format('woff'),
+      url('../font/NotoSansKR-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src:local('Noto Sans KR'),
+      url('../font/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../font/NotoSansKR-Medium.woff2') format('woff2'),
+      url('../font/NotoSansKR-Medium.woff') format('woff'),
+      url('../font/NotoSansKR-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src:local('Noto Sans KR'),
+      url('../font/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../font/NotoSansKR-Regular.woff2') format('woff2'),
+      url('../font/NotoSansKR-Regular.woff') format('woff'),
+      url('../font/NotoSansKR-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src:local('Noto Sans KR'),
+      url('../font/NotoSansKR-Light.eot?#iefix') format('embedded-opentype'),
+      url('../font/NotoSansKR-Light.woff2') format('woff2'),
+      url('../font/NotoSansKR-Light.woff') format('woff'),
+      url('../font/NotoSansKR-Light.ttf') format('truetype');
+}
+
+
+
+
+/* ========================================
+										Reset
+======================================== */
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	height: 100%;
+	min-width:1024px;
+	margin: 0;
+    border: 0;
+    font-family: 'Noto Sans KR','맑은 고딕','Malgun Gothic', sans-serif;
+	font-weight: 400;
+    font-size:1em;
+    text-align: left;
+    line-height: 1;
+	letter-spacing: -0.042em;
+	color: #444444;
+}
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+    margin: 0;
+    padding: 0;
+}
+article, aside, footer, header, nav, section {
+    display: block;
+}
+ul,li,ol,li,dl,dd,dt {
+    list-style: none;
+}
+table {
+    padding: 0;
+    border-spacing: 0;
+    border: 0;
+    border-collapse: collapse;
+}
+caption {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+legend,hr {
+    position: absolute;
+    left: -99.9rem;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+hr {
+    display: none;
+}
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub {
+	font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif;
+	font-size: 1em;
+	color: #444444;
+}
+p {
+    word-break: keep-all
+}
+
+h1, h2, h3, h4, h5, h6{
+	transform:rotate(0.03deg);
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+button {
+    font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+iframe {
+    width: 100%;
+    border: 0;
+}
+fieldset, img {
+    border: none;
+}
+input, select, textarea, label {
+    font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif;
+    vertical-align: middle;
+}
+input[type="radio"], label {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+a:hover {
+    text-decoration: none;
+}
+::-moz-selection {
+    background: #008cff;
+    color: #fff;
+}
+::selection {
+    background: #008cff;
+    color: #fff;
+}

@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/* =======================================================================================================================
+ *  2024.01.02 ~ 2023.00.00 Write by 이정민
+ *  Green color theme css
+ *  color, image 외의 레이아웃에 영향을 미치는 width, height 등은 변경 금지.
+ *  font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif;
+ *  CSS 작성 규칙 : {기준속성, 크기속성, 위치속성, 라인속성, 서체속성, Etc속성, 백그라운드 속성} 순서대로 나열해서 적는다.
+ *                  될수 있으면, 소문자로 쓰되 _으로 구분해서 적는다. (부트스트랩 등 다른 css와 충돌 방지를 위함.)
+ *
+ * bg-grey : #F7F7F7
+ * bg-grey-secondary : #EFEFEF
+ * bg-green-grey : #A1ACA9
+ * line-primary : #DDDDDD
+ * color-primary : #B3CF0A
+ * color-secondary : #55A30F
+ * color-third : #2D5905
+ * color-solid : #FD8C43
+ * color-darkgreen : #043F31
+ * color-red : #FF5B5B
+ * ======================================================================================================================= */
+ 
+/* ========================================
+										Layout
+======================================== */
+/* header */
+h1.logo{margin-top:14px;background-image:url('../images/ci_re100_logo.svg');}
+
+/* header - nav */
+.gnb nav > ul > li.on > a,
+.gnb nav > ul > li > a[aria-expanded="true"] {border-color:#B3CF0A;}
+/* .gnb nav > ul > li.menu07{display:none;} */
+.gnb nav > ul > li.on > div.sub_menu > ul > li.on > a,
+.gnb nav > ul > li > div.sub_menu > ul > li.on > a,
+.gnb nav > ul > li > div.sub_menu > ul > li > a:hover,
+.gnb nav > ul > li > div.sub_menu > ul > li > a:focus{text-decoration:none; color:#55A30F;}
+.gnb nav .menu_depth3 > li > a:hover,
+.gnb nav .menu_depth3 > li > a:focus,
+.gnb nav .menu_depth3 > li.on > a{color:#55A30F;}
+
+/* LOGIN Layout */
+.login_area{background-color:#F7F7F7;}
+.re_passbox{border-color:#DDDDDD;}
+.btn.activ.login.repass{background-color:#A1ACA9}
+.btn.activ.login.repass:hover, .btn.activ.login.repass:focus{background-color:#b3bebc}
+.login_layout .logobox h1.login_logo{width:412px; height:74px; background:url('../images/ci_re100_logo.svg') no-repeat center center;}
+
+/* dashboard Layout */
+body.dashboard #header{border-color:#B3CF0A}
+.dash{background-color:#F7F7F7 !important}
+.card{border-color:#ddd}
+.card__header{border-color:#ddd; background-color:#fff;}
+
+/* GUIDE Layout */
+body.guide-wrap{overflow-y:auto}
+#container.guide{background-color:#fff}
+#container.guide .menu{position:fixed; left:0; top:0; width:200px; height:100%; border-right:1px solid #ddd; overflow-y:auto;}
+#container.guide #content{padding-left:220px;}
+.guide .menu li{border-bottom:1px solid #f2f2f2}
+.guide .menu li.dep{padding:15px 0; font-size:16px; font-weight:500; line-height:20px; text-align:center;}
+.guide .menu li.last{padding:5px 0; font-size:12px; font-style:italic; text-align:center; color:#aaa}
+.guide .menu li.dep1{height:40px; line-height:40px; padding-left:15px; background:#f0f0f0; color:#000;}
+.guide .menu li a{display:block; padding-left:15px; height:40px; line-height:40px; color:#444;}
+.guide .menu li a:hover, .guide .menu li a:focus{text-decoration:underline;}
+.guide_info{width:100%;}
+.guide_info li{position:relative; padding:0 0 8px 8px; font-size:14px; line-height:1.3;}
+.guide_info li::before{position:absolute; left:0; top:6px; width:4px; height:4px; border-radius:50%; background:#444; content:''; }
+.guide_info li.title{padding-left:0; margin-top:10px; font-weight:700;}
+.guide_info li.title::before{display:none}
+.guide_info li:first-child.title{margin-top:0;}
+.guide .code{width:100%; padding:10px; line-height:1.5; border-radius:4px; background:#1b2426; color:#b9bdb6;}
+
+/* grid system */
+.linebox{border-color:#ddd}
+
+/* File Layout */
+.file_layout{border-color:#ddd; background-color:#eff2ec}
+.file_layout .viewbox{border-color:#ddd;}
+ul.file_list li .cont a{color:#55A30F}
+.btn.icon.file{background-image:url("../images/bg_ico_file_green.svg")}
+.btn.icon.file:hover{background-color:transparent; background-image:url("../images/bg_ico_file_green.svg")}
+
+/* footer */
+#footer{color:#888888; background-color:#444444;} 
+ 
+/* email 발송 */
+.sendBox{border-color:#ddd} 
+.sendBox dl{border-color:#ddd; background-color:#EFEFEF}
+.sendBox .sender{border-color:#ddd}
+ 
+ 
+ 
+ @media all and (max-width:1400px){
+ 	#header > div{padding:0 20px;}
+	h1.logo{width:65px; background-image:url('../images/ci_re100_logoSmall.svg');}
+	#nav{width:calc(100% - 95px);}
+	.gnb nav > ul > li > div.sub_menu > ul > li{margin:10px 15px}
+	.gnb nav .menu_depth3{padding-left:5px;}
+	ul.hsection{width:30px}
+	ul.hsection > li{display:none;}
+	ul.hsection > li:last-child{display:block;}
+}
+ 
+ 
+ 
+/* ========================================
+										Form Tag
+======================================== */
+input, select, textarea{border-color:#dddddd;}
+input:focus, select:focus, textarea:focus{box-shadow:0px 0px 3px 3px rgb(227 227 227 / 60%);}
+input:read-only, textarea:read-only{border-color:#ddd; background-color:#F7F7F7}
+input:disabled, select:disabled, textarea:disabled{border-color:#ddd; background-color:#F7F7F7; opacity:.7; cursor:not-allowed;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {-webkit-box-shadow: 2px 2px 2px 1000px #f9fff3 inset;}
+
+
+/* radio, checkbox */
+input[type="radio"], input[type="checkbox"]{border-color:#ddd; background-color:#fff}
+input[type="radio"]:checked, input[type="checkbox"]:checked{border-color:#55A30F;}
+input[type="radio"]::after{background-color:#55A30F}
+input[type="checkbox"]{border-radius:2px;}
+input[type="checkbox"]::after{border-color:#55A30F;}
+input[type="radio"]:disabled, input[type="checkbox"]:disabled{background-color:#F7F7F7}
+input[type="radio"]:disabled, input[type="checkbox"]:disabled{border-color:#ddd}
+
+/* select */
+select.select{border:1px solid #ddd; background-color:#fff}
+select.select:disabled{border-color:#ddd; background-color:#F7F7F7; opacity:.7;}
+
+/* multi select */
+.multi_select .text_box{border-color:#ddd}
+.multi_select .select_box{border-color:#ddd}
+
+/* datepicker */
+input.date, input[type="date"].date{background-image:url("../images/ico_calendar_green.svg"); background-color:#fff;}
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-{background-color:#55A30F}
+.datepicker--cell.-selected-.-focus-{background-color:#B3CF0A}
+.datepicker--cell.-current-,
+.datepicker--cell.-current-:hover {background-color: #2D5905;}
+
+/* file upload */
+.uploadForm span.add__attach__file span.file button.delete{border-color:#ddd}
+.uploadForm span.add__attach__file span.btn__attach label.fileButton{color:#fff; border-color:#444; background-color:#444}
+
+
+
+
+
+/* ========================================
+										Button
+======================================== */
+a.btn, button.btn{border-color:#444}
+a.btn:hover, button.btn:hover{background-color:#F7F7F7}
+a.btn:focus, button.btn:focus{border-color:#000; color:#000; background-color:#F7F7F7}
+a.btn:disabled, button.btn:disabled{opacity:.5; color:#444; border-color:#444; background-color:#fff; cursor:not-allowed;}
+
+.btn.line{border-color:#043F31; color:#043F31}
+.btn.line:hover{border-color:#043F31; color:#043F31; background-color:#F4F9F0}
+.btn.line:focus{border-color:#043025; color:#043025; background-color:#F4F9F0}
+.btn.line:disabled{border-color:#043F31; color:#043F31; background-color:#fff;}
+
+.btn.line.blue{color:#55A30F; border-color:#55A30F; background-color:#fff;}
+.btn.line.blue:hover{color:#4D960A; border-color:#4D960A; background-color:#F8FFF2;}
+.btn.line.blue:focus{color:#488D0B; border-color:#488D0B; background-color:#F8FFF2;}
+.btn.line.blue:disabled{color:#55A30F; border-color:#55A30F; background-color:#fff;}
+
+.btn.activ{background-color:#043F31;}
+.btn.activ:hover{background-color:#065844;}
+.btn.activ:focus{color:#fff; border-color:#056E55; background-color:#056E55;}
+.btn.activ:disabled {background-color: #043F31;}
+
+.btn.list, .btn.list.normal{border-color:#2D5905; color:#2D5905; background-color:#F4F9F0}
+.btn.list:hover, .btn.list.normal:hover{border-color:#2D5905; color:#2D5905; background-color:#E6EDE0}
+.btn.list:focus, .btn.list.normal:focus{border-color:#043025; color:#043025; background-color:#E6EDE0}
+.btn.list:disabled, .btn.list.normal:disabled{border-color:#2D5905; color:#2D5905; background-color:#F4F9F0;}
+
+.btn.send{color:#55A30F; border-color:#55A30F; background-color:#fff;}
+.btn.send:hover{color:#4D960A; border-color:#4D960A; background-color:#F8FFF2;}
+.btn.send:focus{color:#488D0B; border-color:#488D0B; background-color:#F8FFF2;}
+.btn.send:disabled{color:#55A30F; border-color:#55A30F; background-color:#fff;}
+
+.btn.search{background-color:#FD8C43}
+.btn.search:hover{background-color:#FDA743}
+.btn.search:focus{color:#fff; border-color:#FFB764; background-color:#FFB764}
+.btn.search:disabled{background-color:#FD8C43;}
+
+
+
+
+
+/* ========================================
+										Title
+======================================== */
+.title_area h2{position:relative; padding-left:10px; background:none;}
+.title_area h2::before{position:absolute; left:0; top:4px; width:4px; height:24px; background:#55A30F; content:'';}
+.title_area h2 + ul.location{border-color:#dddddd}
+.title_area h3{color:#2D5905}
+.title_area h3 + .total_page::before, .title_area h3 + .legendbox::before{border-color:#ddd}
+.title_area .total_page strong{color:#FD8C43}
+.title_area h4{position:relative; min-height:30px; line-height:30px; padding-left:8px; font-size:14px; color:#444444}
+.title_area h4::before{position:absolute; left:0; top:50%; width:4px; height:4px; margin-top:-2px; background:#444; content:'';}
+
+
+
+
+/* ========================================
+										Search Form
+======================================== */
+.search_box, .search_form{border-color:#ddd; background-color:#F7F7F7}
+
+
+
+
+
+/* ========================================
+										Tab
+======================================== */
+ul.tablist{border-bottom:1px solid #ddd; background:none;}
+ul.tablist > li{border-color:#ddd}
+ul.tablist > li.on{border-color:#ddd; border-bottom:2px solid #55A30F; background-color:#fff}
+ul.tablist > li.on a{color:#55A30F}
+
+
+
+
+/* ========================================
+										Table
+======================================== */
+/* table common */
+table thead th, table thead td,
+table tbody th, table tbody td{border-color:#ddd}
+table thead th, table tbody th{background-color:#EFEFEF}
+table tbody tr td.total{background-color:#FFF4EC}
+table tbody tr.assume th, table tbody tr.assume td{background-color:#ecf3ff}
+table tbody th strong.aster::before{color:#ff7922}
+span.aster_txt::before{color:#ff7922}
+table tbody tr.modify td {background-color:#fff0e6;}
+table tbody td.modify{background-color:#fff0e6}
+
+/* table list */
+.table_list{border-color:#ddd; border-top:2px solid #444}
+table.list thead th{border-color:#ddd; background-color:#EFEFEF}
+table.list tbody td{border-color:#ddd}
+/* table.list tbody tr:nth-child(even) td{background-color:#FFF8F3} */
+table.list tbody tr:hover td{background-color:#fff2e8}
+table.list tbody tr:active td,
+table.list tbody tr.active td,
+table.list tbody tr.slect td, table.list tbody tr.select td{background-color:#fffae8}
+
+/* dashboard table */
+.tableSetting{border-color:#ddd; border-top-color:#444}
+table.new thead tr th, table.new tbody tr th{background-color:#EFEFEF}
+table.new tbody tr th{background-color:#fff}
+table.new tbody tr td:not(:last-child):before, table.new tbody tr th:before{background-color:#ddd}
+table.new tbody tr:not(:last-child) td:after, table.new tbody tr:not(:last-child) th:after{background-color:#ddd}
+table.new tbody tr:hover td{background-color:#fff2e8}
+
+/* jqGrid */
+.glist{border-color:#444}
+.glist .ui-jqgrid{border-color:#ddd}
+.glist .ui-state-default,
+.glist .ui-widget-content .ui-state-default,
+.glist .ui-widget-header .ui-state-default{border-color:#ddd; background-color:#EFEFEF}
+.glist .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr{border-color:#ddd}
+.glist .ui-jqgrid tr.ui-row-ltr td{border-color:#ddd}
+.glist .ui-jqgrid-btable .ui-state-hover {background-color:#fff2e8;}
+.glist .ui-state-highlight,
+.glist .ui-widget-content .ui-state-highlight,
+.glist .ui-widget-header .ui-state-highlight,
+.glist .ui-widget-content .selected-row.ui-state-hover{background-color:#fffae8}
+.glist.tfoot .ui-jqgrid-sdiv .ui-jqgrid-ftable td{border-color:#ddd; color:#043F31; background-color:#f4ffef}
+.glist .ui-jqgrid .ui-jqgrid-view input,
+.glist .ui-jqgrid .ui-jqgrid-view select,
+.glist .ui-jqgrid .ui-jqgrid-view textarea,
+.glist .ui-jqgrid .ui-jqgrid-view button{font-family:"Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif; font-size:12px;}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited{color:#2D5905}
+.ui-state-default .ui-icon{background-image:url('../images/ui-icons_444444_256x240.png');}
+.glist .ui-jqgrid table td input[type="text"],
+.glist .ui-jqgrid table td select{font-size:12px; border-color:#ddd; background-color:#fff;}
+
+/* total view */
+.total_box{border-color:#edecd7; background-color:#fffeef}
+dl.total > dd.tdd > strong{color:#55A30F}
+
+/* 세금계산서 table */
+table.taxbill tbody th, table.taxbill tbody td{border-color:#ddd}
+table.taxbill.head tbody th{background-color:#f9f9f9}
+table.taxbill.content thead th, table.taxbill.content tbody th{border-color:#ddd; background-color:#f9f9f9}
+.taxbox:nth-child(2) table.taxbill tbody tr:first-child th:nth-child(1),
+.taxbox:nth-child(2) table.taxbill tbody tr:first-child td:nth-child(-n+5){border-top-color:#ddd}
+.taxbox:nth-child(2) table.taxbill tbody tr:first-child th:nth-child(6),
+.taxbox:nth-child(2) table.taxbill tbody tr:first-child td:nth-child(n+6){border-top-color:#ddd}
+table.taxbill tbody th.supplier{color:#ce7038; background-color:#ffead9}
+table.taxbill tbody td.supplier{color:#b57d61; background-color:#fff8f2}
+
+/* 입금반제 */
+.tbl_bg tbody th{background-color:#eaf8ec;}
+.tbl_bg tbody td{font-weight:700;color:#2D5905}
+
+
+/* ========================================
+										Popup
+======================================== */
+.popLayer .popup_wrap{border-color:#ddd}
+.pop_header{border-color:#ddd}
+.popup_wrap.alert .pop_header{background-color:#043F31}
+
+
+
+/* ========================================
+										Common
+======================================== */
+.col_lightGreen{color:#B3CF0A}
+.col_green{color:#55A30F !important}
+.col_deepGreen{color:#2D5905 !important}
+.col_darkGreen{color:#043F31}
+.col_orange{color:#FD8C43 !important}
+.col_red{color:#FF5B5B}
+.col_lightGray{color:#F7F7F7}
+.col_gray{color:#EFEFEF}
+.col_deepGray{color:#DDDDDD}
+.col_greenGray{color:#A1ACA9}
+p.msgbox{line-height:1.5; white-space:normal; color:#ff6400}
+

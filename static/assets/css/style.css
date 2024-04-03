@@ -1,0 +1,1293 @@
+@charset "UTF-8";
+
+/* =======================================================================================================================
+ *  2022.7.13 ~ 2022.10.10 Write
+ *  Dashboard & Statistics CSS
+ *	2023.12.01 ~ 2024.00.00 이정민 수정
+ *  font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif;
+ *  CSS 작성 규칙 : {기준속성, 크기속성, 위치속성, 라인속성, 서체속성, Etc속성, 백그라운드 속성} 순서대로 나열해서 적는다.
+ *                  될수 있으면, 소문자로 쓰되 _으로 구분해서 적는다. (부트스트랩 등 다른 css와 충돌 방지를 위함.)
+ * ======================================================================================================================= */
+
+/* ========================================
+										통계 - 레이아웃 리셋
+======================================== */
+.bg_red {
+	background-color: #ffefe4 !important;
+}
+table tbody th a {color: #444444; text-decoration: underline; text-underline-position: under;}
+table tbody th a:hover {text-decoration: underline;}
+table.new thead th,
+table.new thead td,
+table.new tbody th,
+table.new tbody td {border: 0;}
+.tableSetting {
+	position: relative;
+	border-top: solid 2px #9daec0;
+	border-right: solid 1px #d8dcdc;
+	border-bottom: solid 1px #d8dcdc;
+	border-left: solid 1px #d8dcdc;
+	overflow: auto;
+}
+.tableSetting table {
+	position: relative;
+	table-layout: fixed;
+	margin: 0;
+}
+.fixed-header thead {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+}
+table.new {
+	width: 100%;
+	background-color: #fff;
+}
+table.new thead tr th,
+table.new tbody tr th {
+	position: relative;
+	z-index: 0;
+	background-color: #eaf0f3;
+	text-align: center;
+}
+table.new tbody tr td {
+	position: relative;
+	z-index: 0;
+	background-color: #fff;
+	text-align: center;
+}
+table.new tbody tr:hover td {
+	background-color: #ebf4ff;
+}
+table.new thead tr th:before,
+table.new thead tr th:after,
+table.new tbody tr th:before,
+table.new tbody tr th:after,
+table.new tbody tr td:before,
+table.new tbody tr td:after {
+	position: absolute;
+	content: '';
+	z-index: 1;
+}
+table.new thead tr th:not(:first-child):before,
+table.new thead tr:not(:first-child) th:before,
+table.new thead tr:first-child th:before {
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background-color: #d8dcdc;
+}
+table.new thead tr th:after {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #d8dcdc;
+}
+table.new thead tr th.borderR0:before {
+	content: none;
+}
+
+table.new tbody tr td:not(:last-child):before,
+table.new tbody tr th:before {
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background-color: #d8dcdc;
+}
+table.new tbody tr:not(:last-child) td:after,
+table.new tbody tr:not(:last-child) th:after {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #d8dcdc;
+}
+table.new tbody tr th.borderB0:after {
+	content: none;
+}
+
+
+ul.desc {
+	margin-top: 20px;
+}
+ul.desc li {
+	font-size:  12px;
+}
+ul.desc li:not(:first-child) {
+	margin-top: 3px;
+}
+
+
+.search_opt,
+.search_month,
+.search_year {
+	display: inline-block;
+}
+.search_opt {
+	margin-right: 10px;
+}
+.search_year {
+	display: none;
+}
+
+.chartDouble *,
+.chartTriple * {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.chartDouble,
+.chartTriple {
+	width: 100%;
+}
+.chartDouble:after,
+.chartTriple:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.chartDouble > div {
+	width: calc((100% - 20px) / 2);
+}
+.chartLeft {
+	float: left;
+}
+.chartRight {
+	float: left;
+	margin-left: 20px;
+}
+.chartTriple {
+	border: solid 1px #ddd;
+}
+.chartTriple > div {
+	float: left;
+}
+.chartTriple > div:nth-child(1) {
+	width: 30%;
+}
+.chartTriple > div:nth-child(2) {
+	width: 40%;
+	border-left: solid 1px #ddd;
+}
+.chartTriple > div:nth-child(3) {
+	width: 30%;
+	border-left: solid 1px #ddd;
+}
+.chartTriple .chartOuter {
+	position: relative !important;
+	z-index: 1 !important;
+	width: 100% !important;
+	/*height: 300px;*/
+	border: 0 !important;
+}
+
+
+/* ========================================
+										High chart Custom
+======================================== */
+.highcharts-menu hr {
+	position: static;
+	display: block;
+	width: auto;
+	line-height: 1;
+	font-size: 12px;
+	overflow: auto;
+}
+table.chartTooltip {table-layout: auto; width: auto;}
+table.chartTooltip thead th,
+table.chartTooltip thead td,
+table.chartTooltip tbody th,
+table.chartTooltip tbody td {
+	background-color: #fff;
+	border: 0;
+}
+.chartOuter {
+	position: relative !important;
+	z-index: 1 !important;
+	width: 100% !important;
+	/*height: 300px;*/
+	border: solid 1px #ddd;
+}
+
+.chartOuter > p {
+	position: absolute !important;
+	top: 0;
+	left: 50%;
+	z-index: 100;
+	transform: translateX(-50%);
+}
+.chartOuter table.chartTooltip {
+	background-color: #fff !important;
+	border: solid 1px #ccc;
+}
+.chartOuter table.chartTooltip thead th {
+	height: auto !important;
+	background-color: #fff !important;
+	border-bottom: dotted 1px #ccc;
+	font-size: 12px !important;
+	font-weight: 700 !important;
+	padding: 5px 10px !important;
+	text-align: center !important;
+}
+.chartOuter table.chartTooltip tbody td {
+	height: auto !important;
+	background-color: #fff !important;
+	font-size: 12px !important;
+	font-weight: 700 !important;
+	padding: 3px 10px !important;
+	text-align: left !important;
+}
+.chartOuter table.chartTooltip tbody td:last-child {
+	text-align: right !important;
+}
+.chartOuter .highcharts-label-box.highcharts-tooltip-box.highcharts-shadow {
+	stroke-opacity: 0;
+	stroke-width: 0;
+}
+.chartOuter .highcharts-label-box.highcharts-tooltip-box {
+	fill: none;
+	stroke: 0;
+	stroke-width: 0;
+}
+
+
+
+
+
+
+/* ========================================
+										대시보드 - 레이아웃 리셋
+======================================== */
+.dash * {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.dash {
+	background-color:#f3f4f7 !important;
+}
+.dash__stage:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.dash__stage > div {
+	float: left;
+}
+.dash__stage > div:nth-child(1) {
+	width: 32%;
+}
+.dash__stage > div:nth-child(2) {
+	width: calc(68% - 20px);
+	margin-left: 20px;
+}
+.clearbox {
+	width: 100%;
+	margin-top: 20px;
+}
+.clearbox:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.clearbox > div {
+	float: left;
+	width: calc((100% - 20px) / 2);
+}
+.clearbox > div:nth-child(2) {
+	margin-left: 20px;
+}
+.dual {
+	width: 100;
+}
+.dual:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.dual .card__body {
+	float: left;
+	width: 70%;
+}
+.dual .card__body:last-child {
+	width: 30%;
+}
+
+
+
+
+
+
+/* ========================================
+										대시보드 - 영역 카드
+======================================== */
+.cardWrap{
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+	margin:0;
+}
+.card {
+	flex:1 0 0;
+    width:100%;
+    max-width:100%;
+    margin:10px;
+    position: relative;
+    background-color: #fff;
+    border: solid 1px #e3e6f0;
+    border-radius: 8px;
+    line-height: 1;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.cardWrap .card.card__4 {
+    flex:0 0 auto;
+    width:calc(33.333% - 20px);
+}
+.cardWrap .card.card__6 {
+    flex:0 0 auto;
+    width:calc(50% - 20px);
+}
+.cardWrap .card.card__8 {
+    flex:0 0 auto;
+    width:calc(66.666% - 20px);
+}
+.cardWrap .card.card__12 {
+    flex:0 0 auto;
+    width:calc(100% - 20px);
+}
+.card.no-bg{
+	display:flex;
+	flex-wrap:wrap;
+	align-content: space-between;
+	background:transparent;
+	border:0;
+}
+.card.no-bg > div{
+	width:100%;
+
+}
+.card__header {
+	position: relative;
+	background-color: #f8f9fc;
+	border-bottom: solid 1px #e3e6f0;
+	padding: 15px 20px;
+}
+.card__header h6 span {
+	display:inline-block;
+	vertical-align:middle;
+	font-weight:400;
+}
+.card__header h6 span.num {
+	position:relative;
+	margin-left:10px;
+	padding-left:10px;
+	font-weight:700;
+}
+.card__header h6 span.num::before{
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:1px;
+	background:#ddd;
+	content:'';
+}
+.card__header a {
+	position: absolute;
+	top: 9px;
+	right: 20px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	opacity: .5;
+	transition: all .2s ease;
+}
+.card__header a:hover {
+	opacity: 1;
+}
+.card__header a:before {
+	position: absolute;
+	top: 5px;
+	left: 14px;
+	content: '';
+	width: 2px;
+	height: 20px;
+	background-color: #000;
+}
+.card__header a:after {
+	position: absolute;
+	top: 14px;
+	left: 5px;
+	content: '';
+	width: 20px;
+	height: 2px;
+	background-color: #000;
+}
+.card__header .month{
+	display:inline-block;
+	position:relative;
+	margin-left:15px;
+	padding-left:35px;
+	font-size:14px;
+	font-weight:400;
+	vertical-align:middle;
+	color:#888888;
+	background:url('../images/ico_calendar_green.svg') no-repeat 15px center;
+	background-size:14px;
+}
+.card__header .month::before{
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:1px;
+	background:#ddd;
+	content:'';
+}
+.card__body {
+	/* height: 306px; */
+	padding: 20px;
+	overflow-y: auto;
+}
+.card__body.graph {
+	padding: 0;
+}
+.card__body.graph .chartOuter {
+	border: 0;
+}
+.card__body.bg-gray{
+	background-color:#FAFAFA;
+}
+.shadow{
+    box-shadow:0 3px 12px 0 rgba(58,59,69,.15);
+}
+table.dboard thead th,
+table.dboard thead td,
+table.dboard tbody th,
+table.dboard tbody td {
+	background-color: #fff;
+	border: 0;
+	text-align: center;
+}
+table.dboard tbody td {
+	border-top: solid 1px #e0e0e0;
+}
+table.dboard tbody td > span {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.cardWrap.dep2 > .card .card__header{
+	padding:10px 20px;
+	font-size:14px;
+}
+.cardWrap.dep2 > .card .card__header h6{
+	font-weight:400;
+}
+
+
+
+
+@media all and (max-width:1600px){
+	.cardWrap .card.card__xxxl__6 {
+	    flex:0 0 auto;
+	    width:calc(50% - 20px);
+	}
+	.cardWrap .card.card__xxxl__12 {
+	    flex:0 0 auto;
+	    width:calc(100% - 20px);
+	}
+}
+
+
+
+/* ========================================
+										대쉬보드 - RPS이행 현황 슬라이드
+======================================== */
+.dual .card__body.slide > div {
+	position: relative;
+	width: 100%;
+}
+.swiper-wrapper {
+	padding-top: 30px;
+}
+.swiper__paging__count {
+	position: absolute;
+	top: -4px;
+	right: 0px;
+	z-index: 10;
+	width: 99px;
+}
+.swiper__paging__count > div {
+	position: relative;
+	width: 100%;
+	height: 22px;
+}
+.swiper__paging__count div p {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 22px;
+	line-height: 22px;
+	color: #000;
+	font-size: 12px;
+	text-align: center;
+}
+.swiper-button-prev.custom,
+.swiper-button-next.custom {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	margin-top: -11px;
+	background-size: 22px 22px;
+}
+.swiper-button-prev.custom,
+.swiper-container-rtl .swiper-button-next.custom {
+	background-image: url('../images/ico_swiper_prev.png');
+	top: 0;
+	margin: 0;
+	left: 0;
+	right: auto;
+}
+.swiper-button-next.custom,
+.swiper-container-rtl .swiper-button-prev.custom {
+	background-image: url('../images/ico_swiper_next.png');
+	top: 0;
+	margin: 0;
+	left: auto;
+	right: 0;
+}
+.rps__list {
+	position: relative;
+	width: 100%;
+}
+.rps__list__title {
+	background-color: #364c6e;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 15px;
+	text-align: center;
+}
+.rps__list__detail li {
+	border-bottom: solid 1px #e0e0e0;
+	font-size: 12px;
+	padding: 5px;
+}
+.rps__list__detail li:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.rps__list__detail li:not(:first-child) {
+	margin-top: 15px;
+}
+.rps__list__detail li span {
+	display: block;
+	float: right;
+	color: #364c6e;
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+}
+.rps__list__detail li span em {
+	color: #666;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+
+/* ========================================
+										PPA/V.PPA 정산현황
+======================================== */
+.stlmn__list{
+	display:flex;
+	flex-wrap:wrap;
+	align-items: center;
+	width:100%;
+	padding:10px 0;
+
+}
+.stlmn__list li{
+	text-align:center;
+	flex:1;
+	padding:20px;
+}
+.stlmn__list li:first-child{
+	padding-left:0;
+}
+.stlmn__list li:last-child{
+	padding-right:0;
+}
+.stlmn__list li + li{
+	border-left:1px solid #EFEFEF;
+}
+.stlmn__list.ppa li{
+	width:33.333%;
+}
+.stlmn__list.vppa li{
+	width:50%;
+}
+.stlmn__list .case p{
+	font-size:13px;
+}
+.stlmn__list .case p span{
+	display:inline-block;
+	vertical-align:middle;
+}
+.stlmn__list .case .case__tit{
+	padding-top:75px;
+	margin-bottom:5px;
+	font-size:14px;
+	font-weight:700;
+	background:url(../images/img_stlmn_1.png) no-repeat center top;
+	background-size:70px;
+}
+.stlmn__list .case .case__tit.ppa__consum{
+	background-image:url(../images/img_stlmn_2.png);
+	background-size:74px;
+}
+.stlmn__list .case .case__tit.ppa__cost{
+	background-image:url(../images/img_stlmn_3.png);
+	background-size:87px;
+}
+.stlmn__list .case .case__tit.ppa__trans{
+	background-image:url(../images/img_stlmn_4.png);
+	background-size:69px;
+}
+.stlmn__list .case .case__tit.ppa__charge{
+	background-image:url(../images/img_stlmn_5.png);
+	background-size:56px;
+}
+.stlmn__list .case .case__num{
+	color:#60b810;
+}
+.stlmn__list .amount{
+	margin-top:20px;
+	font-size:12px;
+}
+.stlmn__list .amount p{
+	padding:10px;
+}
+.stlmn__list .amount .amount__tit{
+	display:inline-block;
+	padding:5px 10px;
+	font-size:12px;
+	font-weight:700;
+	border-radius:60px;
+	color:#fff;
+	background-color:#60b810;
+}
+.stlmn__list .amount .amount__num{
+	display:inline-block;
+	vertical-align:middle;
+	font-size:20px;
+	word-break:break-all;
+}
+
+
+
+
+
+/* ========================================
+										사업자 서비스 문의/요청 처리 현황
+======================================== */
+.request__list{
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+	font-size:13px;
+}
+.request__list li{
+	text-align:center;
+	flex:1;
+	padding:0 20px 20px;
+	width:50%;
+}
+.request__list li:first-child{
+	border-right:1px solid #EFEFEF;
+	padding-left:0;
+}
+.request__list li:last-child{
+	padding-right:0;
+}
+.request__list li > .request__box{
+	display:flex;
+	justify-content:space-between;
+	width:100%;
+	border:solid 1px #ddd;
+	border-radius:6px;
+	padding:10px 15px;
+	color:#444;
+}
+.request__list li > .request__box:hover,
+.request__list li > .request__box:focus{
+	border-color:#444;
+}
+.request__list li > .request__box + .request__box{
+	margin-top:10px;
+}
+.request__list .request__box .num{
+	display:inline-block;
+	margin-right:5px;
+	vertical-align:middle;
+	font-weight:700;
+	color:#2D5905;
+}
+.request__list .request__box > span:last-child{
+	position:relative;
+	display:inline-block;
+	padding-right:15px;
+}
+.request__list .request__box > span:last-child::after{
+	position: absolute;
+    right:0; 
+    top: 2px; 
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+    opacity:.3;
+}
+.request__list li > .request__box:hover > span:last-child::after,
+.request__list li > .request__box:focus > span:last-child::after{
+	opacity:.8;
+}
+.request__list .request__tit{
+	margin-bottom:20px;
+	padding-top:75px;
+	font-size:13px;
+	font-weight:700;
+	background:url('../images/img_qna.png') no-repeat center top;
+	background-size:65px;
+}
+.request__list .request__tit.account{
+	background-image:url('../images/img_account.png');
+	background-size:65px;
+}
+
+/* ========================================
+										대쉬보드 - 당해연도 손익현황, 미수금현황, 보장공급량 이행률
+======================================== */
+.state__box{
+	padding:20px;
+	border:solid 1px #ddd;
+	border-radius:8px;
+	background:#fff;
+	box-shadow: 0 3px 12px 0 rgba(58,59,69,.15);
+}
+.state__box .state__tit{
+	margin-bottom:20px;
+	font-size:14px;
+	font-weight:700;
+}
+.state__box .state__amount{
+	text-align:right;
+	font-size:20px;
+	background:url('../images/ico_graph1.png') no-repeat left bottom;
+	background-size:24px;
+}
+.state__box.ar .state__amount{
+	background-image:url('../images/ico_graph2.png');
+}
+.state__box.gs .state__amount{
+	background-image:url('../images/ico_graph3.png');
+}
+.state__box .amount__num{
+	font-size:25px;
+	font-weight:700;
+}
+
+@media all and (max-width:1600px){
+	.state > .state__box{
+		width:calc(33.333% - 14px) !important;
+	}
+	.state > .state__box:nth-child(2){
+		margin:0 20px;
+	}
+}
+
+
+
+
+
+/* ========================================
+										대쉬보드 - 구분 별 누적손익 현황
+======================================== */
+.accum__list{
+	display:flex;
+	margin:10px 10px 0;
+	padding:12px 20px;
+	border:solid 1px #ddd;
+	font-size:14px;
+	text-align:center;
+	background-color:#fff;
+}
+.accum__list li{
+	width:33.333%;
+	word-break:keep-all;
+	line-height:1.3;
+}
+.accum__list span{
+	display:inline-block;
+	vertical-align:middle;
+}
+.accum__list .accum__tit{
+	position:relative;
+	margin-right:5px;
+	padding-left:15px;
+}
+.accum__list .accum__tit::before{
+	position:absolute;
+	left:0;
+	top:3px;
+	width:10px;
+	height:10px;
+	background:#FF9776;
+	border-radius:50%;
+	content:'';
+
+}
+.accum__list .accum__tit.ppa2::before{
+	background-color:#FFB876;
+}
+.accum__list .accum__tit.vppa::before{
+	background-color:#FFE176;
+}
+.accum__list .accum__total{
+	font-size:18px;
+	font-weight:700;
+}
+
+
+/* ========================================
+										대쉬보드 - 중요정보 입력일정
+======================================== */
+table.dboard.schedule__table tbody td > span {
+	position: relative;
+	display: inline-block;
+}
+table.dboard.schedule__table tbody td > span em {
+	font-style: normal;
+}
+table.schedule__table tbody td span.schedule__target {
+	width: 100%;
+}
+table.schedule__table tbody td span.schedule__month:not(:last-child) {
+	padding-right: 10px;
+}
+table.schedule__table tbody td span.schedule__month:before {
+	position: absolute;
+	right: 0px;
+	top: 0;
+	content: '/';
+}
+table.schedule__table tbody td span.schedule__month:last-child:before {
+	content: none;
+}
+table.schedule__table tbody td span.schedule__status {
+	border-radius: 3px;
+	color: #fff;
+	font-size: 11px;
+	padding: 3px 3px;
+	outline: solid 1px;
+}
+table.schedule__table tbody td span.schedule__status.status__complete {
+	background-color: #7c8ba2;
+}
+table.schedule__table tbody td span.schedule__status.status__required {
+	background-color: #e84766;
+}
+
+
+
+
+
+
+/* ========================================
+										대쉬보드 - RPS중간정산 청구 일정
+======================================== */
+table.dboard.settlement__table tbody td > span {
+	position: relative;
+	display: inline-block;
+}
+table.settlement__table tbody td span.settlement__status {
+	border-radius: 3px;
+	color: #fff;
+	font-size: 11px;
+	padding: 3px 3px;
+	outline: solid 1px;
+}
+table.settlement__table tbody td span.settlement__status.status__failed {
+	background-color: #e84766;
+}
+table.settlement__table tbody td span.settlement__status.status__available {
+	background-color: #2b345b;
+}
+table.settlement__table tbody td span.settlement__status.status__request {
+	background-color: #7c8ba2;
+}
+table.settlement__table tbody td span.settlement__status.status__requestfailed {
+	background-color: #FF1B1B;
+}
+table.settlement__table tbody td span.settlement__status.status__waiting{
+	background-color: #ACACAC;
+}
+table.settlement__table tbody td span.settlement__status.status__complete {
+	background-color: #ACACAC;
+}
+
+
+
+
+
+
+/* ========================================
+										대쉬보드 - 계약시장 대금정산현황
+======================================== */
+.calcstatus {
+	position: relative;
+	overflow: hidden;
+}
+.calcstatus > div {
+	height: 190px;
+	overflow-y: auto;
+}
+.calcstatus dl {
+	position: relative;
+}
+.calcstatus dl:not(:first-child) {
+	margin-top: 15px;
+}
+.calcstatus dl:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.calcstatus dt {
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 100%;
+	background-color:#364c6e;
+	border-radius: 6px;
+}
+.calcstatus dt span {
+	display: table-cell;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+}
+.calcstatus dd {
+	height: 50px;
+	font-size: 12px;
+	margin-left: 80px;
+	padding-left: 30px;
+}
+.calcstatus dd p {
+	border-bottom: solid 1px #e0e0e0;
+	padding: 5px;
+}
+.calcstatus dd p:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.calcstatus dd p:not(:first-child) {
+	margin-top: 5px;
+}
+.calcstatus dd p span {
+	display: block;
+	float: left;
+}
+.calcstatus dd p span:last-child {
+	float: right;
+}
+.calcstatus dd p span em {
+	color: #364c6e;
+	font-weight: 700;
+	font-style: normal;
+}
+.calcstatus > p {
+	display: block;
+	position: relative;
+	bottom: 20px;
+	left: 10px;
+	width: calc(100% - 20px);
+	background-color: #1cc88a;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 17px;
+	font-weight: 700;
+	margin-top: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+
+
+
+
+
+/* ========================================
+										loading
+======================================== */
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100000;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.loading svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+.loading svg .svg-elem-1 {
+	stroke-dashoffset: 226.14697265625px;
+	stroke-dasharray: 226.14697265625px;
+	fill: transparent;
+	-webkit-transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0s, fill .5s cubic-bezier(0.47, 0, 0.745, 0.715) .6s;
+	transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,	fill .5s cubic-bezier(0.47, 0, 0.745, 0.715) .6s;
+}
+.loading svg .svg-elem-2 {
+	stroke-dashoffset: 279.1951599121094px;
+	stroke-dasharray: 279.1951599121094px;
+	fill: transparent;
+	-webkit-transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s,	fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) .7s;
+	transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s,	fill .5s cubic-bezier(0.47, 0, 0.745, 0.715) .7s;
+}
+.loading svg .svg-elem-3 {
+	stroke-dashoffset: 122.15294647216797px;
+	stroke-dasharray: 122.15294647216797px;
+	fill: transparent;
+	-webkit-transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s, fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) .8s;
+	transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s,	fill .5s cubic-bezier(0.47, 0, 0.745, 0.715) .8s;
+}
+.loading svg .svg-elem-4 {
+	stroke-dashoffset: 156.95408630371094px;
+	stroke-dasharray: 156.95408630371094px;
+	fill: transparent;
+	-webkit-transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s, fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) .9s;
+	transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s,	fill .5s cubic-bezier(0.47, 0, 0.745, 0.715) .9s;
+}
+.loading svg .svg-elem-5 {
+	stroke-dashoffset: 156.74127197265625px;
+	stroke-dasharray: 156.74127197265625px;
+	fill: transparent;
+	-webkit-transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s,	fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
+	transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s,	fill .5s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
+}
+.loading svg .svg-elem-6 {
+	stroke-dashoffset: 144.86181640625px;
+	stroke-dasharray: 144.86181640625px;
+	fill: transparent;
+	-webkit-transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s,	fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
+	transition: stroke-dashoffset .8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s, fill .5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
+}
+.loading svg.active .svg-elem-1 {
+	stroke-dashoffset: 0;
+	fill:#B3CF0A;
+}
+.loading svg.active .svg-elem-2 {
+	stroke-dashoffset: 0;
+	fill:#B3CF0A;
+}
+.loading svg.active .svg-elem-3 {
+	stroke-dashoffset: 0;
+	fill:#B3CF0A;
+}
+.loading svg.active .svg-elem-4 {
+	stroke-dashoffset: 0;
+	fill:#B3CF0A;
+}
+.loading svg.active .svg-elem-5 {
+	stroke-dashoffset: 0;
+	fill:#B3CF0A;
+}
+.loading svg.active .svg-elem-6 {
+	stroke-dashoffset: 0;
+	fill:#B3CF0A;
+}
+
+
+
+
+
+/* ========================================
+										sendForm
+======================================== */
+.text-left {
+	text-align: left !important;
+}
+.sendForm * {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*outline: solid 1px;*/
+}
+.sendForm:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.sendForm > div {
+	float: left;
+	font-size: 12px;
+}
+.sendFormLeft {
+	width: 40%;
+	font-size: 12px;
+}
+.sendFormRight {
+	width: calc(60% - 20px);
+	font-size: 12px;
+	margin-left: 20px;
+}
+.sendBox {
+	border: solid 1px #d7dce3;
+}
+.sendFormRight .sendBox {
+	border: 0;
+}
+.sendBox dl {
+	background-color: #f6f8fa;
+	border-bottom: solid 1px #d7dce3;
+	padding: 5px;
+}
+.sendBox dl:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.sendBox dl.br0 {
+	border-bottom: 0;
+}
+.sendBox dl dt {
+	float: left;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.sendBox dl dt + dd {
+	height: 30px;
+	margin-left: 60px;
+}
+.sendBox dl dd {
+	margin-left: 0;
+}
+.sendBox dl dd:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.sendBox dl dd div {
+	float: right;
+}
+.sendBox dl dd select {
+	display: inline-block;
+	width: 120px;
+}
+.sendBox dl dt + dd select {
+	display: inline-block;
+	width: 270px
+}
+.sendBox dl dd input {
+	display: inline-block;
+	max-width: 300px;
+}
+.sendBox textarea,
+.sendBox .textarea {
+	height: 338px;
+	border: 0;
+	font-size: 12px;
+	resize:  none;
+}
+.sendBox .textarea {
+	overflow-y: auto;
+	padding: 10px;
+}
+.sendBox .sender {
+	height: 33px;
+	line-height: 33px;
+	border-top: solid 1px #d7dce3;
+	padding: 0 5px;
+}
+.sendFormRight .sendBox .sender {
+	border: solid 1px #d7dce3;
+	border-top: 0;
+	line-height: 1;
+	padding-top: 5px;
+}
+
+
+
+/* ========================================
+										errorPage
+======================================== */
+
+.errorBox {
+	margin:  0 auto;
+}
+
+.errorBox__img img {
+	display: block;
+	width: 140px;
+	margin: 0 auto 15px;
+}
+
+.errorBox__msg span {
+	display: block;
+	font-family: "Noto Sans KR";
+	font-size: 16px;
+	line-height:1.5;
+}
+.errorBox__msg span strong {
+	display: block;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.errorBox button {
+	margin-top: 50px;
+}
+.errorBox__msg .error__code{
+	margin-bottom:20px;
+	font-size:40px;
+	font-weight:700;
+	line-height:1;
+}
+
+
+
+
+
+
+
+
