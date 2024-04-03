@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SK E&S RE100 통합관리 서비스">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Re100">
+    <meta property="og:description" content="">
+
+    <title>SK E&amp;S RE100 통합관리 서비스</title>
+
+    <link rel="shortcut icon" href="../../../static/assets//images/favicon.ico" type="image/x-icon" />
+    
+    <!-- js -->
+    <script src="../../../static/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../../../static/assets/js/common.js"></script>
+    
+    <!-- jquery ui -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/css/jquery-ui.min.css" />    
+
+    <!-- Data jqGrid  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/jqGrid/css/ui.jqgrid.css" />
+    <script src="../../../static/assets/jqGrid/js/minified/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="../../../static/assets/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+
+    <!-- Datepicker --> 
+    <link rel="stylesheet" href="../../../static/assets/css/datepicker.min.css">
+    <script src="../../../static/assets/js/datepicker.min.js"></script>
+    <script src="../../../static/assets/js/datepicker.ko.js"></script>
+
+    <!-- highchart -->
+    <script src="../../../static/assets/js/chart/highcharts.js"></script>
+    <script src="../../../static/assets/js/chart/accessibility.js"></script>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/theme_green.css" />
+</head>
+<body><!-- dashboard :: class="dashbd" -->
+    <div class="login_layout">
+        <div class="logobox">
+            <h1 class="login_logo">
+                <span class="">SK E&amp;S</span><span class="">RE100 통합관리서비스</span>
+            </h1>
+        </div>
+        <div class="login_area">
+            <div class="login_formbox">
+                <form name="form" id="form" mathod="post" autocomplete="OFF">
+                    <label for="empNo" class="hidden">아이디 입력</label>
+                    <input id="empNo" name="empNo" type="text" class="login id" placeholder="아이디" />
+                    <label for="empPw" class="hidden">비밀번호 입력</label>
+                    <input id="empPw" name="empPw" type="password" class="login pw" placeholder="비밀번호" />
+                </form>
+                <button class="btn activ login mt20" id="login" onclick="location.href='../../main/dashboard/메인.html'">
+                    <span>로그인</span>
+                </button>
+                <p  class="msgbox" id="msgbox" hide="true" style="display:none;">아이디 또는 비밀번호가 맞지 않습니다.<br/>5회 이상 오류 시, 계정이 잠금 처리되어 사용에 제한이 있습니다.</p>
+                <p class="msgbox" id="msgbox2" hide="true" style="display:none;">5회 이상 로그인 오류<br/>해당 계정이 입력 오류로 잠금 처리 되었습니다.<br/> 비밀번호 재설정을 이용해 다시 로그인 해주시기 바랍니다.</p>
+                <div class="id_save">
+                    <input id="id_save" name="id_save" type="checkbox" />
+                    <label for="id_save">아이디 저장</label>
+                </div>
+                <div class="re_passbox">
+                    <button type="button" class="btn activ login repass" title="비밀번호 초기화">
+                        <span>비밀번호 초기화</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <p class="login txt">본 시스템은 Microsoft Edge 및 Chrome 환경에 최적화 되어있습니다.</p>
+        <p class="login txt">COPYRIGHT © SK E&S. ALL RIGHTS RESERVED.</p>
+    </div>
+</body>
+</html>
