@@ -90,13 +90,11 @@ var initSetting = {
 			$(this).parent().find("li").eq(now_tab).addClass("on");
 			$(this).parent().parent().parent().find(".tab1").eq(now_tab).removeClass("hidden");
 		});
-		
+	    //반응형 처리
 		$('.tabbox > ul.tablist').each(function(){
-			var tabObj = $('.tabbox > ul.tablist > li');
-			//컨텐츠 탭
-			if( $(this).hasClass('small') && $(tabObj).length > 2 ){
+			if( $(this).find('li').length > 4 ){
 				$(this).addClass('responsive');
-			}else if( !$(this).hasClass('small') && $(tabObj).length > 4 ){
+			}else if( $(this).hasClass('small') == true && $(this).find('li').length > 2 ){
 				$(this).addClass('responsive');
 			}
 			
