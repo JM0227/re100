@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SK E&S RE100 통합관리 서비스">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Re100">
+    <meta property="og:description" content="">
+
+    <title>SK E&amp;S RE100 통합관리 서비스</title>
+
+    <link rel="shortcut icon" href="../../../static/assets//images/favicon.ico" type="image/x-icon" />
+    
+    <!-- js -->
+    <script src="../../../static/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../../../static/assets/js/common.js"></script>
+    
+    <!-- jquery ui -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/css/jquery-ui.min.css" />    
+
+    <!-- Data jqGrid  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/jqGrid/css/ui.jqgrid.css" />
+    <script src="../../../static/assets/jqGrid/js/minified/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="../../../static/assets/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+
+    <!-- Datepicker --> 
+    <link rel="stylesheet" href="../../../static/assets/css/datepicker.min.css">
+    <script src="../../../static/assets/js/datepicker.min.js"></script>
+    <script src="../../../static/assets/js/datepicker.ko.js"></script>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/theme_green.css" />
+</head>
+<body><!-- dashboard :: class="dashbd" -->
+	<header id="header">
+    <div>
+        <h1 class="logo">
+            <a href="../../main/dashboard/메인.html" class="">
+                <span class="">SK E&amp;S</span><span class="">RE100 통합관리 서비스</span>
+            </a>
+        </h1>
+        <!-- nav -->
+        <!--
+            [메뉴 활성화]
+            - 활성화 클래스는 li 태그에 붙는다.
+
+
+            [1뎁스]
+            - 활성화 대상  : .gnb > nav > ul > li
+            - 활성화 클래스 : .on
+            - 1뎁스 활성화는 li 태그 내 a aria-expanded도 같이 붙는다.
+
+            비활성 : <li class="menu01"><a href="#" aria-expanded="false"></a></li>
+            활성 : <li class="menu01 on"><a href="#" aria-expanded="true"></a></li>
+
+
+            [2뎁스]
+            - 활성화 대상  : .sub_menu > ul > li
+            - 활성화 클래스 : .on
+
+            비활성 : <div class="sub_menu"><ul><li></li></ul></div>
+            활성 : <div class="sub_menu"><ul><li class="on"></li></ul></div>
+            
+            [3뎁스]
+            - 활성화 대상  : .menu_depth3 > li
+            - 활성화 클래스 : .on
+
+            비활성 : <ul class="menu_depth3"><li></li></ul>
+            활성 : <ul class="menu_depth3" class="on"><li></li></ul>
+        -->
+        <div id="nav">
+            <div class="gnb">
+            <nav>
+                <ul>
+                    <li class="menu01 on">
+                        <a href="" title="계약" aria-expanded="false">
+                            <span>계약</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li class="on">
+                                    <a href="" target="_blank" title="개시전 계약">
+                                        <span>개시전 계약</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_그룹계약관리_목록.html" title="그룹 계약 관리">
+                                                <span>그룹 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li class="on">
+                                            <a href="../../contract/depth2_001/개시전계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="직접 PPA 계약">
+                                        <span>직접 PPA 계약</span> 
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_그룹계약관리_목록.html" title="그룹 계약 관리">
+                                                <span>그룹 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="VPPA 계약">
+                                        <span>V.PPA 계약</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_003/VPPA계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_003/VPPA계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../../contract/depth2_004/보장공급량관리_목록.html" title="보장공급량 관리">
+                                        <span>보장공급량 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu02">
+                        <a href="javascript:voild(0)" title="사업자·계좌" aria-expanded="false">
+                            <span>사업자·계좌</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>                         
+                                <li>
+                                    <a href="../../client/depth2_001/사업자계좌_발전사업자정보_목록.html" title="발전사업자 정보">
+                                        <span>발전사업자 정보</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_002/사업자계좌_전기사용자정보_목록.html" title="전기사용자 정보">
+                                        <span>전기사용자 정보</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_003/사업자계좌_지급계좌등록관리_목록.html" title="입금계좌 관리">
+                                        <span>입금계좌 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_004/사업자계좌_담당자계정관리_목록.html" title="담당자 계정 관리">
+                                        <span>담당자 계정 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu03">
+                        <a href="#" title="대금정산" aria-expanded="false">
+                            <span>대금정산</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="#" title="직접 PPA">
+                                        <span>직접 PPA</span> 
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_PPA거래실적_목록.html" title="PPA 거래실적">
+                                                <span>PPA 거래실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_부가비용선납_목록.html" title="부가비용 선납">
+                                                <span>부가비용 선납</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_대금산정_목록.html" title="대금산정">
+                                                <span>대금산정</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_정산현황_목록.html" title="정산현황">
+                                                <span>정산현황</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="V.PPA/PPA초과발전">
+                                        <span>V.PPA/PPA초과발전</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_002/VPPA_PPA초과발전_대금산정_목록.html" title="대금산정">
+                                                <span>대금산정</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_002/VPPA_PPA초과발전_정산현황_목록.html" title="정산현황">
+                                                <span>정산현황</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../../calculation/depth2_003/입금반제_목록.html" title="입금 반제">
+                                        <span>입금 반제</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../calculation/depth2_004/대금수정정산_목록.html" title="대금 수정 정산">
+                                        <span>대금 수정 정산</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="정산관리">
+                                        <span>정산관리</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_005/정산관리_정산달력.html" title="정산달력">
+                                                <span>정산달력</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_005/정산관리_정산정보설정.html" title="정산정보 설정">
+                                                <span>정산정보 설정</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu04">
+                        <a href="javascript:voild(0)" title="통계" aria-expanded="false">
+                            <span>통계</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="#" title="사업 통계">
+                                        <span>사업통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_손익현황.html" title="손익현황">
+                                                <span>손익현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_계약현황.html" title="계약현황">
+                                                <span>계약현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_예상사업손익.html" title="예상사업손익">
+                                                <span>예상사업손익</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="고객통계">
+                                        <span>고객통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_RE100이행실적.html" title="RE100 이행실적">
+                                                <span>RE100 이행실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_발전량실적.html" title="발전량 실적">
+                                                <span>발전량 실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_정산실적.html" title="정산 실적">
+                                                <span>정산 실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_보장공급량이행률.html" title="보장공급량 이행률">
+                                                <span>보장공급량 이행률</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="전력시장 통계">
+                                        <span>전력시장 통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_003/전력시장통계_시간별SMP.html" title="시간별 SMP">
+                                                <span>시간별 SMP</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_003/전력시장통계_REC평균가격.html" title="REC 평균가격">
+                                                <span>REC 평균가격</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu05">
+                        <a href="javascript:voild(0)" title="시스템운영" aria-expanded="false">
+                            <span>시스템운영</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="../../operation/depth2_001/시스템운영_공지사항_목록.html" title="공지사항">
+                                        <span>공지사항</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_002/시스템운영_1:1문의_목록.html" title="1:1 문의">
+                                        <span>1:1 문의</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_003/시스템운영_템플릿관리.html" title="템플릿 관리">
+                                        <span>템플릿 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_004/시스템운영_회계마감일관리.html" title="회계마감일 관리">
+                                        <span>회계마감일 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_005/시스템운영_발신이력관리.html" title="발신이력 관리">
+                                        <span>발신이력 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu06">
+                        <a href="javascript:voild(0)" title="설정" aria-expanded="false">
+                            <span>설정</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="../../setting/depth2_001/설정_약관관리.html" title="관리자 계정">
+                                        <span>약관 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_002/설정_관리자계정.html" title="관리자 계정">
+                                        <span>관리자 계정</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_003/설정_관리자권한.html" title="관리자 권한">
+                                        <span>관리자 권한</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_004/설정_코드관리.html" title="코드 관리">
+                                        <span>코드 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_005/설정_배치관리.html" title="배치 관리">
+                                        <span>배치 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            </div>
+        </div>
+        <ul class="hsection">
+            <li>
+                <strong class="name">홍길동님</strong>
+                <span class="date">2022-07-07</span>
+            </li>
+            <li>
+                <a class="notice" title="알림보기">
+                    <span class="count">3</span>
+                </a>
+            </li>
+            <li>
+                <a class="logout" title="로그아웃">로그아웃</a>
+            </li>
+        </ul>
+    </div>
+    </header>
+    <div id="container">
+    	<!-- content -->
+        <div id="content">
+        	<!-- title_area -->
+            <div class="title_area">
+                <div class="fleft">
+                    <h2>최종 계약 관리</h2>
+                    <ul class="location">
+                        <li>홈</li>
+                        <li>계약</li>
+                        <li>개시전 계약</li>
+                        <li>최종 계약 관리</li>
+                    </ul>
+                </div>
+                <div class="fright">
+                	<button class="btn line" title="button" onclick="initSetting.popLayer.open('layerKpx')"><span>KPX 승인 계약 적용</span></button>
+	                <button class="btn activ" title="button" onclick="initSetting.popLayer.open('layerEdit')"><span>수정</span></button>
+	                <button class="btn list" title="button"><span>목록</span></button>
+	            </div>
+            </div>
+            <!--// title_area -->
+            
+            <div class="row">
+          	
+				<!-- row : 2분할 화면 -->
+				<div class="row">
+					<!-- left -->
+					<div class="col col-6 col-xl-12 fixed-h">
+						<!-- 최종계약 정보 -->
+						<div class="row">
+							<!-- title_area(h3) -->
+			            	<div class="title_area">
+								<div class="fleft">
+									<h3>최종계약 정보</h3>
+								</div>
+							</div>
+							<!-- title_area(h3) -->
+							<table>
+								<caption>최종계약 정보 리스트</caption>
+								<colgroup>
+									<col style="width:150px;">
+									<col>
+									<col style="width:150px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">계약 번호</th>
+										<td>24-S00432</td>
+										<th scope="row">계약 상태</th>
+										<!-- 계약상태 : 적용필요 시 'txt_em' class 사용 -->
+										<td class="txt_em">적용필요</td>
+									</tr>
+									<tr>
+										<th scope="row">계약명</th>
+										<td colspan="3">송산 태양광 가계약 맵핑</td>
+									</tr>
+									<tr>
+										<th scope="row">비고</th>
+										<td colspan="3">본 계약 전 가상으로 입력한 계약. </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //최종계약 정보 -->
+						<!-- 공급그룹 계약 정보 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">1</span>공급 그룹계약 정보</h3>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <table>
+			                	<caption>공급 그룹계약 정보 리스트</caption>
+			                	<colgroup>
+			                		<col style="width:145px;">
+			                		<col>
+			                		<col style="width:145px;">
+			                		<col>
+			                	</colgroup>
+			                	<tbody>
+			                		<tr>
+			                			<th scope="row">공급 그룹계약 번호</th>
+				                		<td>24-G000432</td>
+				                		<th scope="row">계약상태</th>
+				                		<!-- 계약상태 : 적용필요 시 'txt_em' class 사용 -->
+				                		<td class="txt_em">적용필요</td>
+			                		</tr>
+			                		<tr>
+			                			<th scope="row">계약명</th>
+				                		<td colspan="3">소비계약 가계약 맵핑</td>
+			                		</tr>
+			                		<tr>
+			                			<th scope="row">비고</th>
+				                		<td colspan="3">거래개시가 안 된 계약입니다.</td>
+			                		</tr>	                		
+			                	</tbody>
+			                </table>
+			                <!-- 공급 개별계약 목록 -->
+			                <!-- title_area -->
+			                <div class="title_area mt20">
+			                    <div class="fleft">
+			                        <h4>공급 개별계약 목록</h4>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <!-- row :: jqGrid -->
+				            <div class="grid-container glist">
+				                <table id="grid"></table>
+				            </div>
+				            <!-- row :: jqGrid -->
+			                <!-- //공급 개별계약 목록 -->
+		            	</div>
+		            	<!-- //공급그룹 계약 정보 -->
+		            	
+		            	<!-- 소비그룹 계약 정보 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">2</span>소비 그룹계약 정보</h3>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <table>
+			                	<caption>소비 그룹계약 정보 리스트</caption>
+			                	<colgroup>
+			                		<col style="width:145px;">
+			                		<col>
+			                		<col style="width:145px;">
+			                		<col>
+			                	</colgroup>
+			                	<tbody>
+			                		<tr>
+			                			<th scope="row">소비 그룹계약 번호</th>
+				                		<td>24-G000432</td>
+				                		<th scope="row">계약상태</th>
+				                		<!-- 계약상태 : 적용필요 시 'txt_em' class 사용 -->
+				                		<td>계약등록</td>
+			                		</tr>
+			                		<tr>
+			                			<th scope="row">계약명</th>
+				                		<td colspan="3">그룹계약</td>
+			                		</tr>
+			                		<tr>
+			                			<th scope="row">비고</th>
+				                		<td colspan="3">거래개시가 안 된 계약입니다.</td>
+			                		</tr>	                		
+			                	</tbody>
+			                </table>
+			                <!-- 소비 개별계약 목록 -->
+			                <!-- title_area -->
+			                <div class="title_area mt20">
+			                    <div class="fleft">
+			                        <h4>소비 개별계약 목록</h4>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <!-- row :: jqGrid -->
+				            <div class="grid-container glist">
+				                <table id="grid2"></table>
+				            </div>
+				            <!-- row :: jqGrid -->
+			                <!-- //소비 개별계약 목록 -->
+		            	</div>
+		            	<!-- //소비 그룹계약 정보 -->
+		            	
+		            	<!-- 망이용 계약 유형 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">3</span>망이용 계약 유형</h3>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <!-- 목록 -->
+			                <!-- row :: jqGrid -->
+				            <div class="grid-container glist">
+				                <table id="grid3"></table>
+				            </div>
+				            <!-- row :: jqGrid -->
+			                <!-- //목록 -->
+		            	</div>
+		            	<!-- //망이용 계약 유형 -->
+					</div>
+					<!-- //left -->
+					
+					<!-- right -->
+					<div class="col col-6 col-xl-12">
+						<!-- title_area(h3) -->
+						<div class="title_area">
+							<div class="fleft">
+								<h3>첨부 파일</h3>
+							</div>
+						</div>
+						<!-- //title_area(h3) -->
+						<!-- file_list -->
+						<div class="file_layout">
+            			
+                        <ul class="file_list">
+                            <li>
+                                <strong class="title">첨부1</strong>
+                                <span class="cont">
+                                	<a href="#">주식회사송산태양광발전소_계좌통보서.png</a>
+		                            <span>(63MB)</span>
+		                            <a href="#" class="btn icon file" title="첨부파일">
+		                                <span>첨부파일</span>
+		                            </a>
+                                </span>
+                            </li>
+                            <li>
+                                <strong class="title">첨부2</strong>
+                                <span class="cont">
+	                                <a href="#">주식회사송산태양광발전소_계좌통보서.png</a>
+	                                <span>(63MB)</span>
+	                                <a href="#" class="btn icon file" title="첨부파일">
+	                                    <span>첨부파일</span>
+	                                </a>
+                                </span>
+                            </li>
+                        </ul>
+                        <!-- view box -->
+                        <div class="viewbox"></div>
+                        <!-- //view box -->
+            		 </div>
+            		 <!--// file_list -->
+					</div>
+					<!-- //right -->
+				</div>
+				<!-- //row : 2분할 화면 -->
+				
+            </div>        	
+        </div>
+        <!-- //content -->
+        <!-- footer -->
+        <footer id="footer">
+			<span>COPYRIGHT ⓒ SK E&amp;S. ALL RIGHTS RESRVED.</span>
+        </footer>
+        <!--// footer -->
+    </div>
+    
+    <!-- KPX 승인계약 적용 Layer Popup -->
+	<div id="layerKpx" class="popLayer">
+		<div class="popup_wrap" style="width: 1400px;">
+			<div class="pop_header">
+				<div class="pop_title_area">
+					<h2>KPX 승인계약 적용</h2>
+				</div>
+				<button id="popup_close" class="popup_close">닫기</button>
+			</div>
+		
+			<div class="pop_content">
+				<div class="slide_container">
+					<!-- slide 1 : 1단계개별계약 -->
+					<div class="slide_item">
+						<!-- step ui -->
+						<div class="row">
+							<div class="list_step">
+								<ul class="">
+				                	<li class="current">
+				                		<span class="num">1</span>
+				                		<span>개별계약</span>
+				                	</li>
+				                	<li>
+				                		<span class="num">2</span>
+				                		<span>그룹계약</span>
+				                	</li>
+				                	<li>
+				                		<span class="num">3</span>
+				                		<span>최종계약</span>
+				                	</li>
+				                </ul>
+							</div>  
+						</div>
+						<!-- //step ui -->
+					 	<!-- 공급 개별계약 적용 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">1</span>공급 개별계약 적용</h3>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                
+			                <!-- Table List -->
+							<div class="table_list tableFixHead" style="height: 610px;"><!-- 데이터 최대 3개 노출, 나머지는 스크롤 -->
+								<table class="list">
+									<caption>공급 개별계약 리스트</caption>
+									<colgroup>
+										<col style="width:50px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:200px;" />
+										<col style="width:180px;" />
+										<col style="width:150px;" />
+										<col style="width:150px;" />
+										<col style="width:150px;" />
+										<col style="width:250px;" />
+										<col style="width:250px;" />
+										<col style="width:150px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="3">No.</th>
+											<th scope="col" rowspan="3">구분</th>
+											<th scope="col" rowspan="3">계약번호</th>
+											<th scope="col" rowspan="3">계약상태</th>
+											<th scope="col">상호명(법인명)</th>
+											<th scope="col">사업자 등록번호</th>
+											<th scope="col">전력시장 회원사코드</th>
+											<th scope="col">송·배전망</th>
+											<th scope="col">발전기 코드</th>
+											<th scope="col">발전기명</th>
+											<th scope="col">주소(본사)</th>
+											<th scope="col" rowspan="3">KPX 계약정보 적용</th>
+										</tr>
+										<tr>
+											<th scope="col">연간보장공급량(MWh)</th>
+											<th scope="col">공급단가(원/kWh)</th>
+											<th scope="col">설비용량(kW)</th>
+											<th scope="col">발전형태</th>
+											<th scope="col">발전원</th>
+											<th scope="col">발전기 주소</th>
+											<th scope="col">주소(사업장 소재지)</th>
+										</tr>
+										<tr>
+											<th scope="col">계약일자</th>
+											<th scope="col">계약일</th>
+											<th scope="col">계약시작일</th>
+											<th scope="col">계약종료일</th>
+											<th scope="col" colspan="3">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 
+											* 계약상태 적용 필요 시 'txt_em' class 사용. jq grid에서 사용 시 color:#e67831
+											* 가계약 정보와 KPX 정보 불일치 시 'modify' class 사용. jq grid에서 사용 시 background-color:##f3ffe8
+											* 왼쪽 정렬 : 'alignl' class
+											* 오른쪽 정렬 : 'alignr' class
+										 -->
+										<tr>
+											<td rowspan="5">1</td>
+											<td rowspan="2"><strong>가계약</strong></td>
+											<td rowspan="2">미등록</td>											
+											<td rowspan="2" class="txt_em">적용필요</td>
+											<td>송산 태양광(주)</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td>HD234</td>
+											<td>모헷 1차 태양광발전소 22호</td>
+											<td>서울 강남구 압로정로 11길 22, 17층</td>
+											<td rowspan="5">
+												<button class="btn list normal"><span>적용</span></button>
+											</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td class="alignr">1,885</td>
+											<td>On-site</td>
+											<td>태양광</td>
+											<td>경상북도 영주시 조와동 산 45-1</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td rowspan="3"><strong>KPX 정보</strong></td>
+											<td rowspan="3">24-S000548</td>
+											<td rowspan="3">계약완료</td>
+											<td class="modify">송산 태양광(주)</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td>HD234</td>
+											<td class="modify">정음 솔라태양광 1</td>
+											<td class="modify">서울 강남구 압로정로 11길 22, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td class="alignr">1,885</td>
+											<td>On-site</td>
+											<td>태양광</td>
+											<td>경상북도 영주시 조와동 산 45-1</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr modify">2023-09-05</td>
+											<td class="modify">19년 8개월 17일(7199일)</td>
+											<td class="alignr modify">2023-09-15</td>
+											<td class="alignr modify">2024-05-04</td>
+											<td colspan="3" class="alignl modify">직접 PPA 시스템에서 입력한 비고란 노출</td>
+										</tr>
+										<tr>
+											<td rowspan="5">2</td>
+											<td rowspan="2"><strong>가계약</strong></td>
+											<td rowspan="2">미등록</td>
+											<td rowspan="2" class="txt_em">적용필요</td>
+											<td>송산 태양광(주)</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td>HD234</td>
+											<td>모헷 1차 태양광발전소 22호</td>
+											<td>서울 강남구 압로정로 11길 22, 17층</td>
+											<td rowspan="5">
+												<button class="btn list normal" disabled><span>적용완료</span></button>
+											</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td class="alignr">1,885</td>
+											<td>On-site</td>
+											<td>태양광</td>
+											<td>경상북도 영주시 조와동 산 45-1</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td rowspan="3"><strong>KPX 정보</strong></td>
+											<td rowspan="3">24-S000548</td>
+											<td rowspan="3">계약완료</td>
+											<td>송산 태양광(주)</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td>HD234</td>
+											<td>정음 솔라태양광 1</td>
+											<td>서울 강남구 압로정로 11길 22, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td class="alignr">1,885</td>
+											<td>On-site</td>
+											<td>태양광</td>
+											<td>경상북도 영주시 조와동 산 45-1</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr">2023-09-05</td>
+											<td>19년 8개월 17일(7199일)</td>
+											<td class="alignr">2023-09-15</td>
+											<td class="alignr">2024-05-04</td>
+											<td colspan="3" class="alignl">직접 PPA 시스템에서 입력한 비고란 노출</td>
+										</tr>
+										<tr>
+											<td rowspan="5">3</td>
+											<td rowspan="2"><strong>가계약</strong></td>
+											<td rowspan="2">미등록</td>
+											<td rowspan="2" class="txt_em">적용필요</td>
+											<td>송산 태양광(주)</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td>HD234</td>
+											<td>모헷 1차 태양광발전소 22호</td>
+											<td>서울 강남구 압로정로 11길 22, 17층</td>
+											<td rowspan="5">
+												<button class="btn list normal"><span>적용</span></button>
+											</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td class="alignr">1,885</td>
+											<td>On-site</td>
+											<td>태양광</td>
+											<td>경상북도 영주시 조와동 산 45-1</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td rowspan="3"><strong>KPX 정보</strong></td>
+											<td rowspan="3">24-S000548</td>
+											<td rowspan="3">계약완료</td>
+											<td>송산 태양광(주)</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td>HD234</td>
+											<td>정음 솔라태양광 1</td>
+											<td>서울 강남구 압로정로 11길 22, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td class="alignr">1,885</td>
+											<td>On-site</td>
+											<td>태양광</td>
+											<td>경상북도 영주시 조와동 산 45-1</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr">2023-09-05</td>
+											<td>19년 8개월 17일(7199일)</td>
+											<td class="alignr">2023-09-15</td>
+											<td class="alignr">2024-05-04</td>
+											<td colspan="3" class="alignl">직접 PPA 시스템에서 입력한 비고란 노출</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// Table List -->
+		            	</div>
+		            	<!-- //공급 개별계약 적용 -->
+		            	<!-- 소비 개별계약 적용 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">2</span>소비 개별계약 적용</h3>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <!-- Table List -->
+							<div class="table_list tableFixHead" style="height: 610px;"><!-- 데이터 최대 3개 노출, 나머지는 스크롤 -->
+								<table class="list">
+									<caption>소비 개별계약 리스트</caption>
+									<colgroup>
+										<col style="width:50px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:200px;" />
+										<col style="width:180px;" />
+										<col style="width:200px;" />
+										<col style="width:200px;" />
+										<col style="width:300px;" />
+										<col style="width:150px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="3">No.</th>
+											<th scope="col" rowspan="3">구분</th>
+											<th scope="col" rowspan="3">계약번호</th>
+											<th scope="col" rowspan="3">계약상태</th>
+											<th scope="col">상호명(법인명)</th>
+											<th scope="col">사업자 등록번호</th>
+											<th scope="col">한전 고객번호</th>
+											<th scope="col">망구분</th>
+											<th scope="col">주소(본사)</th>
+											<th scope="col" rowspan="3">KPX 계약정보 적용</th>
+										</tr>
+										<tr>
+											<th scope="col">계약전력(kWh)</th>
+											<th scope="col">거래단가(원/kWh)</th>
+											<th scope="col">부족 전력량 거래방법</th>
+											<th scope="col">지역구분</th>
+											<th scope="col">주소(사업장 소재지)</th>
+										</tr>
+										<tr>
+											<th scope="col">서류상 계약일자</th>
+											<th scope="col">계약기간</th>
+											<th scope="col">계약시작 - 종료일</th>
+											<th scope="col">유효시작 - 종료일</th>
+											<th scope="col">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 
+											* 계약상태 적용 필요 시 'txt_em' class 사용. jq grid에서 사용 시 color:#e67831
+											* 가계약 정보와 KPX 정보 불일치 시 'modify' class 사용. jq grid에서 사용 시 background-color:##f3ffe8
+											* 왼쪽 정렬 : 'alignl' class
+											* 오른쪽 정렬 : 'alignr' class
+										 -->
+										<tr>
+											<td rowspan="5">1</td>
+											<td rowspan="2"><strong>가계약</strong></td>
+											<td rowspan="2">미등록</td>
+											<td rowspan="2" class="txt_em">적용필요</td>
+											<td>아모레</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td>서울 강남구 압로정로 11길 22, 17층</td>
+											<td rowspan="5">
+												<button class="btn list normal" disabled><span>적용완료</span></button>
+											</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td>전기판매사업자</td>
+											<td>수도권</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td rowspan="3"><strong>KPX 정보</strong></td>
+											<td rowspan="3">24-S000548</td>
+											<td rowspan="3">계약완료</td>
+											<td class="modify">아모레퍼시픽 주식회사</td>
+											<td>120-56-12345</td>
+											<td>12005943452</td>
+											<td>배전고압망</td>
+											<td class="modify">서울 강남구 압로정로 11길 22, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr">11,004</td>
+											<td class="alignr">125</td>
+											<td>전기판매사업자</td>
+											<td>수도권</td>
+											<td>서울 강남구 압구정로 11길 25, 17층</td>
+										</tr>
+										<tr>
+											<td class="alignr modify">2023-09-05</td>
+											<td class="modify">20년(7199일)</td>
+											<td class="modify">2023-09-15 ~ 2023-09-15</td>
+											<td class="modify">2023-09-15 ~ 2023-09-15</td>
+											<td class="alignl modify">직접 PPA 시스템에서 입력한 비고란 노출</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// Table List -->
+		            	</div>
+		            	<!-- //소비 개별계약 적용 -->
+					</div>
+					<!-- //slide 1 : 1단계 개별계약 -->
+					
+					<!-- slide 2 : 2단계 그룹계약 -->
+					<div class="slide_item">
+						<!-- step ui -->
+						<div class="row">
+							<div class="list_step">
+								<ul class="">
+				                	<li class="prev">
+				                		<span class="num">1</span>
+				                		<span>개별계약</span>
+				                	</li>
+				                	<li class="current">
+				                		<span class="num">2</span>
+				                		<span>그룹계약</span>
+				                	</li>
+				                	<li>
+				                		<span class="num">3</span>
+				                		<span>최종계약</span>
+				                	</li>
+				                </ul>
+							</div>  
+						</div>
+						<!-- //step ui -->
+						<!-- 공급 그룹계약 적용 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">3</span>공급 그룹계약 적용</h3>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <!-- Table List -->
+							<div class="table_list tableFixHead" style="height: 167px;"><!-- 데이터 최대 1개 노출, 나머지는 스크롤 -->
+								<table class="list">
+									<caption>공급 그룹계약 적용 리스트</caption>
+									<colgroup>
+										<col style="width:50px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:250px;" />
+										<col style="width:200px;" />
+										<col style="width:200px;" />
+										<col style="width:150px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="2">No.</th>
+											<th scope="col" rowspan="2">구분</th>
+											<th scope="col" rowspan="2">계약번호</th>
+											<th scope="col" rowspan="2">계약상태</th>
+											<th scope="col">계약명</th>
+											<th scope="col" colspan="2">비고</th>
+											<th scope="col" rowspan="2">KPX 계약정보 적용</th>
+										</tr>
+										<tr>
+											<th scope="col">계약일자</th>
+											<th scope="col">계약시작 ~ 종료일</th>
+											<th scope="col">계약일(계약기간)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 
+											* 계약상태 적용 필요 시 'txt_em' class 사용. jq grid에서 사용 시 color:#e67831
+											* 가계약 정보와 KPX 정보 불일치 시 'modify' class 사용. jq grid에서 사용 시 background-color:##f3ffe8
+											* 왼쪽 정렬 : 'alignl' class
+											* 오른쪽 정렬 : 'alignr' class
+										 -->
+										<tr>
+											<td rowspan="3">1</td>
+											<td><strong>가계약</strong></td>
+											<td>미등록</td>
+											<td>계약등록</td>
+											<td>송산2,3,12호,써니(금)1,2호 - 아모레 가계약</td>
+											<td class="alignl" colspan="2">가계약 상태인 계약입니다.</td>
+											<td rowspan="3">
+												<button class="btn list normal"><span>적용</span></button>
+											</td>
+										</tr>
+										<tr>
+											<td rowspan="2"><strong>KPX 정보</strong></td>
+											<td rowspan="2">24-G00056</td>
+											<td rowspan="2">계약완료</td>
+											<td class="modify">송산2,3,12호,써니(금)1,2호</td>
+											<td class="alignl" colspan="2">가계약 상태인 계약입니다.</td>
+										</tr>
+										<tr>
+											<td>2024-12-12</td>
+											<td>2024-12-12 ~ 2024-12-12</td>
+											<td>19년 3개월 12일(1234일)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// Table List -->
+		            	</div>
+		            	<!-- //공급 그룹계약 적용 -->
+		            	
+		            	<!-- 소비 그룹계약 적용 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">4</span>소비 그룹계약 적용</h3>
+			                        <div class="legendbox">
+									※ 하단 <span class="col_red ml5"> 사용 장소별 공급비율(%) </span> 을 반드시 확인 후, 적용해 주시기 바랍니다.
+									</div>
+			                    </div>
+			                    
+			                </div>
+			                <!--// title_area -->
+			                <!-- Table List -->
+							<div class="table_list tableFixHead" style="height: 167px;"><!-- 데이터 최대 1개 노출, 나머지는 스크롤 -->
+								<table class="list">
+									<caption>소비 그룹계약 적용리스트</caption>
+									<colgroup>
+										<col style="width:50px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:250px;" />
+										<col style="width:200px;" />
+										<col style="width:200px;" />
+										<col style="width:150px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="2">No.</th>
+											<th scope="col" rowspan="2">구분</th>
+											<th scope="col" rowspan="2">계약번호</th>
+											<th scope="col" rowspan="2">계약상태</th>
+											<th scope="col">계약명</th>
+											<th scope="col" colspan="2">비고</th>
+											<th scope="col" rowspan="2">KPX 계약정보 적용</th>
+										</tr>
+										<tr>
+											<th scope="col">계약일자</th>
+											<th scope="col">계약시작 ~ 종료일</th>
+											<th scope="col">계약일(계약기간)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 
+											* 계약상태 적용 필요 시 'txt_em' class 사용. jq grid에서 사용 시 color:#e67831
+											* 가계약 정보와 KPX 정보 불일치 시 'modify' class 사용. jq grid에서 사용 시 background-color:##f3ffe8
+											* 왼쪽 정렬 : 'alignl' class
+											* 오른쪽 정렬 : 'alignr' class
+										 -->
+										<tr>
+											<td rowspan="3">1</td>
+											<td><strong>가계약</strong></td>
+											<td>미등록</td>
+											<td>계약등록</td>
+											<td>송산2,3,12호,써니(금)1,2호 - 아모레 가계약</td>
+											<td class="alignl" colspan="2">가계약 상태인 계약입니다.</td>
+											<td rowspan="3">
+												<button class="btn list normal"><span>적용</span></button>
+											</td>
+										</tr>
+										<tr>
+											<td rowspan="2"><strong>KPX 정보</strong></td>
+											<td rowspan="2">24-G00056</td>
+											<td rowspan="2">계약완료</td>
+											<td>송산2,3,12호,써니(금)1,2호</td>
+											<td class="alignl" colspan="2">가계약 상태인 계약입니다.</td>
+										</tr>
+										<tr>
+											<td>2024-12-12</td>
+											<td>2024-12-12 ~ 2024-12-12</td>
+											<td>19년 3개월 12일(1234일)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// Table List -->
+							
+							<!-- Table List -->
+							<div class="table_list tableFixHead mt20" style="height:200px;"><!-- 데이터 최대 5개 노출, 나머지는 스크롤 -->
+								<table class="list">
+									<caption>소비 개별계약 적용리스트</caption>
+									<colgroup>
+										<col style="width:50px;" />
+										<col style="width:100px;" />
+										<col style="width:250px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:130px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">No.</th>
+											<th scope="col">소비 개별계약 번호</th>
+											<th scope="col">상호명</th>
+											<th scope="col">사업자 등록번호</th>
+											<th scope="col">대표자명</th>
+											<th scope="col">고객번호/회원사코드</th>
+											<th scope="col">계약전력(kWh)</th>
+											<th scope="col">거래단가(원/kWh)</th>
+											<th scope="col">사용장소별 공급비율(%)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// Table List -->
+		            	</div>
+		            	<!-- //소비 그룹계약 적용 -->
+					</div>
+					<!-- //slide 2 : 2단계 그룹계약 -->
+					
+					<!-- slide 3 : 3단계 최종 계약 -->
+					<div class="slide_item">
+						<!-- step ui -->
+						<div class="row">
+							<div class="list_step">
+								<ul class="">
+				                	<li class="prev">
+				                		<span class="num">1</span>
+				                		<span>개별계약</span>
+				                	</li>
+				                	<li class="prev">
+				                		<span class="num">2</span>
+				                		<span>그룹계약</span>
+				                	</li>
+				                	<li class="current">
+				                		<span class="num">3</span>
+				                		<span>최종계약</span>
+				                	</li>
+				                </ul>
+							</div>  
+						</div>
+						<!-- //step ui -->
+						<!-- 최종계약 적용 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3><span class="num">5</span>최종계약 적용</h3>
+			                        <div class="legendbox">
+									※ 하단 <span class="col_red ml5"> 망 이용 계약유형 정보 </span> 를 반드시 확인 후, 적용해 주시기 바랍니다.
+									</div>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+			                <!-- Table List -->
+							<div class="table_list tableFixHead" style="height: 167px;"><!-- 데이터 최대 1개 노출, 나머지는 스크롤 -->
+								<table class="list">
+									<caption>최종계약 적용 리스트</caption>
+									<colgroup>
+										<col style="width:50px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:250px;" />
+										<col style="width:200px;" />
+										<col style="width:200px;" />
+										<col style="width:150px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="2">No.</th>
+											<th scope="col" rowspan="2">구분</th>
+											<th scope="col" rowspan="2">계약번호</th>
+											<th scope="col" rowspan="2">계약상태</th>
+											<th scope="col">계약명</th>
+											<th scope="col" colspan="2">비고</th>
+											<th scope="col" rowspan="2">KPX 계약정보 적용</th>
+										</tr>
+										<tr>
+											<th scope="col">계약일자</th>
+											<th scope="col">계약시작 ~ 종료일</th>
+											<th scope="col">계약일(계약기간)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 
+											* 계약상태 적용 필요 시 'txt_em' class 사용. jq grid에서 사용 시 color:#e67831
+											* 가계약 정보와 KPX 정보 불일치 시 'modify' class 사용. jq grid에서 사용 시 background-color:##f3ffe8
+											* 왼쪽 정렬 : 'alignl' class
+											* 오른쪽 정렬 : 'alignr' class
+										 -->
+										<tr>
+											<td rowspan="3">1</td>
+											<td><strong>가계약</strong></td>
+											<td>미등록</td>
+											<td>계약등록</td>
+											<td>송산2,3,12호,써니(금)1,2호 - 아모레 가계약</td>
+											<td class="alignl" colspan="2">가계약 상태인 계약입니다.</td>
+											<td rowspan="3">
+												<button class="btn list normal"><span>적용</span></button>
+											</td>
+										</tr>
+										<tr>
+											<td rowspan="2"><strong>KPX 정보</strong></td>
+											<td rowspan="2">24-G00056</td>
+											<td rowspan="2">계약완료</td>
+											<td class="modify">송산2,3,12호,써니(금)1,2호</td>
+											<td class="alignl" colspan="2">가계약 상태인 계약입니다.</td>
+										</tr>
+										<tr>
+											<td>2024-12-12</td>
+											<td>2024-12-12 ~ 2024-12-12</td>
+											<td>19년 3개월 12일(1234일)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// Table List -->
+		            	</div>
+		            	<!-- //최종계약 적용 -->
+		            	<!-- 망 이용계약 유형 -->
+						<div class="row">
+		            		<!-- title_area -->
+			                <div class="title_area">
+			                    <div class="fleft">
+			                        <h3>망 이용계약 유형</h3>
+			                    </div>
+			                </div>
+			                <!--// title_area -->
+							<!-- Table List -->
+							<div class="table_list tableFixHead" style="height:200px;"><!-- 데이터 최대 5개 노출, 나머지는 스크롤 -->
+								<table class="list">
+									<caption>소비 개별계약 적용리스트</caption>
+									<colgroup>
+										<col style="width:50px;" />
+										<col style="width:100px;" />
+										<col style="width:250px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:100px;" />
+										<col style="width:130px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">No.</th>
+											<th scope="col">소비 개별계약 번호</th>
+											<th scope="col">상호명</th>
+											<th scope="col">사업자 등록번호</th>
+											<th scope="col">대표자명</th>
+											<th scope="col">고객번호/회원사코드</th>
+											<th scope="col">계약전력(kWh)</th>
+											<th scope="col">거래단가(원/kWh)</th>
+											<th scope="col">사용장소별 공급비율(%)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>24-U000012</td>
+											<td>주식회사 케이티엔지 상상플래닛</td>
+											<td>123-12-12345</td>
+											<td>김주리</td>
+											<td>0134543234</td>
+											<td class="alignr">1,850</td>
+											<td class="alignr">150</td>
+											<td class="alignr">54 %</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// Table List -->
+		            	</div>
+		            	<!-- //망 이용계약 유형 -->
+					</div>
+					<!-- //slide 3 : 3단계 최종 계약 -->	
+				</div>
+			</div>	            
+			<div class="pop_footer alignc">
+				<button class="btn line" onclick="plusSlides(-1)"><span>이전</span></button>
+				<button class="btn activ" onclick="plusSlides(1);"><span>다음</span></button>
+			</div>
+			<!-- 유효성 체크 박스 -->
+            <!--  유효성 체크 실패 : fail class 사용 -->
+	        <div class="valid_box fail">
+	        	<span>필수 입력 항목을 모두 입력해 주세요.</span> 
+	        </div>
+	        <!--  유효성 체크 성공 : success class 사용
+	   		<div class="valid_box success">
+	        	<span>성공!</span>
+	        </div>
+	         -->
+	        <!-- //유효성 체크 박스 -->
+		</div>
+	</div>
+	<!-- //KPX 승인계약 적용 Layer Popup -->
+	
+	<!-- 직접 PPA 최종계약 수정 Layer Pop up -->
+	<div id="layerEdit" class="popLayer">
+		<div class="popup_wrap" style="width: 1000px;">
+			<div class="pop_header">
+				<div class="pop_title_area">
+					<h2>직접 PPA 최종계약 수정</h2>
+				</div>
+				<button id="popup_close" class="popup_close">닫기</button>
+			</div>
+		
+			<div class="pop_content">
+				<!-- 공급그룹 계약 정보 -->
+				<div class="row">
+            		<!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h3><span class="num">1</span>공급 그룹계약 정보</h3>
+	                    </div>
+	                    <div class="fright">
+	                        <button type="button" class="btn list" title="공급 그룹계약 선택" onclick="initSetting.popLayer.open('layerSearch')">
+	                        	<span>공급 그룹계약 선택</span>
+	                        </button>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <table>
+	                	<caption>공급 그룹계약 정보 리스트</caption>
+	                	<colgroup>
+	                		<col style="width:145px;">
+	                		<col>
+	                		<col style="width:145px;">
+	                		<col>
+	                	</colgroup>
+	                	<tbody>
+	                		<tr>
+	                			<th scope="row">공급 그룹계약 번호</th>
+		                		<td>24-G000432</td>
+		                		<th scope="row">공급 그룹계약 명</th>
+		                		<td>송산2,3,4호 - 아모레(가계약)</td>
+	                		</tr>
+	                		<tr>
+	                			<th scope="row">비고</th>
+		                		<td colspan="3">거래개시가 안 된 계약입니다.</td>
+	                		</tr>	                		
+	                	</tbody>
+	                </table>
+	                <!-- 공급 개별계약 목록 -->
+	                <!-- title_area -->
+	                <div class="title_area mt20">
+	                    <div class="fleft">
+	                        <h4>공급 개별계약 목록</h4>
+	                    </div>
+	                    <div class="fright">
+	                        <button type="button" class="btn line" title="삭제">
+	                        	<span>삭제</span>
+	                        </button>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <!-- Table List -->
+					<div class="table_list tableFixHead" style="height: 215px;"><!-- 데이터 최대 5개 노출, 나머지는 스크롤 -->
+						<table class="list">
+							<caption>공급 개별계약 리스트</caption>
+							<colgroup>
+								<col style="width:60px;" />
+								<col style="width:60px;" />
+								<col style="width:150px;" />
+								<col style="width:250px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<label for="all_select1" class="ndisplay">전체 선택</label>
+										<input id="all_select1" name="all_chec1" type="checkbox" />
+									</th>
+									<th scope="col">No.</th>
+									<th scope="col">계약번호</th>
+									<th scope="col">상호명(법인명)</th>
+									<th scope="col">사업자 등록번호</th>
+									<th scope="col">대표자명</th>
+									<th scope="col">발전기 코드</th>
+									<th scope="col">송·배전망</th>
+									<th scope="col">설비용량(kW)</th>
+									<th scope="col">연간 보장공급량(MWh)</th>
+									<th scope="col">공급 단가(원/kWh)</th>
+									<th scope="col">발전형태</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input id="" name="all_chec1" type="checkbox" />
+									</td>
+									<td>1</td>
+									<td>23-S000133</td>
+									<td>송산 태양광 주식회사</td>
+									<td>123-45-12345</td>
+									<td>김정민</td>
+									<td>HF128</td>
+									<td>송전망</td>
+									<td class="alignr">1,225</td>
+									<td class="alignr">160</td>
+									<td class="alignr">1,800</td>
+									<td>Off-site</td>
+								</tr>
+								<tr>
+									<td>
+										<input id="" name="all_chec1" type="checkbox" />
+									</td>
+									<td>1</td>
+									<td>23-S000133</td>
+									<td>송산 태양광 주식회사</td>
+									<td>123-45-12345</td>
+									<td>김정민</td>
+									<td>HF128</td>
+									<td>송전망</td>
+									<td class="alignr">1,225</td>
+									<td class="alignr">160</td>
+									<td class="alignr">1,800</td>
+									<td>Off-site</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--// Table List -->
+	                <!-- //공급 개별계약 목록 -->
+            	</div>
+            	<!-- //공급그룹 계약 정보 -->
+            	
+            	<!-- 소비그룹 계약 정보 -->
+				<div class="row">
+            		<!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h3><span class="num">2</span>소비 그룹계약 정보</h3>
+	                    </div>
+	                    <div class="fright">
+	                        <button type="button" class="btn list" title="소비 그룹계약 선택" onclick="initSetting.popLayer.open('layerSearch2')">
+	                        	<span>소비 그룹계약 선택</span>
+	                        </button>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <table>
+	                	<caption>소비 그룹계약 정보 리스트</caption>
+	                	<colgroup>
+	                		<col style="width:145px;">
+	                		<col>
+	                		<col style="width:145px;">
+	                		<col>
+	                	</colgroup>
+	                	<tbody>
+	                		<tr>
+	                			<th scope="row">소비 그룹계약 번호</th>
+		                		<td>24-G000432</td>
+		                		<th scope="row">소비 그룹계약 명</th>
+		                		<td>아모레퍼시픽</td>
+	                		</tr>
+	                		<tr>
+	                			<th scope="row">비고</th>
+		                		<td colspan="3">거래개시가 안 된 계약입니다.</td>
+	                		</tr>	                		
+	                	</tbody>
+	                </table>
+	                <!-- 소비 개별계약 목록 -->
+	                <!-- title_area -->
+	                <div class="title_area mt20">
+	                    <div class="fleft">
+	                        <h4>소비 개별계약 목록</h4>
+	                    </div>
+	                    <div class="fright">
+	                        <button type="button" class="btn line" title="삭제">
+	                        	<span>삭제</span>
+	                        </button>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <!-- Table List -->
+					<div class="table_list tableFixHead" style="height: 225px;"><!-- 데이터 최대 5개 노출, 나머지는 스크롤 -->
+						<table class="list">
+							<caption>소비 개별계약 리스트</caption>
+							<colgroup>
+								<col style="width:60px;" />
+								<col style="width:60px;" />
+								<col style="width:150px;" />
+								<col style="width:250px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<label for="all_select2" class="ndisplay">전체 선택</label>
+										<input id="all_select2" name="all_chec2" type="checkbox" />
+									</th>
+									<th scope="col">No.</th>
+									<th scope="col">계약번호</th>
+									<th scope="col">상호명(법인명)</th>
+									<th scope="col">사업자 등록번호</th>
+									<th scope="col">대표자명</th>
+									<th scope="col">한전 고객번호</th>
+									<th scope="col">송·배전망</th>
+									<th scope="col">지역구분</th>
+									<th scope="col">수전 설비용량(kVA)/<br>계약전력(MWh)</th>
+									<th scope="col">공급 단가<br>(원/kWh)</th>
+									<th scope="col">사용장소별<br>공급비율(%)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input id="" name="all_chec2" type="checkbox" />
+									</td>
+									<td>1</td>
+									<td>23-S000133</td>
+									<td>상상마단춘천아트센트</td>
+									<td>120-45-12345</td>
+									<td>김정민</td>
+									<td>17293832345</td>
+									<td>배전저압망</td>
+									<td>수도권</td>
+									<td class="alignr">1,234</td>
+									<td class="alignr">1,800</td>
+									<td class="alignr">40%</td>									
+								</tr>
+								<tr>
+									<td>
+										<input id="" name="all_chec2" type="checkbox" />
+									</td>
+									<td>2</td>
+									<td>23-S000133</td>
+									<td>상상마단춘천아트센트</td>
+									<td>120-45-12345</td>
+									<td>김정민</td>
+									<td>17293832345</td>
+									<td>배전저압망</td>
+									<td>수도권</td>
+									<td class="alignr">1,234</td>
+									<td class="alignr">1,800</td>
+									<td class="alignr">40%</td>									
+								</tr>
+								<tr>
+									<td>
+										<input id="" name="all_chec2" type="checkbox" />
+									</td>
+									<td>3</td>
+									<td>23-S000133</td>
+									<td>상상마단춘천아트센트</td>
+									<td>120-45-12345</td>
+									<td>김정민</td>
+									<td>17293832345</td>
+									<td>배전저압망</td>
+									<td>수도권</td>
+									<td class="alignr">1,234</td>
+									<td class="alignr">1,800</td>
+									<td class="alignr">40%</td>									
+								</tr>
+								<tr>
+									<td>
+										<input id="" name="all_chec2" type="checkbox" />
+									</td>
+									<td>4</td>
+									<td>23-S000133</td>
+									<td>상상마단춘천아트센트</td>
+									<td>120-45-12345</td>
+									<td>김정민</td>
+									<td>17293832345</td>
+									<td>배전저압망</td>
+									<td>수도권</td>
+									<td class="alignr">1,234</td>
+									<td class="alignr">1,800</td>
+									<td class="alignr">40%</td>									
+								</tr>
+								<tr>
+									<td>
+										<input id="" name="all_chec2" type="checkbox" />
+									</td>
+									<td>5</td>
+									<td>23-S000133</td>
+									<td>상상마단춘천아트센트</td>
+									<td>120-45-12345</td>
+									<td>김정민</td>
+									<td>17293832345</td>
+									<td>배전저압망</td>
+									<td>수도권</td>
+									<td class="alignr">1,234</td>
+									<td class="alignr">1,800</td>
+									<td class="alignr">40%</td>									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--// Table List -->
+	                <!-- //소비 개별계약 목록 -->
+            	</div>
+            	<!-- //소비그룹 계약 정보 -->
+            	
+            	<!-- 망이용 계약 유형 -->
+				<div class="row">
+            		<!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h3><span class="num">3</span>망이용 계약 유형</h3>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <!-- Table List -->
+					<div class="table_list tableFixHead" style="height: 215px;"><!-- 데이터 최대 5개 노출, 나머지는 스크롤 -->
+						<table class="list">
+							<caption>망이용 계약 유형 리스트</caption>
+							<colgroup>
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+								<col style="width:200px;" />
+								<col style="width:250px;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">공급 개별계약 번호</th>
+									<th scope="col">소비 개별계약 번호</th>
+									<th scope="col">발전사업자 망구분</th>
+									<th scope="col">전기사용자 망구분</th>
+									<th scope="col">동일변전소 여부</th>
+									<th scope="col">망 계약번호</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>23-S000133</td>
+									<td>24-U013233</td>
+									<td>배전고압망</td>
+									<td>송전망</td>
+									<td>
+										<select class="select">
+											<option>선택</option>
+											<option>동일변전소</option>
+											<option>타변전소</option>
+										</select>
+									</td>
+									<td>
+										<input type="text" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--// Table List -->
+            	</div>
+            	<!-- //망이용 계약 유형 -->
+            	
+            	<!-- 최종계약 정보 -->
+				<div class="row">
+            		<!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h3>최종계약 정보</h3>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <table>
+	                	<caption>최종계약 정보 리스트</caption>
+	                	<colgroup>
+	                		<col style="width:145px;">
+	                		<col>
+	                		<col style="width:145px;">
+	                		<col>
+	                	</colgroup>
+	                	<tbody>
+	                		<tr>
+	                			<th scope="row">계약번호</th>
+		                		<td colspan="3">
+		                			<!-- 안내창 확인 후 test_input class삭제해주세요 -->
+		                			<input type="text" style="width:50%;" class="test_input" />
+		                		</td>
+	                		</tr>
+	                		<tr>
+	                			<th scope="row">계약명</th>
+		                		<td colspan="3">
+		                			<input type="text" style="width:50%;" />
+		                		</td>
+	                		</tr>
+	                		<tr>
+	                			<th scope="row">비고</th>
+		                		<td colspan="3">
+		                			<input type="text" />
+		                		</td>
+	                		</tr>	                		
+	                	</tbody>
+	                </table>
+            	</div>
+            	<!-- //최종계약 정보 -->
+            	
+            	<!-- 첨부파일 -->
+				<div class="row">
+            		<!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h3>첨부파일</h3>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <table>
+	                	<caption>첨부파일 리스트</caption>
+	                	<colgroup>
+	                		<col style="width:145px;">
+	                		<col>
+	                		<col style="width:145px;">
+	                		<col>
+	                	</colgroup>
+	                	<tbody>
+	                		<tr>
+	                			<th scope="row">첨부1</th>
+		                		<td colspan="3">
+		                			<div class="uploadForm">
+										<ul class="add__attach__list">
+											<li>
+												<span class="add__attach__file" data-ui="attach">
+													<span class="btn__attach">
+														<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+													</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+		                		</td>
+	                		</tr>
+	                		<tr>
+	                			<th scope="row">첨부2</th>
+		                		<td colspan="3">
+		                			<div class="uploadForm">
+										<ul class="add__attach__list">
+											<li>
+												<span class="add__attach__file" data-ui="attach">
+													<span class="btn__attach">
+														<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+													</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+		                		</td>
+	                		</tr>                		
+	                	</tbody>
+	                </table>
+            	</div>
+            	<!-- //첨부파일 -->
+            	
+            	<!-- 변경 사유 -->
+				<div class="row">
+            		<!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h3>변경 사유</h3>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                <table>
+	                	<caption>변경 사유 입력 리스트</caption>
+	                	<colgroup>
+	                		<col style="width:145px;">
+	                		<col>
+	                	</colgroup>
+	                	<tbody>
+	                		<tr>
+	                			<th scope="row">변경사유 입력</th>
+		                		<td>
+		                			<input type="text" />
+		                		</td>
+	                		</tr>                		
+	                	</tbody>
+	                </table>
+            	</div>
+            	<!-- //변경 사유 -->
+			</div>	            
+			<div class="pop_footer alignc">
+				<button class="btn line popup_close"><span>취소</span></button>
+				<button class="btn activ" onclick="btnResister();"><span>저장</span></button>
+			</div>
+			<!-- 유효성 체크 박스 -->
+            <!--  유효성 체크 실패 : fail class 사용 -->
+	        <div class="valid_box fail">
+	        	<span>필수 입력 항목을 모두 입력해 주세요.</span> 
+	        </div>
+	        <!--  유효성 체크 성공 : success class 사용
+	   		<div class="valid_box success">
+	        	<span>성공!</span>
+	        </div>
+	         -->
+	        <!-- //유효성 체크 박스 -->
+		</div>
+	</div>
+	<!-- //직접 PPA 최종계약 수정 Layer Popup -->
+	
+	<!-- 공급 그룹 계약 검색 Layer Popup -->
+    <div id="layerSearch" class="popLayer">
+        <div class="popup_wrap" style="width: 1100px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>공급 그룹 계약 검색</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+            
+            <div class="pop_content">
+            	<div class="row">
+            		<!-- search_form -->
+            		<div class="search_form pl30">
+		            	<div class="row_group">
+		            		<div class="row">
+		            			<div class="col">
+		            				<div class="sch_box">
+					            		<select class="select">
+					                        <option value="">계약번호</option>
+					                        <option value="">계약명</option>
+					                    </select>
+					                    <input type="text">
+					            	</div>
+		            			</div>
+		            		</div>
+		            	</div>
+		            	<!-- search button -->
+		            	<div class="btnsrch">
+				            <button class="btn search"><span>조회</span></button>
+				        </div>
+				        <!-- //search button -->
+		            </div>
+            		<!-- //search_form -->
+            		<!-- Table List -->
+					<div class="table_list tableFixHead" style="height: 365px;"><!-- 데이터 최대 10개 노출, 이후는 스크롤 -->
+						<table class="list">
+							<caption>공급 그룹계약 리스트</caption>
+							<colgroup>
+								<col style="width:46px;" />
+								<col style="width:150px;" />
+								<col style="width:250px;" />
+								<col style="width:150px;" />
+								<col style="width:150px;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<label for="chk2" class="ndisplay">전체 선택</label>
+										<input id="chk2" name="" type="checkbox" />
+									</th>
+									<th scope="col">공급 그룹계약 번호</th>
+									<th scope="col">계약명</th>
+									<th scope="col">합산 설비용량(kW)</th>
+									<th scope="col">합산 연간 보장공급량(MWh)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input id="" name="" type="checkbox" /></td>
+									<td>23-S000133</td>
+									<td>주식회사 케이티엔지 강동지사</td>
+									<td class="alignr">12,002</td>
+									<td class="alignr">123,924</td>								
+								</tr>
+								<tr>
+									<td><input id="" name="" type="checkbox" /></td>
+									<!-- jq grid 사용 시 'txt_em' class 대신 color : #e67831 로 사용 -->
+									<td class="txt_em">미등록</td>
+									<td>주식회사 케이티엔지 강동지사</td>
+									<td class="alignr">12,002</td>
+									<td class="alignr">123,924</td>								
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--// Table List -->
+            	</div>
+            </div>
+            
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close">
+                	<span>취소</span>
+                </button>
+                <button class="btn activ">
+                	<span>선택</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- //공급 그룹 계약 검색 Layer Popup -->
+    
+    <!-- 소비 그룹 계약 검색 Layer Popup -->
+    <div id="layerSearch2" class="popLayer">
+        <div class="popup_wrap" style="width: 1100px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>소비 그룹 계약 검색</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+            
+            <div class="pop_content">
+            	<div class="row">
+            		<!-- search_form -->
+            		<div class="search_form pl30">
+		            	<div class="row_group">
+		            		<div class="row">
+		            			<div class="col">
+		            				<div class="sch_box">
+					            		<select class="select">
+					                        <option value="">계약번호</option>
+					                        <option value="">계약명</option>
+					                    </select>
+					                    <input type="text">
+					            	</div>
+		            			</div>
+		            		</div>
+		            	</div>
+		            	<!-- search button -->
+		            	<div class="btnsrch">
+				            <button class="btn search"><span>조회</span></button>
+				        </div>
+				        <!-- //search button -->
+		            </div>
+            		<!-- //search_form -->
+            		<!-- Table List -->
+					<div class="table_list tableFixHead" style="height: 365px;"><!-- 데이터 최대 10개 노출, 이후는 스크롤 -->
+						<table class="list">
+							<caption>소비 그룹계약 리스트</caption>
+							<colgroup>
+								<col style="width:46px;" />
+								<col style="width:150px;" />
+								<col style="width:400px;" />
+								<col style="width:150px;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<label for="chk3" class="ndisplay">전체 선택</label>
+										<input id="chk3" name="" type="checkbox" />
+									</th>
+									<th scope="col">소비 그룹계약 번호</th>
+									<th scope="col">계약명</th>
+									<th scope="col">합산 계약전력량(kW)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input id="" name="" type="checkbox" /></td>
+									<td>23-S000133</td>
+									<td>주식회사 케이티엔지 강동지사</td>
+									<td class="alignr">123,924</td>								
+								</tr>
+								<tr>
+									<td><input id="" name="" type="checkbox" /></td>
+									<td class="txt_em">미등록</td><!-- jq grid 사용 시 color : #e67831 로 사용 -->
+									<td>주식회사 케이티엔지 강동지사</td>
+									<td class="alignr">123,924</td>								
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--// Table List -->
+            	</div>
+            </div>
+            
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close">
+                	<span>취소</span>
+                </button>
+                <button class="btn activ">
+                	<span>선택</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- //소비 그룹 계약 검색 Layer Popup -->
+    
+    <script>
+    	//등록 버튼 클릭
+    	function btnResister(){
+    		//유효성 체크 박스 visible
+    		$('.valid_box').addClass('on');
+    		$('.popLayer:visible').addClass('message');
+    		
+    		//해당 input에 focus
+    		$('.test_input').focus();
+    	}
+    </script>
+    
+    <script>
+  		/* jq grid - 공급 개별계약 목록 */
+  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+  		
+  		var grid = $('#grid');
+        $(function () {
+        	grid.jqGrid({
+                colModel: [
+                    {
+                    	label:'계약 상태',
+                    	name:'labela',
+                    	index:'labela',
+                    	align:'center',
+                    	width:'150px',
+                    	cellattr: function (rowId, val, rawObject, cm, rdata) {
+
+							if(val == '적용필요') {
+								css = ' style="color: #e67831;" ';
+							} else {
+								css = ' style="color: #444444;" ';
+							}
+							return css;
+						},
+                    },
+                    {
+                    	label:'계약 번호',
+                    	name:'labelb',
+                    	index:'labelb',
+                    	align:'center',
+                    	width:'150px',                   	
+						sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'상호명(법인명)',
+                    	name:'labelc',
+                    	index:'labelc',
+                    	align:'center',
+                    	width:'250px', 
+                    },
+                    {
+                    	label:'사업자 등록번호',
+                    	name:'labeld',
+                    	index:'labeld',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'대표자명',
+                    	name:'labele',
+                    	index:'labele',
+                    	align:'center',
+                    	width:'100px',
+                    },
+                    {
+                    	label:'발전기 코드',
+                    	name:'labelf',
+                    	index:'labelf',
+                    	align:'center',
+                    	width:'100px',
+                    },
+                    {
+                    	label:'송·배전망',
+                    	name:'labelg',
+                    	index:'labelg',
+                    	align:'center',
+                    	width:'100px',
+                    },
+                    {
+                    	label:'설비용량(kW)',
+                    	name:'labelh',
+                    	index:'labelh',
+                    	align:'right',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	formatter: 'integer', // 천단위 컴마
+                    	
+                    },
+                    {
+                    	label:'연간 보장공급량(MWh)',
+                    	name:'labeli',
+                    	index:'labeli',
+                    	align:'right',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	formatter: 'integer', // 천단위 컴마
+                    	
+                    },
+                    {
+                    	label:'공급단가(원/kWh)',
+                    	name:'labelj',
+                    	index:'labelj',
+                    	align:'right',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	formatter: 'integer', // 천단위 컴마
+                    },
+                    {
+                    	label:'발전형태',
+                    	name:'labelk',
+                    	index:'labelk',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                ],
+                
+                data: [
+                    {
+                    	labela:"적용필요",
+                    	labelb:"24-P00012",
+                    	labelc:"송산 2,3,4호",
+                    	labeld:"120-12-12345",
+                    	labele:"김나라",
+                    	labelf:"HED13",
+                    	labelg:"배전고압망",
+                    	labelh:"1500",
+                    	labeli:"2400",
+                    	labelj:"123",
+                    	labelk:"On-site",
+                    },
+                    
+                ],
+
+                datatype: "local", // 로컬에서 테스트용
+                height: "180px", // 그리드의 높이. 상세 페이지에서는 최대 5개의 데이터가 출력되도록 180px로 설정한다.
+                autowidth: true,
+                shrinkToFit: false, // 가로스크롤 하기 위해 필요한 옵션 : false
+                cellEdit: false,
+                multiselect: false, // 첫 셀에 체크박스를 생성
+                multiselectWidth: 40, // 첫 셀에 체크박스 width
+                emptyrecode: "No records to view",
+                rownumbers: true, // 줄번호 사용
+                rownumWidth: 40,
+                scroll: true
+            });           
+            
+            $(window).resize(function() {
+                $("#grid").jqGrid('setGridWidth', $(".grid-container").width());
+            });
+            
+        });
+    </script>
+    
+    <script>
+  		/* jq grid - 소비 개별계약 목록 */
+  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+  		
+  		var grid2 = $('#grid2');
+        $(function () {
+        	grid2.jqGrid({
+                colModel: [
+                    {
+                    	label:'계약 상태',
+                    	name:'labela',
+                    	index:'labela',
+                    	align:'center',
+                    	width:'150px',
+                    	cellattr: function (rowId, val, rawObject, cm, rdata) {
+
+							if(val == '적용필요') {
+								css = ' style="color: #e67831;" ';
+							} else {
+								css = ' style="color: #444444;" ';
+							}
+							return css;
+						},
+                    },
+                    {
+                    	label:'계약 번호',
+                    	name:'labelb',
+                    	index:'labelb',
+                    	align:'center',
+                    	width:'150px',                   	
+						sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'상호명(법인명)',
+                    	name:'labelc',
+                    	index:'labelc',
+                    	align:'center',
+                    	width:'250px', 
+                    },
+                    {
+                    	label:'사업자 등록번호',
+                    	name:'labeld',
+                    	index:'labeld',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'대표자명',
+                    	name:'labele',
+                    	index:'labele',
+                    	align:'center',
+                    	width:'100px',
+                    },
+                    {
+                    	label:'한전 고객번호',
+                    	name:'labelf',
+                    	index:'labelf',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'송·배전망',
+                    	name:'labelg',
+                    	index:'labelg',
+                    	align:'center',
+                    	width:'100px',
+                    },
+                    {
+                    	label:'지역구분',
+                    	name:'labelh',
+                    	index:'labelh',
+                    	align:'center',
+                    	width:'100px',
+                    	
+                    },
+                    {
+                    	label:'수전설비용량(kVA)<br>/계약전력(kWh)',
+                    	name:'labeli',
+                    	index:'labeli',
+                    	align:'right',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	formatter: 'integer', // 천단위 컴마
+                    	
+                    },
+                    {
+                    	label:'공급단가<br>(원/kWh)',
+                    	name:'labelj',
+                    	index:'labelj',
+                    	align:'right',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	formatter: 'integer', // 천단위 컴마
+                    },
+                    {
+                    	label:'사용장소별<br>공급비율(%)',
+                    	name:'labelk',
+                    	index:'labelk',
+                    	align:'right',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                ],
+                
+                data: [
+                    {
+                    	labela:"계약등록",
+                    	labelb:"24-P00012",
+                    	labelc:"상상마당 춘천아트센터",
+                    	labeld:"120-12-12345",
+                    	labele:"김나라",
+                    	labelf:"01934345564",
+                    	labelg:"고압배전망",
+                    	labelh:"비수도권",
+                    	labeli:"2400",
+                    	labelj:"120",
+                    	labelk:"50 %",
+                    },
+                    
+                ],
+
+                datatype: "local", // 로컬에서 테스트용
+                height: "180px", // 그리드의 높이. 상세 페이지에서는 최대 5개의 데이터가 출력되도록 180px로 설정한다.
+                autowidth: true,
+                shrinkToFit: false, // 가로스크롤 하기 위해 필요한 옵션 : false
+                cellEdit: false,
+                multiselect: false, // 첫 셀에 체크박스를 생성
+                multiselectWidth: 40, // 첫 셀에 체크박스 width
+                emptyrecode: "No records to view",
+                rownumbers: true, // 줄번호 사용
+                rownumWidth: 40,
+                scroll: true
+            });           
+            
+            $(window).resize(function() {
+                $("#grid2").jqGrid('setGridWidth', $(".grid-container").width());
+            });
+            
+        });
+    </script>
+    
+    <script>
+  		/* jq grid - 망 이용 계약 유형 */
+  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+  		
+  		var grid3 = $('#grid3');
+        $(function () {
+        	grid3.jqGrid({
+                colModel: [
+                    {
+                    	label:'공급 개별계약 번호',
+                    	name:'labela',
+                    	index:'labela',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'소비 개별계약 번호',
+                    	name:'labelb',
+                    	index:'labelb',
+                    	align:'center',
+                    	width:'150px',                   	
+						sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'발전사업자 망구분',
+                    	name:'labelc',
+                    	index:'labelc',
+                    	align:'center',
+                    	width:'150px', 
+                    },
+                    {
+                    	label:'전기사용자 망구분',
+                    	name:'labeld',
+                    	index:'labeld',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'동일변전소 여부',
+                    	name:'labele',
+                    	index:'labele',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'망 계약번호',
+                    	name:'labelf',
+                    	index:'labelf',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                ],
+                
+                data: [
+                    {
+                    	labela:"24-S00012",
+                    	labelb:"24-U00012",
+                    	labelc:"배전고압망",
+                    	labeld:"배전고압망",
+                    	labele:"배전고압망",
+                    	labelf:"12584500432",
+                    },
+                    
+                ],
+
+                datatype: "local", // 로컬에서 테스트용
+                height: "180px", // 그리드의 높이. 상세 페이지에서는 최대 5개의 데이터가 출력되도록 180px로 설정한다.
+                autowidth: true,
+                shrinkToFit: true, // 가로스크롤 하기 위해 필요한 옵션 : false
+                cellEdit: false,
+                multiselect: false, // 첫 셀에 체크박스를 생성
+                multiselectWidth: 40, // 첫 셀에 체크박스 width
+                emptyrecode: "No records to view",
+                rownumbers: false, // 줄번호 사용
+                rownumWidth: 40,
+                scroll: true
+            });           
+            
+            $(window).resize(function() {
+                $("#grid3").jqGrid('setGridWidth', $(".grid-container").width());
+            });
+            
+        });
+    </script>
+    
+    <script>
+    	//KPX 승인계약 팝업 Slider
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("slide_item");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  console.log(slideIndex);
+		}
+	</script>
+ 
+    <script>
+        $(document).ready(function() {
+        	
+            // footer 하단 스크립트(grid script 밑에 위치해야 합니다!)
+            fixedFooter();
+
+            $(window).resize(function() {
+                fixedFooter();
+            });
+        });
+    </script>
+</body>
+</html>

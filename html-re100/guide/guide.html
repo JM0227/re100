@@ -1,0 +1,2791 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SK E&S RE100 통합관리 서비스">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Re100">
+    <meta property="og:description" content="">
+
+    <title>스타일 가이드</title>
+
+    <link rel="shortcut icon" href="../../static/assets/images/favicon.ico" type="image/x-icon" />
+    
+    <!-- js -->
+    <script src="../../static/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../../static/assets/js/common.js"></script> 
+    
+    <!-- jquery ui -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../static/assets/css/jquery-ui.min.css" />
+    
+    <!-- Data jqGrid  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../static/assets/jqGrid/css/ui.jqgrid.css" />
+    <script src="../../static/assets/jqGrid/js/minified/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="../../static/assets/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+
+    <!-- Datepicker --> 
+    <link rel="stylesheet" href="../../static/assets/css/datepicker.min.css">
+    <script src="../../static/assets/js/datepicker.min.js"></script>
+    <script src="../../static/assets/js/datepicker.ko.js"></script>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="../../static/assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/assets/css/theme_green.css" />
+</head>
+<!-- dashboard :: class="dashbd" -->
+<body class="guide-wrap">
+    <div id="container" class="guide">
+    	<!-- menu -->
+    	<div class="menu">
+    		<ul>
+    			<li class="dep">SK E&amp;S RE100<br>통합관리 서비스<br>Style Guide</li>
+    			<li class="last">last update : 2024.01.16</li>
+    			<li class="dep1">Structure</li>
+    			<li><a href="#guideHtml">html</a></li>
+    			<li><a href="#guideCss">css</a></li>
+    			<li><a href="#guideJs">js</a></li>
+    			<li class="dep1">Layout</li>
+    			<li><a href="#guideGrid">Grid System</a></li>
+    			<li><a href="#guideSch">Search Form</a></li>
+    			<li class="dep1">Elements</li>
+    			<li><a href="#guideText">Text</a></li>
+    			<li><a href="#guideTitle">Title</a></li>
+    			<li><a href="#guideBtn">Button</a></li>
+    			<li><a href="#guideInput">Input</a></li>
+    			<li><a href="#guideDate">Datepicker</a></li>
+    			<li><a href="#guideMonth">Monthpicker</a></li>
+    			<li><a href="#guideSelect">Select</a></li>
+    			<li><a href="#guideMulti">Multi Select</a></li>
+    			<li><a href="#guideTextarea">Textarea</a></li>
+    			<li><a href="#guideChk">Checkbox</a></li>
+    			<li><a href="#guideRadio">Radio</a></li>
+    			<li><a href="#guideGroup">Group of Form</a></li>
+    			<li><a href="#guideFile">File Upload</a></li>
+    			<li><a href="#guidePaging">Paging</a></li>
+    			<li><a href="#guideTab">Tab</a></li>
+    			<li><a href="#guideTable1">Table - 상세</a></li>
+    			<li><a href="#guideTable2">Table - 목록</a></li>
+    			<li><a href="./jqGrid.html" target="_blank">Table - jqGrid</a></li>
+    			<li><a href="#guidePopup">팝업</a></li>
+    		</ul>
+    	</div>
+    	<!-- //menu -->
+    	<!-- content -->
+        <div id="content">
+        	<!-- Html -->
+        	<div class="row" id="guideHtml">
+                <div class="title_area">
+                    <h4>Html Structure</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>html 파일 위치 : html-re100</li>
+                	</ul>
+                </div>
+            </div>
+        	<!-- //Html -->
+        	<!-- CSS -->
+            <div class="row" id="guideCss">
+                <div class="title_area">
+                    <h4>CSS Structure</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+	                <ul class="guide_info">
+	                	<li class="title">[Custom CSS]</li>
+	                	<li>base.css : 폰트, 리셋 스타일</li>
+	                	<li>common.css : 레이아웃, 엘리먼트 스타일</li>
+	                	<li>style.css : 대시보드, 차트 스타일</li>
+	                	<li>theme_green.css : green 테마 스타일</li>
+	                	<li class="title">[Library CSS]</li>
+	                	<li>datepicker.min.css : datepicker 스타일</li>
+	                	<li>jquery-ui.min.css : jquery ui 스타일</li>
+	                	<li>swiper.min.css : 메인 슬라이더 스타일</li>
+	                	<li>CSS 파일 위치 : Java Resources\src/main/resources\static\assets\css</li>
+	                	<li class="title">[CSS 호출 위치]</li>
+	                	<li>Java Resources\src/main/resources\templates\common\fragments\config.html</li>
+	                	<li>html : 각 html 파일 내</li>
+	                </ul>
+<pre class="code">
+&lt;!-- config.html에서 호출 --&gt;
+&lt;link th:inline="css" rel="stylesheet" type="text/css" th:href="@{/assets/css/base.css}" /&gt;
+&lt;link th:inline="css" rel="stylesheet" type="text/css" th:href="@{/assets/css/common.css}" /&gt;
+&lt;link th:inline="css" rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}" /&gt;
+&lt;link th:inline="css" rel="stylesheet" type="text/css" th:href="@{/assets/css/theme_green.css}" /&gt;
+<br>
+&lt;!-- html 내에서 호출 --&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../static/assets/css/base.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../static/assets/css/common.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../static/assets/css/style.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../static/assets/css/theme_green.css" /&gt;
+</pre>
+				</div>
+            </div>
+            <!-- //CSS -->
+            <!-- JS -->
+            <div class="row" id="guideJs">
+                <div class="title_area">
+                    <h4>JS Structure</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+	                <ul class="guide_info">
+	                	<li class="title">[Custom JS]</li>
+	                	<li>common.js : 공통 스크립트. (추가 스크립트 필요 시 common.js에 추가하지 말고 개별 페이지 내에서 해결.)</li>
+	                	<li>lib.js : 벨리데이션 체크</li>
+	                	<li class="title">[Library JS]</li>
+	                	<li>datepicker.ko.js : datepicker 한글화</li>
+	                	<li>datepicker.min.js : datepicker</li>
+	                	<li>html2canvas.js : 화면 pdf 출력</li>
+	                	<li>jquery.cookie.js : 쿠키 관리</li>
+	                	<li>jquery-3.1.1.min.js : jquery 3.1.1 버전</li>
+	                	<li>jquery-3.4.1.min.js : jquery 3.4.1 버전 </li>
+	                	<li>jquery-ui.min.js : jquery ui</li>
+	                	<li>jspdf.js : 화면 pdf 출력</li>
+	                	<li>swiper.min.js : 메인 슬라이더</li>
+	                	<li>index.global.min.js : 풀 캘린더(대금정산 일정 페이지)</li>
+	                	<li>JS 파일 위치 : Java Resources\src/main/resources\static\assets\js</li>
+	                	<li class="title">[JS 호출 위치]</li>
+	                	<li>Java Resources\src/main/resources\templates\common\fragments\config.html</li>
+	                	<li>html : 각 html 파일 내</li>
+	                </ul>
+<pre class="code">
+&lt;!-- config.html 에서 호출 --&gt;
+&lt;script th:inline="javascript" type="text/javascript" th:src="@{/assets/js/common.js}"&gt;&lt;/script&gt;
+<br>
+&lt;!-- html 내에서 호출 --&gt;
+&lt;script src="../../../static/assets/js/common.js"&gt;&lt;/script&gt;
+</pre>
+				</div>
+            </div>
+            <!-- //JS -->
+        	<!-- Grid System -->
+            <div class="row" id="guideGrid">
+                <div class="title_area">
+                    <h4>Grid System</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+	                <ul class="guide_info">
+	                	<li>기본적으로 12등분으로 영역을 나눠 놓고 col-(*) 괄호 안의 숫자만 바꿔서 영역 사이즈를 조절 한다.</li>
+	                	<li class="title">[반응형 처리]</li>
+	                	<li>분기점 1400px 이하 : col col-xxl-(*)</li>
+	                	<li>분기점 1200px 이하 : col col-xl-(*)</li>
+	                </ul>
+	                <div class="row exbg pad15">1분할 DIV 박스</div>
+	                <div class="row mt10">
+		                <div class="col exbg pad15">왼쪽 DIV 박스</div>
+		                <div class="col exbg pad15">오른쪽 DIV 박스</div>
+	                </div>
+	                <div class="row mt10">
+	                    <div class="col col-4 exbg pad15">4/12 DIV 박스</div>
+	                    <div class="col col-8 exbg pad15">8/12영역 DIV 박스</div>
+	                </div>
+	                <div class="row mt10">
+	                    <div class="col col-4 col-xxl-5 col-xl-6 exbg pad15">4/12 DIV 박스(1400px 이하 5/12, 1200px 이하 6/12)</div>
+	                    <div class="col col-8 col-xxl-7 col-xl-6 exbg pad15">8/12영역 DIV 박스(1400px 이하 7/12, 1200px 이하 6/12)</div>
+	                </div>
+	           		<div class="row">
+<pre class="code">
+&lt;!-- 기본 DIV 박스 --&gt;
+&lt;div class="row"&gt;기본 DIV 박스&lt;/div&gt;
+<br>
+&lt;!-- 균일한 분할 DIV 박스 --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="col"&gt;왼쪽 DIV 박스&lt;/div&gt;
+	&lt;div class="col"&gt;오른쪽 DIV 박스&lt;/div&gt;
+&lt/div&gt;
+<br>
+&lt;!-- 다른 사이즈의 분할 DIV 박스 --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="col col-4"&gt;4/12영역 DIV 박스&lt;/div&gt;
+	&lt;div class="col col-8"&gt;8/12영역 DIV 박스&lt;/div&gt;
+&lt/div&gt;
+<br>
+&lt;!-- DIV 박스 반응형 처리 --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="col col-4 col-xxl-5 col-xl-6"&gt;4/12영역 DIV 박스(1400px 이하 5/12, 1200px 이하 6/12)&lt;/div&gt;
+	&lt;div class="col col-8 col-xxl-7 col-xl-6"&gt;8/12영역 DIV 박스(1400px 이하 7/12, 1200px 이하 6/12)&lt;/div&gt;
+&lt/div&gt;
+</pre>
+           			</div>
+           		</div>
+            </div>
+            <!-- //Grid System -->
+            <!-- Search Form - Type1 -->
+            <div class="row" id="guideSch">
+                <div class="title_area">
+                    <h4>Search Form - Type1</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li class="title">[사용법]</li>
+	                	<li>검색 조건 2개 이하, 각 항목의 길이가 짧은 경우 사용한다.</li>
+	        			<li>table을 사용하며 각 영역의 너비는 폼 태그에서 직접 컨트롤하는 것이 아닌 col style을 통해 컨트롤한다.(col style=“width:110px”)</li>
+	        			<li>th = 최소 110px로 사용, 10px 단위로 사용할 것.(118px 금지 / 120px 가능)</li>
+	        			<li>td = form tag를 담는 영역. 최소 100px로 사용, 10px단위로 사용할 것.(118px 금지 / 120px 가능)</li>
+	        			<li class="title">[검색 영역 내 폼 태그]</li>
+	        			<li>태그의 너비 직접 삽입 금지(select style=“width:100px” 금지), 위에서 설명한 table의 col style을 통해 너비 조절할 것.</li>
+	                </ul>
+                	<!-- search_form -->
+		            <div class="search_form">
+		            	<div class="tbl_group">
+		            		<table class="search">
+		                        <colgroup>
+		                            <col style="width:110px;" />
+		                            <col style="width:100px;" />
+		                            <col style="width:110px;" />
+		                            <col style="width:100px;" />
+		                        </colgroup>
+		                        <tbody>
+		                            <tr>
+		                                <th scope="row">타이틀</th>
+		                                <td><input type="text" /></td>
+		                                <th scope="row">타이틀</th>
+		                                <td><input type="text" /></td>
+		                            </tr>
+		                        </tbody>
+		                    </table>
+		            	</div>
+		            	<!-- Search Button -->
+		                <div class="btnsrch">
+		                	<button class="btn"><span>초기화</span></button>
+		                    <button class="btn search"><span>조회</span></button>
+		                </div>
+		                <!--// Search Button -->
+		            </div>
+		            <!-- //search_form --> 
+		            <!-- search_form -->
+		            <div class="search_form">
+		            	<div class="tbl_group">
+		            		<table class="search">
+		                        <colgroup>
+		                            <col style="width:110px;" />
+		                            <col style="width:300px;" />
+		                            <col style="width:110px;" />
+		                            <col style="width:150px;" />
+		                        </colgroup>
+		                        <tbody>
+		                            <tr>
+		                                <th scope="row">타이틀</th>
+		                                <td>
+		                                	<input type="text" placeholder="입력" />
+		                                </td>
+		                                <th scope="row">타이틀</th>
+		                                <td>
+		                                	<select class="select">
+		                                        <option value="">전체</option>
+		                                        <option value="">노출</option>
+		                                        <option value="">미노출</option>
+		                                    </select>
+		                                </td>
+		                            </tr>
+		                        </tbody>
+		                    </table>
+		            	</div>
+		            	<!-- Search Button -->
+		                <div class="btnsrch">
+		                	<button class="btn"><span>초기화</span></button>
+		                    <button class="btn search"><span>조회</span></button>
+		                </div>
+		                <!--// Search Button -->
+		            </div>
+		            <!-- //search_form -->
+		            <div class="row">
+<pre class="code">
+&lt;div class="search_form"&gt;
+	&lt;!-- 검색 조건 --&gt;
+	&lt;div class="tbl_group"&gt;
+		&lt;table class="search"&gt;
+			&lt;colgroup&gt;
+				&lt;col style="width:110px;" /&gt;
+				&lt;col style="width:100px;" /&gt;
+				&lt;col style="width:110px;" /&gt;
+				&lt;col style="width:100px;" /&gt;
+			&lt;/colgroup&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;th scope="row"&gt;타이틀&lt;/th&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;th scope="row"&gt;타이틀&lt;/th&gt;
+					&lt;td&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+	&lt;!--// 검색 조건 --&gt;
+	&lt;!-- Search Button --&gt;
+	&lt;div class="btnsrch"&gt;
+		&lt;button class="btn"&gt;&lt;span>초기화&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn search"&gt;&lt;span&gt;조회&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;!--// Search Button --&gt;
+&lt;/div&gt;
+</pre>		            
+		            </div>
+                </div>
+            </div>
+            <!-- //Search Form - Type1 -->
+            <!-- //Search Form - Type2 -->
+            <div class="row">
+            	<div class="title_area">
+                    <h4>Search Form - Type2</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li class="title">[개요]</li>
+                		<li>버튼 영역을 뺀 나머지 영역의 너비는 버튼 영역을 뺀 나머지 영역을 100%로 사용.</li>
+        				<li>각 검색 항목은 고정 너비가 아니라 차지하는 영역에 따라 화면 사이즈 조절 시 유동적으로 움직인다.</li>
+        				<li class="title">[row/col 개념]</li>
+        				<li>row = 행(table의 tr과 유사한 개념)</li>
+        				<li>col = 열(table의 td와 유사한 개념)</li>
+        				<li>열(col)은 한 행(row) 내에 최대 4개까지만 배치하도록 하며 타이틀+폼 태그로 구성된 경우에는 dl 사용/폼 태그 단일로만 구성된 경우에는 div로 사용.</li>
+        				<li class="title">[col의 너비 조절]</li>
+        				<li>col_* 클래스를 통해 너비 조절(col_1 ~ col_12)</li>
+        				<li> col_1 = 한 행의 1/12 차지 , col_6 = 한 행의 50%(6/12) 차지, col_12 = 한 행의 100%(12/12) 차지.</li>
+        				<li>사용 예시 : div class="col col_12" or dl class="col col_12"</li>
+        				<li class="title">[col의 너비 조절(반응형)]</li>
+        				<li>3개의 반응형 중단점을 사용하며 중단점은 max-width 미디어쿼리 기반.</li>
+        				<li>중단점 1) max-width:1600px(1600px 미만에서 작동) / class="col_xxxl_*"(col_xxxl_1 ~ col_xxxl_12)</li>
+        				<li>중단점 2) max-width:1400px(1400px 미만에서 작동) / class="col_xxl_*"(col_xxl_1 ~ col_xxl_12)</li>
+        				<li>중단점 3) max-width:1200px(1200px 미만에서 작동) / class="col_xl_*"(col_xl_1 ~ col_xl_12)</li>
+        				<li>사용 예시 : dl class="col col_4 col_xxl_6 col_xl_12"(default값으로 4/12 영역 차지 -> 1400px 미만에서 6/12 차지 -> 1200px 미만에서 12/12 차지)</li>
+        				<li class="title">[form 태그 사용]</li>
+        				<li>태그의 width 직접 컨트롤 금지(select style="100px" 금지), class(col_*)로 width 조절.</li>
+        				<li>체크박스 3개 이상 또는 길이가 길 때는 Multi Select 사용을 권장한다.</li>
+                	</ul>
+                	<!-- search form -->
+	        		<div class="search_form">
+	        			<div class="row_group">
+	        				<div class="row"><!-- 1번째 행 -->
+	        					<dl class="col">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        				</div>
+	        				<div class="row"><!-- 2번째 행 -->
+	        					<dl class="col col_4">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        					<dl class="col col_8">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        				</div>
+	        				<div class="row"><!-- 3번째 행 -->
+	        					<dl class="col col_6 col_xxl_12">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        					<dl class="col col_3 col_xxl_6">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        					<dl class="col col_3 col_xxl_6">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        				</div>
+	        				<div class="row"><!-- 4번째 행 -->
+	        					<dl class="col col_xl_6">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        					<dl class="col col_xl_6">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        					<dl class="col col_xl_6">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        					<dl class="col col_xl_6">
+	        						<dt><span>타이틀</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        				</div>
+	        			</div>
+	        			<!-- Search Button -->
+		                <div class="btnsrch">
+		                	<button class="btn line"><span>초기화</span></button>
+		                    <button class="btn search"><span>조회</span></button>
+		                </div>
+		                <!--// Search Button -->
+	        		</div>
+	        		<!-- //search form -->
+	        		<div class="row">
+<pre class="code">
+&lt;div class="search_form"&gt;
+	&lt;!-- 검색 조건 --&gt;
+	&lt;div class="row_group"&gt;
+		&lt;div class="row"&gt;&lt;!-- 1번째 행 --&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;타이틀&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;타이틀&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;타이틀&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd>&lt;/dd&gt;
+			&lt;/dl&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;타이틀&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- //검색 조건 --&gt;
+	&lt;!-- Search Button --&gt;
+	&lt;div class="btnsrch"&gt;
+		&lt;button class="btn"&gt;&lt;span&gt;초기화&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn search"&gt;&lt;span&gt;조회&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;!--// Search Button --&gt;
+&lt;/div&gt;
+</pre>	        		
+	        		</div>
+	        		<!-- search form -->
+	        		<div class="search_form">
+	        			<div class="row_group">
+	        				<div class="row"><!-- 1번째 행 -->
+	        					<dl class="col">
+	        						<dt><span>Input</span></dt>
+	        						<dd><input type="text" /></dd>
+	        					</dl>
+	        					<dl class="col">
+	        						<dt><span>Select</span></dt>
+	        						<dd>
+	        							<select class="select">
+	                                        <option value="">전체</option>
+	                                        <option value="">1</option>
+	                                        <option value="">2</option>
+	                                        <option value="">3</option>
+	                                    </select>
+	        						</dd>
+	        					</dl>
+	        					<dl class="col">
+	        						<dt><span>Select</span></dt>
+	        						<dd>
+	        							<select class="select">
+	                                        <option value="">전체</option>
+	                                        <option value="">1</option>
+	                                        <option value="">2</option>
+	                                        <option value="">3</option>
+	                                    </select>
+	        						</dd>
+	        					</dl>
+	        				</div>
+	        				<div class="row"><!-- 2번째 행 -->
+	        					<dl class="col">
+	        						<dt><span>Select+Input</span></dt>
+	        						<dd>
+	        							<div class="sch_box">
+		            						<select class="select">
+		                                        <option value="" selected="selected">전체</option>
+		                                        <option value="">1</option>
+		                                    </select>
+		                                	<input type="text" />
+		            					</div>
+	        						</dd>
+	        					</dl>
+	        				</div>
+	        				<div class="row"><!-- 3번째 행 -->
+	        					<dl class="col col_4 col_xxl_8 col_xl_10">
+	        						<dt><span>기간 선택1</span></dt>
+	        						<dd>
+	        							<div class="date_box">
+			             					<input class="date useDatepicker dateFrom" id="" type="text" placeholder="YYYY-MM-DD" readonly />
+											<span>~</span>
+											<input class="date useDatepicker dateTo" id="" type="text" placeholder="YYYY-MM-DD" readonly />
+			             				</div>
+	        						</dd>
+	        					</dl>
+	        					<dl class="col col_8 col_xxl_12">
+	        						<dt><span>기간 선택2</span></dt>
+	        						<dd>
+	        							<div class="period_box">
+			            					<select class="select">
+			                                    <option value="">전체</option>
+			                                </select>
+			                                <select class="select">
+			                                    <option value="">전체</option>
+			                                </select>
+			                                <span>~</span>
+			                                <select class="select">
+			                                    <option value="">전체</option>
+			                                </select>
+			                                <select class="select">
+			                                    <option value="">전체</option>
+			                                </select>
+			            				</div>
+	        						</dd>
+	        					</dl>
+	        				</div>
+	        				<div class="row"><!-- 4번째 행 -->
+	        					<dl class="col col_xl_12">
+	        						<dt><span>Radio</span></dt>
+	        						<dd>
+	        							<ul class="radio_box">
+			                				<li>
+			                					<input id="radio1" name="radiogroup" type="radio" checked />
+			                                    <label for="radio1">Option1</label>
+			                				</li>
+			                				<li>
+			                					<input id="radio2" name="radiogroup" type="radio" />
+			                                   	 <label for="radio2">Option2</label>
+			                				</li>
+			                				<li>
+			                					<input id="radio3" name="radiogroup" type="radio" />
+			                                    <label for="radio3">Option3</label>
+			                				</li>
+			                			</ul>
+	        						</dd>
+	        					</dl>
+	        					<dl class="col col_xl_12">
+	        						<dt><span>Checkbox</span></dt>
+	        						<dd>
+	        							<ul class="chks_box">
+			                				<li>
+			                					<input id="chk1" name="chksgroup" type="checkbox" checked />
+			                                    <label for="chk1">Option1</label>
+			                				</li>
+			                				<li>
+			                					<input id="chk2" name="chksgroup" type="checkbox" />
+			                                   	 <label for="chk2">Option2</label>
+			                				</li>
+			                				<li>
+			                					<input id="chk3" name="chksgroup" type="checkbox" />
+			                                    <label for="chk3">Option3</label>
+			                				</li>
+			                			</ul>
+	        						</dd>
+	        					</dl>
+	        				</div>
+	        			</div>
+	        			<!-- Search Button -->
+		                <div class="btnsrch">
+		                	<button class="btn"><span>초기화</span></button>
+		                    <button class="btn search"><span>조회</span></button>
+		                </div>
+		                <!--// Search Button -->
+	        		</div>
+	        		<!-- //search form -->
+	        		<div class="row">
+<pre class="code">
+&lt;div class="search_form"&gt;
+	&lt;!-- 검색 조건 --&gt;
+	&lt;div class="row_group"&gt;
+		&lt;div class="row"&gt;&lt;!-- 1번째 행 --&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;Input&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;Select&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;Select&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;&lt;!-- 2번째 행 --&gt;
+			&lt;dl class="col"&gt;
+				&lt;dt&gt;&lt;span&gt;Select+Input&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;&lt;!-- 3번째 행 --&gt;
+			&lt;dl class="col col_4 col_xxl_8 col_xl_10"&gt;
+				&lt;dt&gt;&lt;span&gt;기간 선택1&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+			&lt;dl class="col col_8 col_xxl_12"&gt;
+				&lt;dt&gt;&lt;span&gt;기간 선택2&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;&lt;!-- 4번째 행 --&gt;
+			&lt;dl class="col col_xl_12"&gt;
+				&lt;dt&gt;&lt;span&gt;Radio&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+			&lt;dl class="col col_xl_12"&gt;
+				&lt;dt&gt;&lt;span&gt;Checkbox&lt;/span&gt;&lt;/dt&gt;
+				&lt;dd&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- //검색 조건 --&gt;
+	&lt;!-- Search Button --&gt;
+	&lt;div class="btnsrch"&gt;
+		&lt;button class="btn"&gt;&lt;span&gt;초기화&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn search"&gt;&lt;span&gt;조회&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;!--// Search Button --&gt;
+&lt;/div&gt;
+</pre>	        		
+	        		</div>
+                </div>
+            </div>
+            <!-- //Search Form - Type2 -->
+            
+            <!-- Text -->
+            <div class="row" id="guideText">
+                <div class="title_area">
+                    <h4>Text</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+	                	<li>폰트 : Noto Sans KR : 본고딕</li>
+	                	<li>굵기 : font-weight:300 / font-weight:400 / font-weight:500 / font-weight:700(font-weight:regular, font-weight:bold와 같은 이니셜 사용 금지.)</li>
+	                	<li>태그 : p, span</li>
+	                	<li>colors</li>
+	                </ul>
+	                <div class="row">
+	                	<p class="col_lightGreen">컬러 라이트 그린</p>
+	                	<p class="col_green ml10">컬러 그린</p>
+	                	<p class="col_deepGreen ml10">컬러 딥 그린</p>
+	                	<p class="col_darkGreen ml10">컬러 다크 그린</p>
+	                	<p class="col_orange ml10">컬러 오렌지</p>
+	                	<p class="col_red ml10">컬러 레드</p>
+	                	<p class="col_lightGray ml10">컬러 라이트 그레이</p>
+	                	<p class="col_gray ml10">컬러 그레이</p>
+	                	<p class="col_deepGray ml10">컬러 딥 그레이</p>
+	                	<p class="col_greenGray ml10">컬러 그린 그레이</p>
+	                </div>
+	                <div class="row">
+<pre class="code">
+&lt;!-- Text Colors --&gt;
+&lt;p class="col_lightGreen"&gt;컬러 라이트 그린&lt;/p&gt;
+&lt;p class="col_green"&gt;컬러 그린&lt;/p&gt;
+&lt;p class="col_deepGreen"&gt;컬러 딥 그린&lt;/p&gt;
+&lt;p class="col_darkGreen"&gt;컬러 다크 그린&lt;/p&gt;
+&lt;p class="col_orange"&gt;컬러 오렌지&lt;/p&gt;
+&lt;p class="col_red"&gt;컬러 레드&lt;/p&gt;
+&lt;p class="col_lightGray"&gt;컬러 라이트 그레이&lt;/p&gt;
+&lt;p class="col_gray"&gt;컬러 그레이&lt;/p&gt;
+&lt;p class="col_deepGray"&gt;컬러 딥 그레이&lt;/p&gt;
+&lt;p class="col_greenGray"&gt;컬러 그린 그레이&lt;/p&gt;
+<br>
+</pre>	             
+	                </div>
+                </div>
+            </div>
+            <!-- //Text -->
+            
+            <!-- TITLE -->
+            <div class="row" id="guideTitle">
+                <div class="title_area">
+                    <h4>Title</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+	                <!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h2>페이지 타이틀(h2)</h2>
+	                        <ul class="location">
+	                            <li>홈</li>
+	                            <li>depth1</li>
+	                            <li>depth2</li>
+	                            <li>depth3</li>
+	                        </ul>
+	                    </div>
+	                    <div class="fright">
+	                    	<button class="btn" title="button"><span>button</span></button>
+	                        <button class="btn list" title="button"><span>button</span></button>
+	                        <button class="btn line" title="button"><span>button</span></button>
+	                        <button class="btn activ" title="button"><span>button</span></button>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                
+	                <!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <h3>컨텐츠 타이틀(h3)</h3>
+	                        <div class="total_page">
+	                            <span>총 건수:</span>
+	                            <strong>852,159 건</strong>
+	                        </div>
+	                    </div>
+	                    <div class="fright">
+	                    	<button class="btn send" title="button"><span>button</span></button>
+	                        <button class="btn" title="button"><span>button</span></button>
+	                        <button class="btn list" title="button"><span>button</span></button>
+	                        <button class="btn line" title="button"><span>button</span></button>
+	                        <button class="btn activ" title="button"><span>button</span></button>
+	                        <select class="select" name="sel1">
+	                        	<option value="opt1" selected>10건 보기</option>
+	                            <option value="opt1">15건 보기</option>
+	                            <option value="opt2">20건 보기</option>
+	                        </select>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+	                
+	                <!-- title_area -->
+	                <div class="title_area">
+	                    <div class="fleft">
+	                        <div class="total_page">
+	                            <span>총 건수:</span>
+	                            <strong>852,159 건</strong>
+	                        </div>
+	                    </div>
+	                    <div class="fright">
+	                    	<button class="btn send" title="button"><span>button</span></button>
+	                        <button class="btn" title="button"><span>button</span></button>
+	                        <button class="btn list" title="button"><span>button</span></button>
+	                        <button class="btn line" title="button"><span>button</span></button>
+	                        <button class="btn activ" title="button"><span>button</span></button>
+	                        <select class="select">
+	                        	<option value="opt1" selected>10건 보기</option>
+	                            <option value="opt1">15건 보기</option>
+	                            <option value="opt2">20건 보기</option>
+	                        </select>
+	                    </div>
+	                </div>
+	                <!--// title_area -->
+					<div class="row">							
+<pre class="code">
+&lt;!-- 페이지 타이틀(h2) --&gt;
+&lt;div class="title_area"&gt;
+	&lt;div class="fleft"&gt;
+		&lt;h2&gt;계약관리&lt;/h2&gt;
+		&lt;ul class="location"&gt;
+			&lt;li&gt;홈&lt;/li&gt;
+			&lt;li&gt;depth1&lt;/li&gt;
+			&lt;li&gt;depth2&lt;/li&gt;
+			&lt;li&gt;depth3&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class="fright"&gt;버튼 및 폼 박스 관련 영역&lt;/div&gt;
+&lt;/div&gt;
+<br>
+&lt;!-- 컨텐츠 타이틀(h3) --&gt;
+&lt;div class="title_area"&gt;
+	&lt;div class="fleft"&gt;
+		&lt;h3&gt;타이틀&lt;/h3&gt;
+		&lt;div class="total_page"&gt;
+			&lt;span&gt;총 건수:&lt;/span&gt;
+			&lt;strong&gt;852,159 건&lt;/strong&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="fright"&gt;버튼 및 폼 박스 관련 영역&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+					</div>
+				</div>
+            </div>
+            <!-- //TITLE -->
+            <!-- BUTTON -->
+            <div class="row" id="guideBtn">
+                <div class="title_area">
+                    <h4>Button</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>type : button, a href</li>
+                		<li>use class : .btn</li>
+                		<li>attr : disabled</li>
+                		<li>사이즈 및 컬러 인라인 태그(style="")로 변경 금지</li>
+                	</ul>
+                	<div class="row">
+                		<button class="btn"><span>디폴트 버튼</span></button>		            	
+		            	<button class="btn search" title="조회버튼"><span>조회버튼</span></button>
+		                <button class="btn activ" title="등록하기"><span>등록</span></button>
+		                <button class="btn line" title="기본버튼 &amp; 삭제버튼"><span>기본버튼 &amp; 삭제버튼</span></button>
+		                <button class="btn list" title="목록버튼"><span>목록버튼</span></button>
+		                <button class="btn list normal" title="세부버튼"><span>세부버튼</span></button>
+		                <button class="btn send" title="E-mail &amp; SMS 버튼"><span>E-mail &amp; SMS 버튼</span></button>
+                	</div>
+                	<div class="row">
+                		<button class="btn" disabled><span>디폴트 버튼</span></button>		            	
+		            	<button class="btn search" title="조회버튼" disabled><span>조회버튼</span></button>
+		                <button class="btn activ" title="등록하기" disabled><span>등록</span></button>
+		                <button class="btn line" title="기본버튼 &amp; 삭제버튼" disabled><span>기본버튼 &amp; 삭제버튼</span></button>
+		                <button class="btn list" title="목록버튼" disabled><span>목록버튼</span></button>
+		                <button class="btn list normal" title="세부버튼" disabled><span>세부버튼</span></button>
+		                <button class="btn send" title="E-mail &amp; SMS 버튼" disabled><span>E-mail &amp; SMS 버튼</span></button>
+                	</div>
+                	<div class="row">
+                		<button class="btn icontxt list download" title="일괄 다운로드 버튼"><span>일괄 다운로드 버튼</span></button>
+                		<button class="btn icon file" title="첨부파일"><span>첨부파일</span></button>
+                	</div>
+					<div class="row">
+<pre class="code">
+&lt;!-- 기본 버튼 --&gt;
+&lt;button class="btn"&gt;&lt;span&gt;디폴트 버튼&lt;/span&gt;&lt;/button&gt;	            	
+&lt;button class="btn search" title="조회버튼"&gt;&lt;span&gt;조회버튼&lt;/span&gt;&lt;/button&gt;
+&lt;button class="btn activ" title="등록하기"&gt;&lt;span&gt;등록&lt;/span&gt;&lt;/button&gt;
+&lt;button class="btn line" title="기본버튼 &amp; 삭제버튼"&gt;&lt;span&gt;기본버튼 &amp; 삭제버튼&lt;/span&gt;&lt;/button&gt;
+&lt;button class="btn list" title="목록버튼"&gt;&lt;span&gt;목록버튼&lt;/span&gt;&lt;/button&gt;
+&lt;button class="btn list normal" title="세부버튼"&gt;&lt;span&gt;세부버튼&lt;/span&gt;&lt;/button&gt;
+&lt;button class="btn send" title="E-mail &amp; SMS 버튼"&gt;&lt;span&gt;E-mail &amp; SMS 버튼&lt;/span&gt;&lt;/button&gt;
+<br>
+&lt;!-- 아이콘+텍스트 버튼, 아이콘 버튼 --&gt;
+&lt;button class="btn icontxt list download" title="일괄 다운로드 버튼"&gt;&lt;span&gt;일괄 다운로드 버튼&lt;/span&gt;&lt;/button&gt;
+&lt;button class="btn icon file" title="첨부파일"&gt;&lt;span&gt;첨부파일&lt;/span&gt;&lt;/button&gt;
+</pre>
+					</div>
+                </div>
+            </div>
+            <!-- //BUTTON -->
+            <!-- Input -->
+            <div class="row" id="guideInput">
+                <div class="title_area">
+                    <h4>Input</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>기본 100% 넓이 이므로, 사이즈 제어가 필요한 경우 class 를 추가하여 태그에 사용하거나 외부에 감싸는 태그를 통해 제어.</li>
+                		<li>type : text, password, email, url, tel</li>
+                		<li>use attr : readonly, disabled</li>
+                		<li>기본</li>
+                	</ul>
+                	<div class="row">
+                		<div class="col col-2 pad15"><input type="text" placeholder="텍스트"></div>
+                		<div class="col col-2 pad15"><input type="password" placeholder="비밀번호"></div>
+                		<div class="col col-2 pad15"><input type="email" placeholder="이메일"></div>
+                		<div class="col col-2 pad15"><input type="url" placeholder="url"></div>
+                		<div class="col col-2 pad15"><input type="tel" placeholder="tel"></div>
+                	</div>
+                	<ul class="guide_info mt10">               		
+                		<li>readonly</li>
+                	</ul>
+                	<div class="row">
+                		<div class="col col-2 pad15"><input type="text" placeholder="텍스트" readonly></div>
+                		<div class="col col-2 pad15"><input type="password" placeholder="비밀번호" readonly></div>
+                		<div class="col col-2 pad15"><input type="email" placeholder="이메일" readonly></div>
+                		<div class="col col-2 pad15"><input type="url" placeholder="url" readonly></div>
+                		<div class="col col-2 pad15"><input type="tel" placeholder="tel" readonly></div>
+                	</div>
+                	<ul class="guide_info mt10">               		
+                		<li>disabled</li>
+                	</ul>
+                	<div class="row">
+                		<div class="col col-2 pad15"><input type="text" placeholder="텍스트" disabled></div>
+                		<div class="col col-2 pad15"><input type="password" placeholder="비밀번호" disabled></div>
+                		<div class="col col-2 pad15"><input type="email" placeholder="이메일" disabled></div>
+                		<div class="col col-2 pad15"><input type="url" placeholder="url" disabled></div>
+                		<div class="col col-2 pad15"><input type="tel" placeholder="tel" disabled></div>
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;input type="text" placeholder="텍스트"&gt;
+&lt;input type="password" placeholder="비밀번호"&gt;
+&lt;input type="email" placeholder="이메일"&gt;
+&lt;input type="url" placeholder="url"&gt;
+&lt;input type="tel" placeholder="tel"&gt;
+</pre>
+                	</div>
+                </div>
+            </div>
+            <!-- //Input -->
+            
+            <!-- Datepicker -->
+            <div class="row" id="guideDate">
+                <div class="title_area">
+                    <h4>Datepicker</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>직접입력을 막기위해 readonly로만 사용한다.</li>
+                	</ul>
+                	<div class="row">
+                		<div class="col col-2 pad15">
+                			<p class="mb10">[Single Date]</p>
+                			<input class="date useDatepicker" id="" type="text" placeholder="YYYY-MM-DD" readonly />
+                		</div>
+                		<div class="col col-3 pad15">
+                			<p class="mb10">[Period Date]</p>
+                			<div class="date_box">
+		             			<input class="date useDatepicker dateFrom" id="" type="text" placeholder="YYYY-MM-DD" />
+								<span>~</span>
+								<input class="date useDatepicker dateTo" id="" type="text" placeholder="YYYY-MM-DD" />
+		             		</div>
+                		</div>
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;!-- Single Date --&gt;
+&lt;input class="date useDatepicker" id="" type="text" placeholder="YYYY-MM-DD" readonly /&gt;
+<br>
+&lt;!-- Period Date --&gt;
+&lt;div class="date_box"&gt;
+	&lt;input class="date useDatepicker dateFrom" id="" type="text" placeholder="YYYY-MM-DD" /&gt;
+	&lt;span>~&lt;/span&gt;
+	&lt;input class="date useDatepicker dateTo" id="" type="text" placeholder="YYYY-MM-DD" /&gt;
+&lt;/div&gt;
+</pre>                	
+                	</div>
+                </div>
+             </div>
+             <!-- //Datepicker -->
+
+             <!-- Month Picker -->
+            <div class="row" id="guideMonth">
+                <div class="title_area">
+                    <h4>Month Picker</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>셀렉트 박스로 사용</li>
+                	</ul>
+                	<div class="row">
+                		<div class="col col-2 pad15">
+                			<p class="mb10">[Single Month]</p>
+                			<div class="flex alignc">
+            					<select class="select" name="fromYear">
+            						<option value="2022">2022</option>
+            						<option value="2023">2023</option>
+            						<option value="2024">2024</option>
+            						<option value="2025">2025</option>
+            						<option value="2026">2026</option>
+            						<option value="2027">2027</option>
+            						<option value="2028">2028</option>
+            						<option value="2029">2029</option>
+            						<option value="2030">2030</option>
+            						<option value="2031">2031</option>
+            					</select>
+            					<select class="select" name="fromMonth">
+            						<option value="01">01</option>
+            						<option value="02">02</option>
+            						<option value="03">03</option>
+            						<option value="04">04</option>
+            						<option value="05">05</option>
+            						<option value="06">06</option>
+            						<option value="07">07</option>
+            						<option value="08">08</option>
+            						<option value="09">09</option>
+            						<option value="10">10</option>
+            						<option value="11">11</option>
+            						<option value="12">12</option>
+            					</select>							
+            				</div>
+                		</div>
+                		<div class="col col-4 pad15">
+                			<p class="mb10">[Period Month]</p>
+                			<div class="flex alignc">
+            					<select class="select" name="yearFrom">
+            						<option value="2022">2022</option>
+            						<option value="2023">2023</option>
+            						<option value="2024">2024</option>
+            						<option value="2025">2025</option>
+            						<option value="2026">2026</option>
+            						<option value="2027">2027</option>
+            						<option value="2028">2028</option>
+            						<option value="2029">2029</option>
+            						<option value="2030">2030</option>
+            						<option value="2031">2031</option>
+            					</select>
+            					<select class="select" name="monthFrom">
+            						<option value="01">01</option>
+            						<option value="02">02</option>
+            						<option value="03">03</option>
+            						<option value="04">04</option>
+            						<option value="05">05</option>
+            						<option value="06">06</option>
+            						<option value="07">07</option>
+            						<option value="08">08</option>
+            						<option value="09">09</option>
+            						<option value="10">10</option>
+            						<option value="11">11</option>
+            						<option value="12">12</option>
+            					</select>
+            					<span>~</span>   
+            					<select class="select" name="yearTo">
+            						<option value="2022">2022</option>
+            						<option value="2023">2023</option>
+            						<option value="2024">2024</option>
+            						<option value="2025">2025</option>
+            						<option value="2026">2026</option>
+            						<option value="2027">2027</option>
+            						<option value="2028">2028</option>
+            						<option value="2029">2029</option>
+            						<option value="2030">2030</option>
+            						<option value="2031">2031</option>
+            					</select>
+            					<select class="select" name="monthTo">
+            						<option value="01">01</option>
+            						<option value="02">02</option>
+            						<option value="03">03</option>
+            						<option value="04">04</option>
+            						<option value="05">05</option>
+            						<option value="06">06</option>
+            						<option value="07">07</option>
+            						<option value="08">08</option>
+            						<option value="09">09</option>
+            						<option value="10">10</option>
+            						<option value="11">11</option>
+            						<option value="12">12</option>
+            					</select>        							
+            				</div>
+                		</div>
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;!-- Single Month --&gt;
+&lt;input class="date useDatepicker" id="" type="text" placeholder="YYYY-MM-DD" readonly /&gt;
+<br>
+&lt;!-- Period Date --&gt;
+&lt;div class="date_box"&gt;
+	&lt;input class="date useDatepicker dateFrom" id="" type="text" placeholder="YYYY-MM-DD" /&gt;
+	&lt;span>~&lt;/span&gt;
+	&lt;input class="date useDatepicker dateTo" id="" type="text" placeholder="YYYY-MM-DD" /&gt;
+&lt;/div&gt;
+</pre>                	
+                	</div>
+                </div>
+             </div>
+             <!-- //Month Picker -->
+                
+            <!-- Select -->
+            <div class="row" id="guideSelect">
+                <div class="title_area">
+                    <h4>Select</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>use class : select</li>
+                		<li>기본 100% 넓이 이므로, 사이즈 제어가 필요한 경우 class 를 추가하여 태그에 사용하거나 외부에 감싸는 태그를 통해 제어.</li>
+                		<li>use attr : disabled</li>
+                	</ul>
+                	<div class="row">
+                		<div class="col col-3 pad15">
+                			<select class="select">
+	                			<option value="opt1" selected="">option1</option>
+	                			<option value="opt2">option2</option>
+	                			<option value="opt3">option3</option>
+	                		</select>
+                		</div>
+                		<div class="col col-3 pad15">
+                			<select class="select" disabled>
+	                			<option value="opt1" selected="">option1</option>
+	                			<option value="opt2">option2</option>
+	                			<option value="opt3">option3</option>
+	                		</select>
+                		</div>
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;select class="select"&gt;
+	&lt;option value="opt1" selected=""&gt;option1&lt;/option&gt;
+	&lt;option value="opt2"&gt;option2&lt;/option&gt;
+	&lt;option value="opt3"&gt;option3&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+                	</div>
+                </div>
+            </div>
+            <!-- //Select -->
+            
+            <!-- Multi Select -->
+            <div class="row" id="guideMulti">
+                <div class="title_area">
+                    <h4>Multi Select</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                <ul class="guide_info">
+                	<li>사용 class : multi_select</li>
+                	<li>검색영역 내 체크박스 3개 이상 또는 체크박스 길이가 길 때는 Multi Select 사용을 권장한다.</li>
+                	<li>스크립트 : 공통 X, 각 페이지 내에서 처리.</li>
+                </ul>
+                <div class="row">
+                	<div class="col col-4">
+                		<div class="multi_select" id="multiSelect">
+                			<div class="tooltip_box"></div>
+		        			<div class="text_box"><span>선택</span></div>
+		        			<ul class="select_box">
+		        				<li>
+		        					<input id="check_1" name="check_1" type="checkbox" />
+									<label for="check_1">option1</label>
+		        				</li>
+		        				<li>
+		        					<input id="check_2" name="check_2" type="checkbox" />
+									<label for="check_2">option2</label>
+		        				</li>
+		        				<li>
+		        					<input id="check_3" name="check_3" type="checkbox" />
+									<label for="check_3">option3</label>
+		        				</li>
+		        				<li>
+		        					<input id="check_4" name="check_4" type="checkbox" />
+									<label for="check_4">option4</label>
+		        				</li>
+		        				<li>
+		        					<input id="check_5" name="check_5" type="checkbox" />
+									<label for="check_5">option3</label>
+		        				</li>
+		        			</ul>
+		        		</div>
+                	</div>
+                </div>
+                <div class="row">
+<pre class="code">
+&lt;!-- Multi Select --&gt;
+&lt;div class="multi_select" id="multiSelect"&gt;
+	&lt;div class="tooltip_box"&gt;&lt;/div&gt;
+	&lt;div class="text_box"&gt;&lt;span&gt;선택&lt;/span&gt;&lt;/div&gt;
+	&lt;ul class="select_box"&gt;
+		&lt;li&gt;
+			&lt;input id="check_1" name="check_1" type="checkbox" /&gt;
+			&lt;label for="check_1"&gt;option1&lt;/label&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;input id="check_2" name="check_2" type="checkbox" /&gt;
+			&lt;label for="check_2"&gt;option2&lt;/label&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+                </div>
+                </div>
+            </div>
+             <!-- Multi Select -->
+             
+             <!-- Textarea -->
+            <div class="row" id="guideTextarea">
+                <div class="title_area">
+                    <h4>Textarea</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+	                	<li>use class : select</li>
+	                	<li>width 제어 : 기본 100% 넓이 이므로, 사이즈 제어가 필요한 경우 class 를 추가하여 태그에 사용하거나 외부에 감싸는 태그를 통해 제어.</li>
+	                	<li>height 제어 : height로 지정하지 말고 rows를 통해 제어.(rows="3" : 세줄)</li>
+	                	<li>use attr : readonly, disabled</li>
+	                </ul>
+	                <div class="row">
+	                	<div class="col col-3 pad15">
+	                		<textarea placeholder="default"></textarea>
+	                	</div>
+	                	<div class="col col-3 pad15">
+	                		<textarea placeholder="3줄" rows="3"></textarea>
+	                	</div>
+	                	<div class="col col-3 pad15">
+	                		<textarea placeholder="4줄 readonly" rows="4" readonly></textarea>
+	                	</div>
+	                	<div class="col col-3 pad15">
+	                		<textarea placeholder="5줄 disabled" rows="5" disabled></textarea>
+	                	</div>
+	                </div>
+	                <div class="row">
+<pre class="code">
+&lt;textarea placeholder="default"&gt;&lt;/textarea&gt;
+&lt;textarea placeholder="3줄" rows="3"&gt;&lt;/textarea&gt;
+&lt;textarea placeholder="4줄 readonly" rows="4" readonly&gt;&lt;/textarea&gt;
+&lt;textarea placeholder="5줄 disabled" rows="5" disabled&gt;&lt;/textarea&gt;
+</pre>
+	                </div>
+                </div>
+            </div>
+            <!-- //Textarea -->
+            
+            <!-- Checkbox -->
+			<div class="row" id="guideChk">
+                <div class="title_area">
+                    <h4>Checkbox</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>input의 id와 label의 id를 동일하게 맞춘다.</li>
+                		<li>use attr : disabled, checked</li>
+                		<li>텍스트 없이 체크박스만 사용하는 경우 : label에 'hidden' class 추가</li>
+                		<li>체크박스 여러 개 사용 : ul(class : chks_box) 태그를 사용하여 각 li 내에 input과 label을 따로 위치. (반응형 작업 시 input과 label 분리되는 것을 방지)</li>
+                		<li>기본</li>
+                	</ul>
+                	<div class="row">
+                		<input id="check01" name="check01" type="checkbox">
+                		<label for="check01" class="hidden">label 없는 경우</label>
+                		<input id="check02" name="check02" type="checkbox">
+                		<label for="check02">label 있는 경우</label>
+                	</div>
+                	<ul class="guide_info mt10">
+                		<li>체크박스 여러개 사용</li>
+                	</ul>
+                	<ul class="chks_box">
+                		<li>
+                			<input id="check03" name="check03" type="checkbox">
+                			<label for="check03">option</label>
+                		</li>
+                		<li>
+                			<input id="check04" name="check04" type="checkbox" checked>
+                			<label for="check04">option checked</label>
+                		</li>
+                		<li>
+                			<input id="check05" name="check05" type="checkbox" disabled>
+                			<label for="check05">option Disabled</label>
+                		</li>
+                		<li>
+                			<input id="check06" name="check06" type="checkbox" checked disabled>
+                			<label for="check06">option checked Disabled</label>
+                		</li>
+                	</ul>
+                	<div class="row">
+<pre class="code">
+&lt;!-- 기본 --&gt;
+&lt;input id="check01" name="check01" type="checkbox"&gt;
+&lt;label for="check01"&gt;option1&lt;/label&gt;
+<br>
+&lt;!-- 텍스트 없이 체크박스만 사용 --&gt;
+&lt;input id="check02" name="check02" type="checkbox"&gt;
+&lt;label for="check02" class="hidden"&gt;option2&lt;/label&gt;
+<br>
+&lt;!-- 체크박스 여러 개 사용 --&gt;
+&lt;ul class="chks_box"&gt;
+	&lt;li&gt;
+		&lt;input id="check03" name="check03" type="checkbox"&gt;
+		&lt;label for="check03"&gt;option3&lt;/label&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;input id="check04" name="check04" type="checkbox"&gt;
+		&lt;label for="check04"&gt;option4&lt;/label&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                	</div>
+                </div>
+            </div>
+			<!-- //Checkbox -->
+            <!-- Radio -->
+            <div class="row" id="guideRadio">
+                <div class="title_area">
+                    <h4>Radio</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>input의 id와 label의 id를 동일하게 맞춘다.</li>
+                		<li>그룹끼리 name을 동일하게 해준다.</li>
+                		<li>use attr : disabled, checked</li>
+                		<li>ul(class : radio_box) 태그를 사용하여 각 li 내에 input과 label을 따로 위치. (반응형 작업 시 input과 label 분리되는 것을 방지)</li>
+                		<li>기본</li>
+                	</ul>
+                	<div class="row">
+	                	<ul class="radio_box">
+	                		<li>
+	                			<input type="radio" id="g1" name="radio1" checked>
+	                			<label for="g1">Radio g1 checked</label>
+	                		</li>
+	                		<li>
+	                			<input type="radio" id="g2" name="radio1">
+	                			<label for="g2">Radio g2</label>
+	                		</li>
+	                	</ul>
+                	</div>
+                	<div class="row">
+	                	<ul class="radio_box">
+	                		<li>
+	                			<input type="radio" id="g3" name="radio2" disabled>
+	                			<label for="g3">Radio disabled</label>
+	                		</li>
+	                		<li>
+	                			<input type="radio" id="g4" name="radio2" checked disabled>
+	                			<label for="g4">Radio Checked Disabled</label>
+	                		</li>
+	                	</ul>
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;!-- 기본 --&gt;
+&lt;ul class="radio_box"&gt;
+	&lt;li&gt;
+		&lt;input type="radio" id="g1" name="radio1" checked&gt;
+		&lt;label for="g1"&gt;Radio g1 checked&lt;/label&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;input type="radio" id="g2" name="radio1"&gt;
+		&lt;label for="g2"&gt;Radio g2&lt;/label&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                	</div>
+                </div>
+            </div>
+            <!-- //Radio -->
+             
+             <!-- Group of Form -->
+             <div class="row" id="guideGroup">
+                <div class="title_area">
+                    <h4>Group of Form</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li></li>
+                	</ul>
+                </div>
+            </div>
+             <!-- //Group of Form -->
+             
+             <!-- File Upload -->
+             <div class="row" id="guideFile">
+                <div class="title_area">
+                    <h4>File Upload</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<div class="row">
+	                	<div class="col col-xl-6">
+	                		<p class="mb10">default - 1개</p>
+		                	<div class="uploadForm">
+								<ul class="add__attach__list">
+									<li>
+										<span class="add__attach__file" data-ui="attach">
+											<span class="btn__attach">
+												<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+											</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col col-xl-6">
+							<p class="mb10">default edit - 1개</p>
+							<div class="uploadForm mt10">
+								<ul class="add__attach__list">
+									<li>
+										<span class="add__attach__file" data-ui="attach">
+											<span class="btn__attach">
+												<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+											</span>
+											<span class="file">
+												<span class="loc">에스케이이엔에스 통신 증명원.pdf</span>
+												<button type="button" class="delete">삭제</button>
+											</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col col-xl-6">
+							<p class="mb10">default - 5개</p>
+							<div class="uploadForm">
+						 		<button type="button" class="add__attach btn line">첨부파일 추가</button>
+								<ul class="add__attach__list">
+									<li>
+								    	<span class="add__attach__file" data-ui="attach">
+								        	<span class="btn__attach">
+								            	<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+								            </span>
+								        </span>
+								    </li>
+								</ul>
+							</div>
+						</div>
+						<div class="col col-xl-6">
+							<p class="mb10">default edit - 5개</p>
+							<div class="uploadForm">
+						 		<button type="button" class="add__attach btn line">첨부파일 추가</button>
+								<ul class="add__attach__list">
+									<li>
+								    	<span class="add__attach__file" data-ui="attach">
+								        	<span class="btn__attach">
+								            	<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+								            </span>
+								            <span class="file">
+												<span class="loc">에스케이이엔에스 통신 증명원.pdf</span>
+												<button type="button" class="delete">삭제</button>
+											</span>
+								        </span>
+								    </li>
+								    <li>
+								    	<span class="add__attach__file" data-ui="attach">
+								        	<span class="btn__attach">
+								            	<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+								            </span>
+								            <span class="file">
+												<span class="loc">에스케이이엔에스 통신 증명원.pdf</span>
+												<button type="button" class="delete">삭제</button>
+											</span>
+								        </span>
+								    </li>
+								    <li>
+								    	<span class="add__attach__file" data-ui="attach">
+								        	<span class="btn__attach">
+								            	<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+								            </span>
+								            <span class="file">
+												<span class="loc">에스케이이엔에스 통신 증명원.pdf</span>
+												<button type="button" class="delete">삭제</button>
+											</span>
+								        </span>
+								    </li>
+								    <li>
+								    	<span class="add__attach__file" data-ui="attach">
+								        	<span class="btn__attach">
+								            	<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+								            </span>
+								            <span class="file">
+												<span class="loc">에스케이이엔에스 통신 증명원.pdf</span>
+												<button type="button" class="delete">삭제</button>
+											</span>
+								        </span>
+								    </li>
+								    <li>
+								    	<span class="add__attach__file" data-ui="attach">
+								        	<span class="btn__attach">
+								            	<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+								            </span>
+								            <span class="file">
+												<span class="loc">에스케이이엔에스 통신 증명원.pdf</span>
+												<button type="button" class="delete">삭제</button>
+											</span>
+								        </span>
+								    </li>
+								</ul>
+							</div>
+						</div>
+                	</div>
+                </div>
+            </div>
+            <!-- //File Upload -->
+             
+            <!-- Paging -->
+            <div class="row" id="guidePaging">
+                <div class="title_area">
+                    <h4>Paging</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>페이징은 5개씩 처리한다.</li>
+                		<li>current page : a 대신 strong 태그로 처리.</li>
+                	</ul>
+                	<div class="row">
+                		<!-- Paging List -->
+	                    <div class="paging_area">
+	                    	<a href="#" class="first"><span>처음페이지로 가기</span></a>
+	                        <a href="#" class="prev"><span>전페이지로 가기</span></a>
+	                        <a href="#">1</a>
+	                        <strong>2</strong>
+	                        <a href="#">3</a>
+	                        <a href="#">4</a>
+	                        <a href="#">5</a>
+	                        <a href="#" class="next"><span>다음페이지로 가기</span></a>
+	                        <a href="#" class="last"><span>마지막페이지로 가기</span></a>
+	                     </div>
+	                     <!--// Paging List -->
+                	</div>
+                     <div class="row">
+<pre class="code">
+&lt;div class="paging_area"&gt;
+	&lt;a href="#" class="first"&gt;&lt;span&gt;처음페이지로 가기&lt;/span&gt;&lt;/a&gt;
+	&lt;a href="#" class="prev"&gt;&lt;span&gt;전페이지로 가기&lt;/span&gt;&lt;/a&gt;
+	&lt;a href="#"&gt;1&lt;/a&gt;
+	&lt;strong&gt;2&lt;/strong&gt;
+	&lt;a href="#"&gt;3&lt;/a&gt;
+	&lt;a href="#"&gt;4&lt;/a&gt;
+	&lt;a href="#"&gt;5&lt;/a&gt;
+	&lt;a href="#" class="next"&gt;&lt;span&gt;다음페이지로 가기&lt;/span&gt;&lt;/a&gt;
+	&lt;a href="#" class="last"&gt;&lt;span&gt;마지막페이지로 가기&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>                     
+                     </div>
+                </div>
+            </div>
+            <!-- //Paging -->
+            
+            <!-- Tab -->
+            <div class="row" id="guideTab">
+                <div class="title_area">
+                    <h4>Tab</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>페이지 전체 탭</li>
+                	</ul>
+                	<!-- TAB BOX -->
+                    <div class="tabbox">
+                    	<ul class="tablist">
+                        	<li class="on">
+                                <a href="javascript:void(0)" title="TAB_MENU1">TAB_MENU1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" title="TAB_MENU2">TAB_MENU2</a>
+                            </li>
+                        </ul>
+                        <!-- TAB1 CONTENT -->
+                        <div class="tab">
+                            <div class="row">TAB_MENU1 내용</div>
+                        </div>
+                        <!--// TAB1 CONTENT -->
+                        <!-- TAB2 CONTENT -->
+                        <div class="tab hidden">
+                            <div class="row"> TAB_MENU2 내용</div>
+                        </div>
+                    	<!--// TAB2 CONTENT -->
+                    </div>
+                	<!--// TAB BOX -->
+                	<ul class="guide_info mt30">
+                		<li>페이지 전체 탭 + 버튼</li>
+                	</ul>
+                	<!-- TAB BOX -->
+                    <div class="tabbox">
+                    	<ul class="tablist">
+                        	<li class="on">
+                                <a href="javascript:void(0)" title="TAB_MENU3">TAB_MENU3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" title="TAB_MENU4">TAB_MENU4</a>
+                            </li>
+                        </ul>
+                        <!-- TAB1 CONTENT -->
+                        <div class="tab">
+                            <div class="row">TAB_MENU3 내용</div>
+                        </div>
+                        <!--// TAB1 CONTENT -->
+                        <!-- TAB2 CONTENT -->
+                        <div class="tab hidden">
+                            <div class="row"> TAB_MENU4 내용</div>
+                        </div>
+                    	<!--// TAB2 CONTENT -->
+                    </div>
+                	<!--// TAB BOX -->
+                </div>
+            </div>
+            <!-- //Tab -->
+            
+            <!-- Table - 상세 -->
+            <div class="row" id="guideTable1">
+                <div class="title_area">
+                    <h4>Table - 상세</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>col style을 통해 너비 조절.(col style="width:10%;")</li>
+                		<li>필수 조건이 있을 때는 th 내에 strong tag 사용.( strong class="aster" )</li>
+                		<li>td 안에 여러 개의 폼 요소들이 들어가야 할 때는 div(class="flex")에 넣고 작성한다.</li>
+                	</ul>
+                	<div class="row">
+						<table>
+                                <colgroup>
+                                    <col style="width: 150px;" />
+                                    <col />
+                                    <col style="width: 150px;" />
+                                    <col />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><strong class="aster">TEXT</strong></th>
+                                        <td colspan="3">Rayful System</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">INPUT</th>
+                                        <td colspan="3">
+                                            <div class="flex">
+                                                <label class="hidden">INPUT</label>
+                                                <input type="text" placeholder="입력" />
+                                                <label class="hidden">readonly</label>
+                                                <input type="text" placeholder="readonly" readonly />
+                                                <label class="hidden">disabled</label>
+                                                <input type="text" placeholder="disabled" disabled />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">DATEPICKER</th>
+                                        <td>
+                                            <input class="date useDatepicker" type="text" placeholder="YYYY-MM-DD" style="width: 150px;" />
+                                        </td>
+                                        <th scope="row">SELECT</th>
+                                        <td>
+                                            <div class="flex">
+                                                <select class="select">
+                                                    <option value="">option 01</option>
+                                                    <option value="">option 02</option>
+                                                </select>
+                                                <select class="select" disabled>
+                                                    <option value="">option 01</option>
+                                                    <option value="">option 02</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">CHECKBOX</th>
+                                        <td>
+                                        	<ul class="chks_box">
+                                        		<li>
+                                        			<input id="check_01" name="check_01" type="checkbox" />
+                                            		<label for="check_01" class="hidden">lavel 없는 경우</label>
+                                        		</li>
+                                        		<li>
+                                        			<input id="check_02" name="check_02" type="checkbox" />
+                                            		<label for="check_02">lavel 있는 경우</label>
+                                        		</li>
+                                        	</ul>
+                                        </td>
+                                        <th scope="row">RADIO</th>
+                                        <td>
+                                        	<ul class="radio_box">
+                                        		<li>
+	                                        		<input id="radio_01" name="radio1" type="radio" />
+	                                            	<label for="radio_01" class="hidden">lavel 없는 경우</label>
+                                        		</li>
+                                        		<li>
+                                        			<input id="radio_02" name="radio1" type="radio" />
+                                            		<label for="radio_02">lavel 있는 경우</label>
+                                        		</li>
+                                        	</ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>						
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;table&gt;
+	&lt;colgroup&gt;
+		&lt;col style="width: 150px;" /&gt;
+		&lt;col /&gt;
+		&lt;col style="width: 150px;" /&gt;
+		&lt;col /&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;&lt;strong class="aster"&gt;TEXT&lt;/strong&gt;&lt;/th&gt;
+		&lt;td colspan="3"&gt;Rayful System&lt;/td&gt;
+	 &lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;INPUT&lt;/th&gt;
+		&lt;td colspan="3"&gt;
+			&lt;div class="flex"&gt;
+				&lt;label class="hidden"&gt;INPUT&lt;/label&gt;
+				&lt;input type="text" placeholder="입력" /&gt;
+				&lt;label class="hidden"&gt;readonly&lt;/label&gt;
+				&lt;input type="text" placeholder="readonly" readonly /&gt;
+				&lt;label class="hidden"&gt;disabled&lt;/label&gt;
+				&lt;input type="text" placeholder="disabled" disabled /&gt;
+			&lt;/div&gt;
+		&lt;/td&gt;
+	 &lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;DATEPICKER&lt;/th&gt;
+		&lt;td&gt;
+			&lt;input class="date useDatepicker" type="text" placeholder="YYYY-MM-DD" style="width: 150px;" /&gt;
+		&lt;/td&gt;
+		&lt;th scope="row"&gt;SELECT&lt;/th&gt;
+		&lt;td&gt;
+			&lt;div class="flex"&gt;
+				&lt;select class="select"&gt;
+					&lt;option value=""&gt;option 01&lt;/option&gt;
+					&lt;option value=""&gt;option 02&lt;/option&gt;
+				&lt;/select&gt;
+				&lt;select class="select" disabled&gt;
+					&lt;option value=""&gt;option 01&lt;/option&gt;
+					&lt;option value=""&gt;option 02&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;CHECKBOX&lt;/th&gt;
+		&lt;td&gt;
+			&lt;ul class="chks_box"&gt;
+				&lt;li&gt;
+					&lt;input id="check_01" name="check_01" type="checkbox" /&gt;
+					&lt;label for="check_01" class="hidden"&gt;lavel 없는 경우&lt;/label&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;input id="check_02" name="check_02" type="checkbox" /&gt;
+					&lt;label for="check_02"&gt;lavel 있는 경우&lt;/label&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/td&gt;
+		&lt;th scope="row"&gt;RADIO&lt;/th&gt;
+		&lt;td&gt;
+			&lt;ul class="radio_box"&gt;
+				&lt;li&gt;
+					&lt;input id="radio_01" name="radio1" type="radio" /&gt;
+					&lt;label for="radio_01" class="hidden"&gt;lavel 없는 경우&lt;/label&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;input id="radio_02" name="radio1" type="radio" /&gt;
+					&lt;label for="radio_02"&gt;lavel 있는 경우&lt;/label&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+ </pre>               	
+                	</div>
+                </div>
+            </div>
+            <!-- //Table - 상세 -->
+            
+            <!-- Table - 목록 -->
+            <div class="row" id="guideTable2">
+                <div class="title_area">
+                    <h4>Table - 목록</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>col style을 통해 너비 조절.(col style="width:10%;")</li>
+                		<li>사용 class : table 외부의 div에 table_list class 사용.</li>
+                		<li>헤더 고정 : table 외부의 div에 tableFixHead class 사용. height는 해당 div에 인라인 태그로 입력한다. </li>
+                	</ul>
+                	<div class="row">
+                			<!-- Table List -->
+                            <div class="table_list tableFixHead" style="height: 115px;">
+                                <table class="list">
+                                    <caption>설비정보 리스트</caption>
+                                    <colgroup>
+                                        <col style="width:46px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                        <col style="width:200px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <label for="all_select" class="ndisplay">전체 선택</label>
+                                                <input id="all_select" name="all_chec" type="checkbox" />
+                                            </th>
+                                            <th scope="col">TH 타이틀 01</th>
+                                            <th scope="col">TH 타이틀 02</th>
+                                            <th scope="col">TH 타이틀 03</th>
+                                            <th scope="col">TH 타이틀 04</th>
+                                            <th scope="col">TH 타이틀 05</th>
+                                            <th scope="col">TH 타이틀 06</th>											
+                                            <th scope="col">TH 타이틀 07</th>
+                                            <th scope="col">TH 타이틀 08</th>
+                                            <th scope="col">TH 타이틀 09</th>
+                                            <th scope="col">TH 타이틀 10</th>
+                                            <th scope="col">TH 타이틀 11</th>
+                                            <th scope="col">TH 타이틀 12</th>
+                                            <th scope="col">TH 타이틀 13</th>
+                                            <th scope="col">TH 타이틀 14</th>
+                                            <th scope="col">TH 타이틀 15</th>											
+                                            <th scope="col">TH 타이틀 16</th>
+                                        	<th scope="col">TH 타이틀 17</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input id="all_select1" name="all_chec" type="checkbox" /></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="all_select2" name="all_chec" type="checkbox" /></td>
+                                            <td>글자 테스트 글자 테스트 글자 테스트 글자 테스트 글자 테스트 글자 테스트 글자 테스트 글자 테스트 </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="all_select3" name="all_chec" type="checkbox" /></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// Table List -->
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;!-- Table List --&gt;
+&lt;div class="table_list tableFixHead" style="height: 115px;"&gt;
+	&lt;table class="list"&gt;
+		&lt;caption&gt;설비정보 리스트&lt;/caption&gt;
+		&lt;colgroup&gt;
+		&lt;col style="width:46px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;col style="width:200px;"&gt;
+		&lt;/colgroup&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th scope="col"&gt;
+					&lt;label for="all_select" class="ndisplay"&gt;전체 선택&lt;/label&gt;
+					&lt;input id="all_select" name="all_chec" type="checkbox" /&gt;
+				&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 01&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 02&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 03&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 04&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 05&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 06&lt;/th&gt;											
+				&lt;th scope="col"&gt;TH 타이틀 07&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 08&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 09&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 10&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 11&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 12&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 13&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 14&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 15&lt;/th&gt;											
+				&lt;th scope="col"&gt;TH 타이틀 16&lt;/th&gt;
+				&lt;th scope="col"&gt;TH 타이틀 17&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;input id="all_select1" name="all_chec" type="checkbox" /&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+&lt;!--// Table List --&gt;
+</pre>                	
+                	</div>
+                </div>
+            </div>
+            <!-- //Table - 목록 -->
+            
+            <!-- 팝업 -->
+            <div class="row" id="guidePopup">
+                <div class="title_area">
+                    <h4>팝업</h4>
+                </div>
+                <div class="row roundbox linebox pad15">
+                	<ul class="guide_info">
+                		<li>일반 레이어 팝업 : 기본 사이즈 800px이나 컨텐츠 내용에 따라 사이즈를 달리 사용할 수 있다.</li>
+                		<li>알림 레이어 팝업 : 기본 사이즈 300px이나 컨텐츠 내용에 따라 사이즈를 달리 사용할 수 있다.</li>
+                		<li>공통 레이어 팝업 : SMS 발송, E-mail 발송, 다운로드 팝업, 주소 검색 팝업.</li>
+                	</ul>
+                	<div class="row">
+                		<button type="button" class="btn activ" title="일반 레이어 팝업" onclick="initSetting.popLayer.open('layer1')">
+			            	<span>일반 레이어 팝업</span>
+			            </button>
+			            <button type="button" class="btn activ" title="알림 레이어 팝업" onclick="initSetting.popLayer.open('layer2')">
+			            	<span>알림 레이어 팝업</span>
+			            </button>
+			            <button type="button" class="btn send" title="SMS 보내기" onclick="initSetting.popLayer.open('layerSms')" disabled>
+			            	<span>SMS</span>
+			            </button>
+			            <button type="button" class="btn send" title="E-mail 보내기" onclick="initSetting.popLayer.open('layerEmail')" disabled>
+			            	<span>E-mail</span>
+			            </button>
+			            <button type="button" class="btn line" title="다운로드" onclick="initSetting.popLayer.open('layerDownload')" disabled>
+			            	<span>다운로드</span>
+			            </button>
+			            <button type="button" class="btn line" title="주소 검색" onclick="initSetting.popLayer.open('layerAdress')" disabled>
+			            	<span>주소 검색</span>
+			            </button>
+                	</div>
+                	<div class="row">
+<pre class="code">
+&lt;!-- 일반 Layer Popup Button --&gt;
+&lt;button type="button" class="btn activ" title="일반 레이어 팝업" onclick="initSetting.popLayer.open('layer1')"&gt;
+	&lt;span&gt;일반 레이어 팝업&lt;/span&gt;
+&lt;/button&gt;
+&lt;!-- //일반 Layer Popup Button --&gt;
+<br>
+&lt;!-- 일반 Layer Popup --&gt;
+&lt;div id="layer1" class="popLayer"&gt;
+	&lt;div class="popup_wrap" style="width: 800px;"&gt;
+		&lt;div class="pop_header"&gt;
+			&lt;div class="pop_title_area"&gt;
+				&lt;h2&gt;팝업 타이틀&lt;/h2&gt;
+			&lt;/div&gt;
+			&lt;button id="popup_close" class="popup_close"&gt;닫기&lt;/button&gt;
+		&lt;/div&gt;
+	
+		&lt;div class="pop_content"&gt;
+		&lt;/div&gt;
+            
+		&lt;div class="pop_footer alignc"&gt;
+			&lt;button class="btn line popup_close"&gt;&lt;span&gt;취소&lt;/span&gt;&lt;/button&gt;
+			&lt;button class="btn activ" onclick="location.href='링크경로삽입'"&gt;&lt;span&gt;링크텍스트 삽입&lt;/span&gt;&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- //일반 Layer Popup --&gt;
+<br>
+&lt;!-- 알림 Layer Popup Button --&gt;
+&lt;button type="button" class="btn activ" title="알림 레이어 팝업" onclick="initSetting.popLayer.open('layer2')"&gt;
+	&lt;span&gt;알림 레이어 팝업&lt;/span&gt;
+&lt;/button&gt;
+&lt;!-- //알림 Layer Popup Button --&gt;
+<br>
+&lt;!-- 알림 Layer Popup --&gt;
+&lt;div id="layer2" class="popLayer"&gt;
+	&lt;div class="popup_wrap alert" style="width: 300px;"&gt;
+		&lt;div class="pop_header"&gt;
+			&lt;div class="pop_title_area"&gt;
+				&lt;h2&gt;알림 팝업 타이틀&lt;/h2&gt;
+			&lt;/div&gt;
+			&lt;button id="popup_close" class="popup_close"&gt;닫기&lt;/button&gt;
+		&lt;/div&gt;
+            
+		&lt;div class="pop_content"&gt;
+		&lt;/div&gt;
+            
+		&lt;div class="pop_footer alignc"&gt;
+			&lt;button class="btn line popup_close"&gt;&lt;span&gt;취소&lt;/span&gt;&lt;/button&gt;
+			&lt;button class="btn activ" id="" onclick="location.href='링크경로삽입'"&gt;&lt;span&gt;링크텍스트 삽입&lt;/span&gt;&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // 알림 Layer Popup --&gt;
+</pre>                	
+                	</div>
+                </div>
+            </div>
+            <!-- //팝업  -->
+    	</div>
+    	<!-- //content -->
+    </div>
+    <!-- //container -->
+    
+    <!-- 일반 Layer Popup -->
+    <div id="layer1" class="popLayer">
+        <div class="popup_wrap" style="width: 800px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>팝업 타이틀</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+            
+            <div class="pop_content">
+            </div>
+            
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close">
+                	<span>취소</span>
+                </button>
+                <button class="btn activ" onclick="location.href='링크경로삽입'">
+                	<span>링크텍스트 삽입</span>
+                </button>
+                <button class="btn activ" onclick="btnResister()">
+                	<span>클릭 시 메세지창 오픈</span>
+                </button>
+            </div>
+            <!-- 유효성 체크 박스 -->
+            <!--  유효성 체크 실패 : fail class 사용
+	        <div class="valid_box fail">
+	        	<span>실패!</span> 
+	        </div>
+	         -->
+	        <!--  유효성 체크 성공 : success class 사용 -->
+	   		<div class="valid_box success">
+	        	<span>성공!</span>
+	        </div>    
+	        <!-- //유효성 체크 박스 -->
+        </div>
+    </div>
+    <!-- //일반 Layer Popup -->
+    
+    <script>
+    	//클릭 시 메세지창 오픈
+    	function btnResister(){
+    		//유효성 체크 박스 visible
+    		$('.valid_box').addClass('on');
+    		$('.popLayer:visible').addClass('message');
+    		
+    		//해당 input에 focus
+    		$('#testInput').focus().addClass('form-fail');
+    	}
+    </script>
+    
+    <!-- 알림 Layer Popup -->
+    <div id="layer2" class="popLayer">
+        <div class="popup_wrap alert" style="width: 300px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>알림 팝업 타이틀</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+            
+            <div class="pop_content">
+            </div>
+            
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close">
+                	<span>취소</span>
+                </button>
+                <button class="btn activ" id="" onclick="location.href='링크경로삽입'">
+                	<span>링크텍스트 삽입</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- // 알림 Layer Popup -->
+    
+    <!-- Layer Popup  : SMS발송 팝업 -->
+	<div id="layerSms" class="popLayer">
+		<div class="popup_wrap" style="width: 1100px;">
+			<div class="pop_header">
+				<div class="pop_title_area">
+					<h2>SMS 발송</h2>
+				</div>
+				<button id="popup_close" class="popup_close">닫기</button>
+			</div>
+			<div class="pop_content">
+				<div class="sendForm">
+
+					<div class="sendFormLeft">
+						<div class="title_area">
+							<div class="fleft">
+								<h3>발신내용</h3>
+							</div>
+						</div>
+						<div class="sendBox">
+							<dl>
+								<dt>템플릿</dt>
+								<dd>
+									<select class="select">
+										<option value="">선택</option>
+										<option value="">세금계산서 발행 요청</option>
+										<option value="">지급계좌 신청 요청</option>
+										<option value="">기타1</option>
+										<option value="">기타2</option>
+									</select>
+									<div>
+										<button class="btn line" title="선택">
+											<span>선택</span>
+										</button>
+									</div>
+								</dd>
+							</dl>
+							<textarea>이곳에 선택한 내용 출력, 직접입력도 되어야하고, 불러온 문구에서 추가 수정도 되어야 함.</textarea>
+							<div class="sender">
+								발신번호 : <span class="senderValue">010-1234-5678</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="sendFormRight">
+						<div class="title_area">
+							<div class="fleft">
+								<h3>수신자 목록 (&nbsp;<span class="selNum">0</span>건&nbsp;)</h3>
+							</div>
+							<div class="fright">
+								<button class="btn search" title="E-mail 보내기" onclick="initSetting.popLayer.open('layer_receiveList')">
+									<span>추가</span>
+								</button>
+								<button class="btn line del_emailList" title="삭제">
+									<span>삭제</span>
+								</button>
+							</div>
+						</div>
+						<div class="sendBox">
+							<div class="table_list tableFixHead" style="height: 365px">
+								<table class="list smsList">
+									<caption>수신자리스트</caption>
+									<colgroup>
+										<col style="width:45px;" />
+										<col />
+										<col style="width:120px;" />
+										<col style="width:140px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<tr>
+												<th scope="col">
+													<input id="checkAll" name="checkAll" class="checkAll" type="checkbox" />
+													<label for="checkAll" class="hidden"></label>
+												</th>
+												<th scope="col">개별 발전소 / 사용장소 명</th>
+												<th scope="col">이름</th>
+												<th scope="col">휴대전화 번호</th>
+											</tr>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input id="recieve1" name="recieve1" class="checkItem" type="checkbox" />
+												<label for="recieve1" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve2" name="recieve2" class="checkItem" type="checkbox" />
+												<label for="recieve2" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve3" name="recieve3" class="checkItem" type="checkbox" />
+												<label for="recieve3" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve4" name="recieve4" class="checkItem" type="checkbox" />
+												<label for="recieve4" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve5" name="recieve5" class="checkItem" type="checkbox" />
+												<label for="recieve5" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve6" name="recieve6" class="checkItem" type="checkbox" />
+												<label for="recieve6" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve7" name="recieve7" class="checkItem" type="checkbox" />
+												<label for="recieve7" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve8" name="recieve8" class="checkItem" type="checkbox" />
+												<label for="recieve8" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve9" name="recieve9" class="checkItem" type="checkbox" />
+												<label for="recieve9" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve10" name="recieve10" class="checkItem" type="checkbox" />
+												<label for="recieve10" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieve11" name="recieve11" class="checkItem" type="checkbox" />
+												<label for="recieve11" class="hidden"></label>
+											</td>
+											<td>써니 태양광 발전소 2호</td>
+											<td>장종민</td>
+											<td>010-2345-1234</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="sender">
+								<input id="check_sameTarget2" name="check_sameTarget2" type="checkbox" />
+								<label for="check_sameTarget2">중복 수신자 제거</label>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="pop_footer alignc">
+				<button class="btn line popup_close">
+					<span>취소</span>
+				</button>
+				<button type="button" class="btn activ popup_close" title="보내기">
+					<span>전송</span>
+				</button>
+			</div>
+		</div>
+		<script>
+			// 이메일 리스트 체크박스
+			$(document).on('click','.smsList input.checkItem', function() {
+				var checkBoxLength = $(this).closest('tbody').find('input.checkItem').length;
+				var checkedBoxLength = $(this).closest('tbody').find('input.checkItem:checked').length;
+
+				$('#layerSms .selNum').text(checkedBoxLength)
+
+				if(checkBoxLength == checkedBoxLength ) {
+					$(this).closest('.smsList').find('thead input.checkAll').prop("checked", true);
+				} else {
+					$(this).closest('.smsList').find('thead input.checkAll').prop("checked", false);
+				}
+			});
+			$(document).on('click','.smsList input.checkAll', function() {
+				var isCheckedAll = $(this).prop("checked");
+				$(this).closest('.smsList').find('tbody input.checkItem').prop('checked', isCheckedAll);
+				var checkedBoxLength = $(this).closest('.smsList').find(' tbody input.checkItem:checked').length;
+				// console.log(checkedBoxLength)
+				$('#layerSms .selNum').text(checkedBoxLength)
+			});
+
+			// 이메일 리스트 삭제
+			$(document).on('click','.del_emailList', function() {
+				if ($('.smsList').find('input.checkItem:checked').length == 0) {
+					alert('삭제할 주소를 선택해주세요.')
+				} else {
+					$('.smsList').find('input.checkItem:checked').closest('tr').remove();
+				}
+				if ($('.smsList tbody tr').length == 0) {
+					$('.smsList').find('thead input.checkAll').prop("checked", false);
+				}
+			});
+		</script>
+	</div>
+	<!--// Layer Popup  : SMS발송 팝업 -->
+	
+	<!-- Layer Popup  : e-mail발송 팝업 -->
+	<div id="layerEmail" class="popLayer">
+		<div class="popup_wrap" style="width: 1100px;">
+			<div class="pop_header">
+				<div class="pop_title_area">
+					<h2>E-mail 발송</h2>
+				</div>
+				<button id="popup_close" class="popup_close">닫기</button>
+			</div>
+			<div class="pop_content">
+				<div class="sendForm">
+
+					<div class="sendFormLeft">
+						<div class="title_area">
+							<div class="fleft">
+								<h3>발신내용 (&nbsp;<span class="sendByte">0</span>&nbsp;/ 1000byte&nbsp;)</h3>
+							</div>
+						</div>
+						<div class="sendBox">
+							<dl>
+								<dt>제목</dt>
+								<dd>
+									<input id="contract" name="contract" type="text" placeholder="제목 입력" />
+								</dd>
+							</dl>
+							<textarea class="senderText" placeholder="메일 내용을 입력하세요."></textarea>
+							<div class="sender">
+								발신이메일 : <span class="senderValue">skens.aa479@partner.sk.com</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="sendFormRight">
+						<div class="title_area">
+							<div class="fleft">
+								<h3>수신자 목록 (&nbsp;<span class="selNum">0</span>건&nbsp;)</h3>
+							</div>
+							<div class="fright">
+								<button class="btn search" title="E-mail 보내기" onclick="initSetting.popLayer.open('layer_receiveList')">
+									<span>추가</span>
+								</button>
+								<button class="btn line del_emailList" title="삭제">
+									<span>삭제</span>
+								</button>
+							</div>
+						</div>
+						<div class="sendBox">
+							<div class="table_list tableFixHead" style="height: 365px">
+								<table class="list emailList">
+									<caption>수신자리스트</caption>
+									<colgroup>
+										<col style="width:45px;" />
+										<col />
+										<col style="width:120px;" />
+										<col style="width:140px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<tr>
+												<th scope="col">
+													<input id="checkAllEmail" name="checkAllEmail" class="checkAll" type="checkbox" />
+													<label for="checkAllEmail" class="hidden"></label>
+												</th>
+												<th scope="col">개별 발전소/사용장소 명</th>
+												<th scope="col">이름</th>
+												<th scope="col">이메일주소</th>
+											</tr>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input id="recieveEmail1" name="recieveEmail1" class="checkItem" type="checkbox" />
+												<label for="recieveEmail1" class="hidden"></label>
+											</td>
+											<td>그린솔라-03-학교법인웅지학원린솔라-03-학교법인웅지학원린솔라-03-학교법인웅지학원</td>
+											<td>장종민</td>
+											<td>abscsdasdqweqwae@gmail.com</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieveEmail2" name="recieveEmail2" class="checkItem" type="checkbox" />
+												<label for="recieveEmail2" class="hidden"></label>
+											</td>
+											<td>그린솔라-03-학교법인웅지학원</td>
+											<td>장종민</td>
+											<td>abscsdasdqweqwae@gmail.com</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="recieveEmail3" name="recieveEmail3" class="checkItem" type="checkbox" />
+												<label for="recieveEmail3" class="hidden"></label>
+											</td>
+											<td>그린솔라-03-학교법인웅지학원</td>
+											<td>장종민</td>
+											<td>abscsdasdqweqwae@gmail.com</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="sender">
+								<input id="check_sameTarget" name="check_sameTarget" type="checkbox" />
+								<label for="check_sameTarget">중복 수신자 제거</label>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="pop_footer alignc">
+				<button class="btn line popup_close">
+					<span>취소</span>
+				</button>
+				<button type="button" class="btn activ popup_close" title="보내기">
+					<span>전송</span>
+				</button>
+			</div>
+		</div>
+		<script>
+			// 이메일 리스트 체크박스
+			$(document).on('click','.emailList input.checkItem', function() {
+				var checkBoxLength = $(this).closest('tbody').find('input.checkItem').length;
+				var checkedBoxLength = $(this).closest('tbody').find('input.checkItem:checked').length;
+				$('#layerEmail .selNum').text(checkedBoxLength)
+
+				if(checkBoxLength == checkedBoxLength ) {
+					$(this).closest('.emailList').find('thead input.checkAll').prop("checked", true);
+				} else {
+					$(this).closest('.emailList').find('thead input.checkAll').prop("checked", false);
+				}
+			});
+			$(document).on('click','.emailList input.checkAll', function() {
+				var isCheckedAll = $(this).prop("checked");
+				$(this).closest('.emailList').find('tbody input.checkItem').prop('checked', isCheckedAll);
+				var checkedBoxLength = $(this).closest('.emailList').find(' tbody input.checkItem:checked').length;
+				// console.log(checkedBoxLength)
+				$('#layerEmail .selNum').text(checkedBoxLength)
+			});
+
+			// 이메일 리스트 삭제
+			$(document).on('click','.del_emailList', function() {
+				if ($('.emailList').find('input.checkItem:checked').length == 0) {
+					alert('삭제할 주소를 선택해주세요.')
+				} else {
+					$('.emailList').find('input.checkItem:checked').closest('tr').remove();
+				}
+				if ($('.emailList tbody tr').length == 0) {
+					$('.emailList').find('thead input.checkAll').prop("checked", false);
+				}
+			});
+
+
+			$('.senderText').on('keyup', function() {
+				$('.sendByte').text($(this).val().length);
+
+				if($(this).val().length > 1000) {
+					alert('한글 500자, 영문 1000자 이내만 가능합니다.')
+					$(this).val($(this).val().substring(0, 1000));
+					$('.sendByte').text(1000);
+				}
+			});
+		</script>
+	</div>
+	<!--// Layer Popup  : e-mail발송 팝업 -->
+	
+	<!-- 알림 Layer Popup : 다운로드 Alert 팝업 -->
+    <div id="layerDownload" class="popLayer">
+        <div class="popup_wrap alert" style="width: 360px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>알림</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+            
+            <div class="pop_content">
+            	<p class="notice_memo alignc npadding mb20">개인정보가 포함된 파일은 다운로드 사유 입력이 필요합니다.</p>
+            	<textarea placeholder="다운로드 사유 입력" rows="5"></textarea>
+            </div>
+            
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close">
+                	<span>취소</span>
+                </button>
+                <button class="btn activ" id="" onclick="location.href='링크경로삽입'">
+                	<span>저장</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- // 알림 Layer Popup : 다운로드 Alert 팝업 -->
+	
+	<!-- Layer Popup  : 주소 검색 팝업 -->
+	<div id="layerAdress" class="popLayer">
+        <div class="popup_wrap" style="width:1000px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>주소 검색</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+            
+            <div class="pop_content">
+            	<!-- 검색 영역 -->
+            	<div class="search_form">
+            		<div class="row_group">
+            			<div class="row">
+            				<div class="col">
+            					<input type="text" placeholder="주소를 입력하세요.">
+            				</div>
+            			</div>
+            		</div>
+            		<!-- Search Button -->
+	                <div class="btnsrch">
+	                    <button class="btn search"><span>조회</span></button>
+	                </div>
+	                <!--// Search Button -->
+            	</div>
+            	<!-- //검색 영역 -->
+            	<!-- row :: Adress List -->
+                <div class="row">
+                	<!-- info box -->
+	            	<div class="row linebox pad15 mb10">
+			        	<ul class="info_box">
+							<li>도로명이나 지역명과 함께 건물번호, 번지를 함께 입력하여 검색하시면 더 정확한 검색 결과가 검색됩니다.</li>
+			        	</ul>
+			        </div>
+			        <!-- //info box -->
+                    <!-- Adress List -->
+                    <div class="adress_list">
+	                    <table>
+	                    	<colgroup>
+	                    		<col style="width:10%;" />
+	                    		<col style="width:70%;" />
+	                    		<col style="width:20%;" />
+	                    	</colgroup>
+	                    	<thead>
+	                    		<tr>
+	                    			<th scope="col">선택</th>
+	                    			<th scope="col">주소</th>
+	                    			<th scope="col">우편번호</th>
+	                    		</tr>
+	                    	</thead>
+	                    	<tbody>
+	                    		<tr>
+	                    			<td>
+										<input id="checkAdress1" name="checkAdress1" type="checkbox">
+										<label for="checkAdress1" class="hidden">주소1 도로명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress">도로명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    			<td rowspan="2">00910</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+	                    				<input id="checkAdress2" name="checkAdress2" type="checkbox">
+										<label for="checkAdress2" class="hidden">주소1 지명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress place">지명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+										<input id="checkAdress3" name="checkAdress3" type="checkbox">
+										<label for="checkAdress3" class="hidden">주소2 도로명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress">도로명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    			<td rowspan="2">00910</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+	                    				<input id="checkAdress4" name="checkAdress4" type="checkbox">
+										<label for="checkAdress4" class="hidden">주소2 지명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress place">지명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+										<input id="checkAdress5" name="checkAdress5" type="checkbox">
+										<label for="checkAdress5" class="hidden">주소3 도로명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress">도로명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    			<td rowspan="2">00910</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+	                    				<input id="checkAdress6" name="checkAdress6" type="checkbox">
+										<label for="checkAdress6" class="hidden">주소3 지명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress place">지명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+										<input id="checkAdress7" name="checkAdress7" type="checkbox">
+										<label for="checkAdress7" class="hidden">주소4 도로명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress">도로명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    			<td rowspan="2">00910</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+	                    				<input id="checkAdress8" name="checkAdress8" type="checkbox">
+										<label for="checkAdress8" class="hidden">주소4 지명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress place">지명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+										<input id="checkAdress9" name="checkAdress9" type="checkbox">
+										<label for="checkAdress9" class="hidden">주소5 도로명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress">도로명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    			<td rowspan="2">00910</td>
+	                    		</tr>
+	                    		<tr>
+	                    			<td>
+	                    				<input id="checkAdress10" name="checkAdress10" type="checkbox">
+										<label for="checkAdress10" class="hidden">주소5 지명</label>
+	                    			</td>
+	                    			<td class="alignl">
+	                    				<span class="ico adress place">지명</span>
+	                    				<span>1경상북도 서초구 방배천로 16길 11-3(방배동, 강남타운)</span>
+	                    			</td>
+	                    		</tr>
+	                    	</tbody>
+	                  	</table>
+	                </div>
+                    <!--// Adress List -->
+                    <!-- Paging List -->
+                    <div class="paging_area">
+                        <a href="#" class="first"><span>처음페이지로 가기</span></a>
+                        <a href="#" class="prev"><span>전페이지로 가기</span></a>
+                        <a href="#">1</a>
+                        <strong>2</strong>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="next"><span>다음페이지로 가기</span></a>
+                        <a href="#" class="last"><span>마지막페이지로 가기</span></a>
+                    </div>
+                    <!--// Paging List -->
+                </div>
+                <!--// row :: Adress List ist -->
+            </div>
+            
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close">
+                	<span>취소</span>
+                </button>
+                <button class="btn activ" onclick="location.href='링크경로삽입'">
+                	<span>선택</span>
+                </button>
+            </div>
+        </div>
+    </div>
+	<!-- //Layer Popup  : 주소 검색 팝업 -->
+	
+    <script>
+    	/* 
+    		Multi select
+    	   	슬라이드, 닫기 효과
+    	*/
+    	$('.multi_select .text_box').on('click', function(){
+			$(this).next('.select_box').stop().slideToggle(200);
+			
+			//body 클릭 시 닫기
+			$('body').click(function(e){
+				if( $('.multi_select').has(e.target).length === 0 ){
+					$('.select_box').hide();
+				}
+			});
+		});
+		
+    	/* 
+			Multi select
+			체크박스 체크 시 셀렉트 박스, 툴팁 박스에 텍스트 보여주기
+		*/
+		var chkObj = $('#multiSelect .select_box input[type="checkbox"]');
+		
+		chkObj.change(function(){
+		      var textBox = "";
+		      var tooltipBox = "";
+		      var total = chkObj.length;
+		      var checkCnt = 0;
+		      
+		      //check된 Label값 확인
+		      chkObj.each(function(index, item){
+		         if($(item).is(":checked")){
+		            checkCnt++;
+		            //2개이상 선택시 , 추가
+		            if(checkCnt >= 2) {
+		            	textBox += ", "
+		            	tooltipBox += ", "
+		            }
+		           textBox += $('label[for='+item.id+']').text();
+		           tooltipBox += $('label[for='+item.id+']').text();
+		         }
+		        //선택 0개 , 모두 선택 시
+		         if(checkCnt == total) {
+		        	textBox = "전체";
+		         } else if (checkCnt == 0 && index + 1 == total) {
+		        	textBox = "선택";
+		         }
+		      });
+		      
+		      $('#multiSelect .text_box span').text(textBox);
+		      $('#multiSelect .tooltip_box').text(tooltipBox);
+		   });
+			/* 
+				Multi select
+				체크박스 마우스 오버 시 툴팁
+			*/
+			$('.multi_select .text_box').on({
+			mouseenter:function(){
+				if( $(this).parent().find('.tooltip_box').text().length === 0 ){
+					
+				}else{
+					$(this).parent().find('.tooltip_box').addClass('on');
+				}
+			}
+			,mouseleave:function(){
+				$(this).parent().find('.tooltip_box').removeClass('on');
+			}
+		});
+		</script>
+</body>
+</html>

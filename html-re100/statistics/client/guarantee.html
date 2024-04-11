@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SK E&S RE100 통합관리 서비스">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Re100">
+    <meta property="og:description" content="">
+
+    <title>SK E&amp;S RE100 통합관리 서비스</title>
+
+    <link rel="shortcut icon" href="../../../static/assets//images/favicon.ico" type="image/x-icon" />
+    
+    <!-- js -->
+    <script src="../../../static/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../../../static/assets/js/common.js"></script>
+    
+    <!-- jquery ui -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/css/jquery-ui.min.css" />    
+
+    <!-- Data jqGrid  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/jqGrid/css/ui.jqgrid.css" />
+    <script src="../../../static/assets/jqGrid/js/minified/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="../../../static/assets/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+
+    <!-- Datepicker --> 
+    <link rel="stylesheet" href="../../../static/assets/css/datepicker.min.css">
+    <script src="../../../static/assets/js/datepicker.min.js"></script>
+    <script src="../../../static/assets/js/datepicker.ko.js"></script>
+
+    <!-- highchart -->
+    <script src="../../../static/assets/js/chart/highcharts.js"></script>
+    <script src="../../../static/assets/js/chart/accessibility.js"></script>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/theme_green.css" />
+</head>
+<body><!-- dashboard :: class="dashbd" -->
+	<header id="header">
+    <div>
+        <h1 class="logo">
+            <a href="../../main/dashboard/메인.html" class="">
+                <span class="">SK E&amp;S</span><span class="">RE100 통합관리 서비스</span>
+            </a>
+        </h1>
+        <!-- nav -->
+        <!--
+            [메뉴 활성화]
+            - 활성화 클래스는 li 태그에 붙는다.
+
+
+            [1뎁스]
+            - 활성화 대상  : .gnb > nav > ul > li
+            - 활성화 클래스 : .on
+            - 1뎁스 활성화는 li 태그 내 a aria-expanded도 같이 붙는다.
+
+            비활성 : <li class="menu01"><a href="#" aria-expanded="false"></a></li>
+            활성 : <li class="menu01 on"><a href="#" aria-expanded="true"></a></li>
+
+
+            [2뎁스]
+            - 활성화 대상  : .sub_menu > ul > li
+            - 활성화 클래스 : .on
+
+            비활성 : <div class="sub_menu"><ul><li></li></ul></div>
+            활성 : <div class="sub_menu"><ul><li class="on"></li></ul></div>
+            
+            [3뎁스]
+            - 활성화 대상  : .menu_depth3 > li
+            - 활성화 클래스 : .on
+
+            비활성 : <ul class="menu_depth3"><li></li></ul>
+            활성 : <ul class="menu_depth3" class="on"><li></li></ul>
+        -->
+        <div id="nav">
+            <div class="gnb">
+            <nav>
+                <ul>
+                    <li class="menu01">
+                        <a href="" title="계약" aria-expanded="false">
+                            <span>계약</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="" target="_blank" title="개시전 계약">
+                                        <span>개시전 계약</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_그룹계약관리_목록.html" title="그룹 계약 관리">
+                                                <span>그룹 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="직접 PPA 계약">
+                                        <span>직접 PPA 계약</span> 
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_그룹계약관리_목록.html" title="그룹 계약 관리">
+                                                <span>그룹 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="VPPA 계약">
+                                        <span>V.PPA 계약</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_003/VPPA계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_003/VPPA계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../../contract/depth2_004/보장공급량관리_목록.html" title="보장공급량 관리">
+                                        <span>보장공급량 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu02">
+                        <a href="javascript:voild(0)" title="사업자·계좌" aria-expanded="false">
+                            <span>사업자·계좌</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>                         
+                                <li>
+                                    <a href="../../client/depth2_001/사업자계좌_발전사업자정보_목록.html" title="발전사업자 정보">
+                                        <span>발전사업자 정보</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_002/사업자계좌_전기사용자정보_목록.html" title="전기사용자 정보">
+                                        <span>전기사용자 정보</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_003/사업자계좌_지급계좌등록관리_목록.html" title="입금계좌 관리">
+                                        <span>입금계좌 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_004/사업자계좌_담당자계정관리_목록.html" title="담당자 계정 관리">
+                                        <span>담당자 계정 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu03">
+                        <a href="#" title="대금정산" aria-expanded="false">
+                            <span>대금정산</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="#" title="직접 PPA">
+                                        <span>직접 PPA</span> 
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_PPA거래실적_목록.html" title="PPA 거래실적">
+                                                <span>PPA 거래실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_부가비용선납_목록.html" title="부가비용 선납">
+                                                <span>부가비용 선납</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_대금산정_목록.html" title="대금산정">
+                                                <span>대금산정</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_정산현황_목록.html" title="정산현황">
+                                                <span>정산현황</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="V.PPA/PPA초과발전">
+                                        <span>V.PPA/PPA초과발전</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_002/VPPA_PPA초과발전_대금산정_목록.html" title="대금산정">
+                                                <span>대금산정</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_002/VPPA_PPA초과발전_정산현황_목록.html" title="정산현황">
+                                                <span>정산현황</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../../calculation/depth2_003/입금반제_목록.html" title="입금 반제">
+                                        <span>입금 반제</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../calculation/depth2_004/대금수정정산_목록.html" title="대금 수정 정산">
+                                        <span>대금 수정 정산</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="정산관리">
+                                        <span>정산관리</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_005/정산관리_정산달력.html" title="정산달력">
+                                                <span>정산달력</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_005/정산관리_정산정보설정.html" title="정산정보 설정">
+                                                <span>정산정보 설정</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu04 on">
+                        <a href="javascript:voild(0)" title="통계" aria-expanded="false">
+                            <span>통계</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="#" title="사업 통계">
+                                        <span>사업통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_손익현황.html" title="손익현황">
+                                                <span>손익현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_계약현황.html" title="계약현황">
+                                                <span>계약현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_예상사업손익.html" title="예상사업손익">
+                                                <span>예상사업손익</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="on">
+                                    <a href="#" title="고객통계">
+                                        <span>고객통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_RE100이행실적.html" title="RE100 이행실적">
+                                                <span>RE100 이행실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_발전량실적.html" title="발전량 실적">
+                                                <span>발전량 실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_정산실적.html" title="정산 실적">
+                                                <span>정산 실적</span>
+                                            </a>
+                                        </li>
+                                        <li class="on">
+                                            <a href="../../statistics/depth2_002/고객통계_보장공급량이행률.html" title="보장공급량 이행률">
+                                                <span>보장공급량 이행률</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="전력시장 통계">
+                                        <span>전력시장 통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_003/전력시장통계_시간별SMP.html" title="시간별 SMP">
+                                                <span>시간별 SMP</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_003/전력시장통계_REC평균가격.html" title="REC 평균가격">
+                                                <span>REC 평균가격</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu05">
+                        <a href="javascript:voild(0)" title="시스템운영" aria-expanded="false">
+                            <span>시스템운영</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="../../operation/depth2_001/시스템운영_공지사항_목록.html" title="공지사항">
+                                        <span>공지사항</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_002/시스템운영_1:1문의_목록.html" title="1:1 문의">
+                                        <span>1:1 문의</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_003/시스템운영_템플릿관리.html" title="템플릿 관리">
+                                        <span>템플릿 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_004/시스템운영_회계마감일관리.html" title="회계마감일 관리">
+                                        <span>회계마감일 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_005/시스템운영_발신이력관리.html" title="발신이력 관리">
+                                        <span>발신이력 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu06">
+                        <a href="javascript:voild(0)" title="설정" aria-expanded="false">
+                            <span>설정</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="../../setting/depth2_001/설정_약관관리.html" title="관리자 계정">
+                                        <span>약관 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_002/설정_관리자계정.html" title="관리자 계정">
+                                        <span>관리자 계정</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_003/설정_관리자권한.html" title="관리자 권한">
+                                        <span>관리자 권한</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_004/설정_코드관리.html" title="코드 관리">
+                                        <span>코드 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_005/설정_배치관리.html" title="배치 관리">
+                                        <span>배치 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            </div>
+        </div>
+        <ul class="hsection">
+            <li>
+                <strong class="name">홍길동님</strong>
+                <span class="date">2022-07-07</span>
+            </li>
+            <li>
+                <a class="notice" title="알림보기">
+                    <span class="count">3</span>
+                </a>
+            </li>
+            <li>
+                <a class="logout" title="로그아웃">로그아웃</a>
+            </li>
+        </ul>
+    </div>
+    </header>
+    <div id="container">
+    
+    	<!-- content -->
+        <div id="content">
+        	<!-- title_area -->
+            <div class="title_area">
+                <div class="fleft">
+                    <h2>보장공급량 이행률</h2>
+                    <ul class="location">
+                        <li>홈</li>
+                        <li>통계</li>
+                        <li>고객통계</li>
+                        <li>보장공급량 이행률</li>
+                    </ul>
+                </div>
+            </div>
+            <!--// title_area -->
+            <!-- search form -->
+            <div class="search_form small">
+            	<div class="row_group">
+            		<div class="row">
+            			<dl class="col col_6 col_xxl_8 col_xl_12">
+            				<dt>기간</dt>
+            				<dd class="flex alignc">
+            					<ul class="radio_box">
+	            					<li>
+	            						<input type="radio" id="slcPrdYear" value="slcPrdYear" name="slcPrd" checked>
+										<label for="slcPrdYear">년</label>
+	            					</li>
+	            					<li>
+	            						<input type="radio" id="slcPrdMonth" value="slcPrdMonth" name="slcPrd">
+										<label for="slcPrdMonth">월</label>
+	            					</li>
+	            				</ul>
+	            				<div class="flex alignc ml10" id="slcYearCont">
+		            				<select class="select">
+		            					<option>2024</option>
+		            					<option>2025</option>
+		            					<option>2026</option>
+		            				</select>
+		            				<span>~</span>
+		            				<select class="select">
+		            					<option>2024</option>
+		            					<option>2025</option>
+		            					<option>2026</option>
+		            				</select>
+	            				</div>
+	            				<div class="flex alignc" id="slcMonthCont" style="display:none;">
+	            					<select class="select">
+	            						<option>2024</option>
+	            						<option>2025</option>
+	            						<option>2026</option>
+	            					</select>
+	            					<select class="select">
+	            						<option>01</option>
+	            						<option>02</option>
+	            						<option>03</option>
+	            						<option>04</option>
+	            						<option>05</option>
+	            						<option>06</option>
+	            						<option>07</option>
+	            						<option>08</option>
+	            						<option>09</option>
+	            						<option>10</option>
+	            						<option>11</option>
+	            						<option>12</option>
+	            					</select>
+	            					<span>~</span>
+	            					<select class="select">
+	            						<option>2024</option>
+	            						<option>2025</option>
+	            						<option>2026</option>
+	            					</select>
+	            					<select class="select">
+	            						<option>01</option>
+	            						<option>02</option>
+	            						<option>03</option>
+	            						<option>04</option>
+	            						<option>05</option>
+	            						<option>06</option>
+	            						<option>07</option>
+	            						<option>08</option>
+	            						<option>09</option>
+	            						<option>10</option>
+	            						<option>11</option>
+	            						<option>12</option>
+	            					</select>
+	            				</div>
+            				</dd>
+            			</dl>
+            			<dl class="col col_3 col_xxl_6">
+            				<dt>최종 계약번호</dt>
+            				<dd>
+            					<input type="text">
+            				</dd>
+            			</dl>
+            			<dl class="col col_3 col_xxl_6">
+            				<dt>공급 계약번호</dt>
+            				<dd>
+            					<input type="text">
+            				</dd>
+            			</dl>
+            		</div>
+            	</div>           	
+            	<!-- search button -->
+            	<div class="btnsrch">
+		            <button class="btn search"><span>조회</span></button>
+		        </div>
+		        <!-- //search button -->
+            </div>
+            <!-- //search form -->
+            
+            <!-- high chart -->
+			<div class="row">
+				<div id="chart1" class="chartOuter"></div>
+			</div>
+			<!-- //high chart -->
+            
+            <!-- title area -->
+            <div class="title_area">
+				<div class="fleft">
+					<h3>보장공급량 이행률 목록</h3>
+					<div class="legendbox">
+                        (단위 : kW)
+                    </div>
+				</div>
+				<div class="fright">
+					<button class="btn line" title="엑셀 다운로드">
+						<span>엑셀 다운로드</span>
+					</button>
+				</div>
+			</div>
+			<!-- //title area -->
+			<!-- 목록 -->
+			<div class="table_list tableFixHead" id="mergeTable">
+				<table class="list statistic">
+					<caption>보장공급량 이행률 목록</caption>
+					<colgroup>
+						<col style="width:10%;" />
+						<col style="width:10%;" />
+						
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="2">구분</th>
+							<th scope="col" colspan="3">누적</th>
+							<th scope="col" colspan="3">2023-07</th>
+							<th scope="col" colspan="3">2023-08</th>
+							<th scope="col" colspan="3">2023-09</th>
+							<th scope="col" colspan="3">2023-10</th>
+							<th scope="col" colspan="3">2023-11</th>
+							<th scope="col" colspan="3">2023-12</th>
+						</tr>
+						<tr>
+							<th scope="col">최종 계약번호</th>
+							<th scope="col">공급 계약번호</th>
+							<th scope="col">예상 보장공급량</th>
+							<th scope="col">발전량</th>
+							<th scope="col">이행률</th>
+							<th scope="col">예상 보장공급량</th>
+							<th scope="col">발전량</th>
+							<th scope="col">이행률</th>
+							<th scope="col">예상 보장공급량</th>
+							<th scope="col">발전량</th>
+							<th scope="col">이행률</th>
+							<th scope="col">예상 보장공급량</th>
+							<th scope="col">발전량</th>
+							<th scope="col">이행률</th>
+							<th scope="col">예상 보장공급량</th>
+							<th scope="col">발전량</th>
+							<th scope="col">이행률</th>
+							<th scope="col">예상 보장공급량</th>
+							<th scope="col">발전량</th>
+							<th scope="col">이행률</th>
+							<th scope="col">예상 보장공급량</th>
+							<th scope="col">발전량</th>
+							<th scope="col">이행률</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="sum"><!-- 총계 row : 'sum' class 추가 -->
+							<th scope="col" colspan="2" class="sum">합계</th>
+							<td class="alignr">3,456,123.34</td>
+							<td class="alignr">1,234,123.34</td>
+							<td class="alignr">79%</td>
+							<td class="alignr">3,456,123.34</td>
+							<td class="alignr">1,234,123.34</td>
+							<td class="alignr">79%</td>
+							<td class="alignr">3,456,123.34</td>
+							<td class="alignr">1,234,123.34</td>
+							<td class="alignr">79%</td>
+							<td class="alignr">3,456,123.34</td>
+							<td class="alignr">1,234,123.34</td>
+							<td class="alignr">79%</td>
+							<td class="alignr">3,456,123.34</td>
+							<td class="alignr">1,234,123.34</td>
+							<td class="alignr">79%</td>
+							<td class="alignr">3,456,123.34</td>
+							<td class="alignr">1,234,123.34</td>
+							<td class="alignr">79%</td>
+							<td class="alignr">3,456,123.34</td>
+							<td class="alignr">1,234,123.34</td>
+							<td class="alignr">79%</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00005</th>
+							<td>23-S00001</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00005</th>
+							<td>23-S00002</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00005</th>
+							<td>23-S00003</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00005</th>
+							<td>23-S00004</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00005</th>
+							<td>23-S00005</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00006</th>
+							<td>23-S00028</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00007</th>
+							<td>23-S00029</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+						<tr>
+							<th scope="col">23-P00007</th>
+							<td>23-S00030</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">-231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+							<td class="alignr">17,123,123</td>
+							<td class="alignr">58,122,345</td>
+							<td class="alignr">231,935</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //목록 -->
+        </div>
+        <!-- //content -->
+        
+        <!-- footer -->
+        <footer id="footer">
+			<span>COPYRIGHT ⓒ SK E&amp;S. ALL RIGHTS RESRVED.</span>
+        </footer>
+        <!--// footer -->
+    </div>
+    
+    <script>
+    	//검색 영역 - 년월 선택
+		$(' input[name="slcPrd"] ').change(function() {
+			if( $("input[name='slcPrd']:checked").val() == 'slcPrdYear' ){
+				//alert('년도 선택');
+				$('#slcYearCont').css('display', 'flex');
+				$('#slcMonthCont').css('display', 'none');
+				
+			}else if( $("input[name='slcPrd']:checked").val() == 'slcPrdMonth' ){	
+				//alert('월 선택');
+				$('#slcYearCont').css('display', 'none');
+				$('#slcMonthCont').css('display', 'flex');
+				
+			}
+		});
+    	
+    </script>
+    
+    <script>
+ 		 //table 자동 merge(rowspan)
+	    $("#mergeTable tbody th").each(function(){
+			var tempString = $(this).text();
+			var m_rows = $("#mergeTable tbody th").filter(function(){
+				return $(this).text() == tempString;
+			});
+			if(m_rows.length > 1){
+				m_rows.eq(0).attr("rowspan", m_rows.length);
+				m_rows.not(":eq(0)").remove();
+			}
+		});
+    </script>
+    
+    <script>
+    	/* high cart : 손익현황 */
+	    chart1();
+	
+		function chart1() {
+	        Highcharts.setOptions({
+				lang: {
+					thousandsSep: ','
+				}
+			});
+	
+			chart1 = Highcharts.chart('chart1', {
+				chart: {
+					style: {
+						font: '300 12 "Noto Sans KR',
+					},
+					marginLeft: 70,
+					marginRight : 70,
+					marginTop: 90,
+				},
+	
+				credits: {
+					enabled: false
+				},
+	
+				title: {
+					text: '',
+					align: 'center',
+					style: {
+						color: '#000',
+						font: '300 16px "Noto Sans KR"',
+					},
+					marginLeft: 70,
+					marginRight : 70,
+					marginTop: 90,
+				},
+	
+				subtitle: {
+					text: '',
+					align: 'center',
+					style: {
+						color: '#000',
+						font: '300 16px "Noto Sans KR"',
+					},
+				},
+	
+				legend: {
+					itemStyle: {
+						font: '300 12px "Noto Sans KR"',
+						color: 'black'
+					},
+					itemHoverStyle:{
+						color: 'gray'
+					},
+					layout: 'horizontal',
+					align: 'left',
+					x: 60,
+					verticalAlign: 'top',
+					y: 0,
+					floating: true,
+					backgroundColor: '#fff',
+					shadow: false,
+					borderColor: '#ddd',
+					borderWidth: 1,
+				},
+	
+				xAxis: {
+					categories: ['2023-07', '2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01'],
+					crosshair: false
+				},
+	
+				yAxis: [
+						{
+							labels: {
+								format: '',
+								style: {
+									color: '#000',
+									font: '300 12px "Noto Sans KR"',
+								}
+							},
+							title: {
+								text: 'kW',
+								align: 'high',
+								rotation: 0,
+								y: -30,
+								x: 30,
+								style: {
+									color: '#000',
+									font: '300 12px "Noto Sans KR"',
+								}
+							},	
+					},
+					{
+						labels: {
+							format: '',
+							style: {
+								color: '#000',
+								font: '300 12px "Noto Sans KR"',
+							}
+						},
+						title: {
+							text: '이행률(%)',
+							align: 'high',
+							rotation: 0,
+							y: -30,
+							x: -50,
+							style: {
+								color: '#000',
+								font: '300 12px "Noto Sans KR"',
+							}
+						},
+						opposite: true,
+					},
+				],
+	
+				tooltip: {
+					enabled: true,
+					shared: false,
+					useHTML: true,
+					headerFormat: '<table class="chartTooltip"><thead><tr><th colspan="2">{point.key}</th></tr></thead>',
+					pointFormat: '<tbody><tr><td style="color: {series.color}">{series.name} </td>' +
+					'<td style="color:#666; text-align: right">{point.y}</td></tr></tbody>',
+					footerFormat: '</table>',
+					valueDecimals: 0
+				},
+	
+				plotOptions: {
+					series: {
+						dataLabels: {
+							enabled: true,
+							inside: false,
+							color: '#000',
+							style: {
+								color: '#000',
+								font: '300 12px "Noto Sans KR"',
+							},
+						}
+					}
+				},
+	
+				series: [
+					{
+						yAxis: 0,
+						type: 'column',
+						name: '예상 보장공급량',
+						data: [800, 900, 1000, 1100, 1200, 1300, 1400],
+						color: '#00A5CF',
+						tooltip: {valueSuffix: ' kW'},
+					},
+					{
+						yAxis: 0,
+						type: 'column',
+						name: '발전량',
+						data: [900, 1000, 1100, 1200, 1300, 1400, 1500],
+						color: '#25A18E',
+						tooltip: {valueSuffix: ' kW'},
+					},
+					{
+						yAxis: 1,
+						type: 'line',
+						name: '이행률',
+						data: [76, 150, 140, 120, 170, 190, 210],
+						color: '#FF9776',
+						tooltip: {valueSuffix: ' %'},
+					}
+				]
+			});
+		}
+    </script>
+</body>
+</html>
