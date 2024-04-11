@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SK E&S RE100 통합관리 서비스">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Re100">
+    <meta property="og:description" content="">
+
+    <title>SK E&amp;S RE100 통합관리 서비스</title>
+
+    <link rel="shortcut icon" href="../../../static/assets//images/favicon.ico" type="image/x-icon" />
+    
+    <!-- js -->
+    <script src="../../../static/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../../../static/assets/js/common.js"></script>
+    
+    <!-- jquery ui -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/css/jquery-ui.min.css" />    
+
+    <!-- Data jqGrid  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../static/assets/jqGrid/css/ui.jqgrid.css" />
+    <script src="../../../static/assets/jqGrid/js/minified/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="../../../static/assets/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+
+    <!-- Datepicker --> 
+    <link rel="stylesheet" href="../../../static/assets/css/datepicker.min.css">
+    <script src="../../../static/assets/js/datepicker.min.js"></script>
+    <script src="../../../static/assets/js/datepicker.ko.js"></script>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../static/assets/css/theme_green.css" />
+</head>
+<body><!-- dashboard :: class="dashbd" -->
+	<header id="header">
+    <div>
+        <h1 class="logo">
+            <a href="../../main/dashboard/메인.html" class="">
+                <span class="">SK E&amp;S</span><span class="">RE100 통합관리 서비스</span>
+            </a>
+        </h1>
+        <!-- nav -->
+        <!--
+            [메뉴 활성화]
+            - 활성화 클래스는 li 태그에 붙는다.
+
+
+            [1뎁스]
+            - 활성화 대상  : .gnb > nav > ul > li
+            - 활성화 클래스 : .on
+            - 1뎁스 활성화는 li 태그 내 a aria-expanded도 같이 붙는다.
+
+            비활성 : <li class="menu01"><a href="#" aria-expanded="false"></a></li>
+            활성 : <li class="menu01 on"><a href="#" aria-expanded="true"></a></li>
+
+
+            [2뎁스]
+            - 활성화 대상  : .sub_menu > ul > li
+            - 활성화 클래스 : .on
+
+            비활성 : <div class="sub_menu"><ul><li></li></ul></div>
+            활성 : <div class="sub_menu"><ul><li class="on"></li></ul></div>
+            
+            [3뎁스]
+            - 활성화 대상  : .menu_depth3 > li
+            - 활성화 클래스 : .on
+
+            비활성 : <ul class="menu_depth3"><li></li></ul>
+            활성 : <ul class="menu_depth3" class="on"><li></li></ul>
+        -->
+        <div id="nav">
+            <div class="gnb">
+            <nav>
+                <ul>
+                    <li class="menu01">
+                        <a href="" title="계약" aria-expanded="false">
+                            <span>계약</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="" target="_blank" title="개시전 계약">
+                                        <span>개시전 계약</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_그룹계약관리_목록.html" title="그룹 계약 관리">
+                                                <span>그룹 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_001/개시전계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="직접 PPA 계약">
+                                        <span>직접 PPA 계약</span> 
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_그룹계약관리_목록.html" title="그룹 계약 관리">
+                                                <span>그룹 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_002/직접PPA계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="VPPA 계약">
+                                        <span>V.PPA 계약</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../contract/depth2_003/VPPA계약_개별계약관리_목록.html" title="개별 계약 관리">
+                                                <span>개별 계약 관리</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../contract/depth2_003/VPPA계약_최종계약관리_목록.html" title="최종 계약 관리">
+                                                <span>최종 계약 관리</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../../contract/depth2_004/보장공급량관리_목록.html" title="보장공급량 관리">
+                                        <span>보장공급량 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu02">
+                        <a href="javascript:voild(0)" title="사업자·계좌" aria-expanded="false">
+                            <span>사업자·계좌</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>                         
+                                <li>
+                                    <a href="../../client/depth2_001/사업자계좌_발전사업자정보_목록.html" title="발전사업자 정보">
+                                        <span>발전사업자 정보</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_002/사업자계좌_전기사용자정보_목록.html" title="전기사용자 정보">
+                                        <span>전기사용자 정보</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_003/사업자계좌_지급계좌등록관리_목록.html" title="입금계좌 관리">
+                                        <span>입금계좌 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../client/depth2_004/사업자계좌_담당자계정관리_목록.html" title="담당자 계정 관리">
+                                        <span>담당자 계정 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu03 on">
+                        <a href="#" title="대금정산" aria-expanded="false">
+                            <span>대금정산</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li class="on">
+                                    <a href="#" title="직접 PPA">
+                                        <span>직접 PPA</span> 
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_PPA거래실적_목록.html" title="PPA 거래실적">
+                                                <span>PPA 거래실적</span>
+                                            </a>
+                                        </li>
+                                        <li class="on">
+                                            <a href="../../calculation/depth2_001/직접PPA_부가비용선납_목록.html" title="부가비용 선납">
+                                                <span>부가비용 선납</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_대금산정_목록.html" title="대금산정">
+                                                <span>대금산정</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_001/직접PPA_정산현황_목록.html" title="정산현황">
+                                                <span>정산현황</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="V.PPA/PPA초과발전">
+                                        <span>V.PPA/PPA초과발전</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_002/VPPA_PPA초과발전_대금산정_목록.html" title="대금산정">
+                                                <span>대금산정</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_002/VPPA_PPA초과발전_정산현황_목록.html" title="정산현황">
+                                                <span>정산현황</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../../calculation/depth2_003/입금반제_목록.html" title="입금 반제">
+                                        <span>입금 반제</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../calculation/depth2_004/대금수정정산_목록.html" title="대금 수정 정산">
+                                        <span>대금 수정 정산</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="정산관리">
+                                        <span>정산관리</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../calculation/depth2_005/정산관리_정산달력.html" title="정산달력">
+                                                <span>정산달력</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../calculation/depth2_005/정산관리_정산정보설정.html" title="정산정보 설정">
+                                                <span>정산정보 설정</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu04">
+                        <a href="javascript:voild(0)" title="통계" aria-expanded="false">
+                            <span>통계</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="#" title="사업 통계">
+                                        <span>사업통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_손익현황.html" title="손익현황">
+                                                <span>손익현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_계약현황.html" title="계약현황">
+                                                <span>계약현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_001/사업통계_예상사업손익.html" title="예상사업손익">
+                                                <span>예상사업손익</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="고객통계">
+                                        <span>고객통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_RE100이행실적.html" title="RE100 이행실적">
+                                                <span>RE100 이행실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_발전량실적.html" title="발전량 실적">
+                                                <span>발전량 실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_정산실적.html" title="정산 실적">
+                                                <span>정산 실적</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_002/고객통계_보장공급량이행률.html" title="보장공급량 이행률">
+                                                <span>보장공급량 이행률</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" title="전력시장 통계">
+                                        <span>전력시장 통계</span>
+                                    </a>
+                                    <ul class="menu_depth3">
+                                        <li>
+                                            <a href="../../statistics/depth2_003/전력시장통계_시간별SMP.html" title="시간별 SMP">
+                                                <span>시간별 SMP</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../statistics/depth2_003/전력시장통계_REC평균가격.html" title="REC 평균가격">
+                                                <span>REC 평균가격</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu05">
+                        <a href="javascript:voild(0)" title="시스템운영" aria-expanded="false">
+                            <span>시스템운영</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="../../operation/depth2_001/시스템운영_공지사항_목록.html" title="공지사항">
+                                        <span>공지사항</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_002/시스템운영_1:1문의_목록.html" title="1:1 문의">
+                                        <span>1:1 문의</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_003/시스템운영_템플릿관리.html" title="템플릿 관리">
+                                        <span>템플릿 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_004/시스템운영_회계마감일관리.html" title="회계마감일 관리">
+                                        <span>회계마감일 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../operation/depth2_005/시스템운영_발신이력관리.html" title="발신이력 관리">
+                                        <span>발신이력 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu06">
+                        <a href="javascript:voild(0)" title="설정" aria-expanded="false">
+                            <span>설정</span>
+                        </a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li>
+                                    <a href="../../setting/depth2_001/설정_약관관리.html" title="관리자 계정">
+                                        <span>약관 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_002/설정_관리자계정.html" title="관리자 계정">
+                                        <span>관리자 계정</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_003/설정_관리자권한.html" title="관리자 권한">
+                                        <span>관리자 권한</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_004/설정_코드관리.html" title="코드 관리">
+                                        <span>코드 관리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../../setting/depth2_005/설정_배치관리.html" title="배치 관리">
+                                        <span>배치 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            </div>
+        </div>
+        <ul class="hsection">
+            <li>
+                <strong class="name">홍길동님</strong>
+                <span class="date">2022-07-07</span>
+            </li>
+            <li>
+                <a class="notice" title="알림보기">
+                    <span class="count">3</span>
+                </a>
+            </li>
+            <li>
+                <a class="logout" title="로그아웃">로그아웃</a>
+            </li>
+        </ul>
+    </div>
+    </header>
+    <div id="container">
+    	<!-- content -->
+        <div id="content">
+        	<!-- title_area -->
+            <div class="title_area">
+                <div class="fleft">
+                    <h2>부가비용 선납</h2>
+                    <ul class="location">
+                        <li>홈</li>
+                        <li>대금정산</li>
+                        <li>직접 PPA</li>
+                        <li>부가비용 선납</li>
+                    </ul>
+                </div>
+            </div>
+            <!--// title_area -->
+            <!-- TAB BOX -->
+           	<div class="tabbox">
+           		<ul class="tablist">
+	                <li class="on">
+	                	<a href="javascript:void(0)" title="망 이용요금">망 이용요금</a>
+	                </li>
+	                <li>
+	                	<a href="javascript:void(0)" title="부가정산금">부가정산금</a>
+	                </li>
+	                <li>
+	                	<a href="javascript:void(0)" title="전력거래수수료">전력거래수수료</a>
+	                </li>
+                </ul>
+                
+                <!-- TAB1 : 망 이용요금 -->
+                <div class="tab">
+                	<!-- search form -->
+                	<div class="search_form small">
+		            	<div class="row_group">
+		            		<div class="row">
+		            			<dl class="col col_8">
+		            				<dt>전력거래 연월</dt>
+		            				<dd>
+		            					<div class="period_box">
+			            					<select class="select">
+			                                    <option value="">년</option>
+			                                    <option>2024</option>
+			                                    <option>2023</option>
+			                                    <option>2022</option>
+			                                    <option>2021</option>
+			                                    <option>2020</option>
+			                                    <option>2019</option>
+			                                    <option>2018</option>
+			                                    <option>2017</option>
+			                                    <option>2016</option>
+			                                    <option>2015</option>
+			                                    <option>2014</option>
+			                                </select>
+			                                <select class="select">
+			                                    <option value="">월</option>
+			                                    <option>1</option>
+			                                    <option>2</option>
+			                                    <option>3</option>
+			                                    <option>4</option>
+			                                    <option>5</option>
+			                                    <option>6</option>
+			                                    <option>7</option>
+			                                    <option>8</option>
+			                                    <option>9</option>
+			                                    <option>10</option>
+			                                    <option>11</option>
+			                                    <option>12</option>
+			                                </select>
+			                                <span>~</span>
+			                                <select class="select">
+			                                    <option value="">년</option>
+			                                    <option>2024</option>
+			                                    <option>2023</option>
+			                                    <option>2022</option>
+			                                    <option>2021</option>
+			                                    <option>2020</option>
+			                                    <option>2019</option>
+			                                    <option>2018</option>
+			                                    <option>2017</option>
+			                                    <option>2016</option>
+			                                    <option>2015</option>
+			                                    <option>2014</option>
+			                                </select>
+			                                <select class="select">
+			                                    <option value="">월</option>
+			                                    <option>1</option>
+			                                    <option>2</option>
+			                                    <option>3</option>
+			                                    <option>4</option>
+			                                    <option>5</option>
+			                                    <option>6</option>
+			                                    <option>7</option>
+			                                    <option>8</option>
+			                                    <option>9</option>
+			                                    <option>10</option>
+			                                    <option>11</option>
+			                                    <option>12</option>
+			                                </select>
+			            				</div>
+		            				</dd>
+		            			</dl>
+		            			<dl class="col col_4">
+		            				<dt>대조 상태</dt>
+		            				<dd>
+		            					<select class="select">
+			                            	<option value="">전체</option>
+			                            	<option value="">계산서 누락</option>
+			                            	<option value="">계산서 일자마감</option>
+			                            	<option value="">계산서 금액 불일치</option>
+			                            	<option value="">대조완료</option>
+			                            	<option value="">지급일자 누락</option>
+			                            </select>
+		            				</dd>
+		            			</dl>
+		            			<dl class="col col_8">
+		            				<dt>검색어</dt>
+		            				<dd>
+		            					<div class="sch_box">
+			            					<select class="select">
+				                            	<option value="">최종 계약번호</option>
+                                                <option value="">소비 그룹계약 번호</option>
+                                                <option value="">소비 그룹계약 명</option>
+				                            </select>
+				                            <input type="text">
+			                            </div>
+		            				</dd>
+		            			</dl>
+		            			<dl class="col col_4">
+		            				<dt>기안처리 상태</dt>
+		            				<dd>
+		            					<select class="select">
+		            						<option value="">전체</option>
+			                            	<option value="">대기</option>
+			                            	<option value="">반려</option>
+			                            	<option value="">매입전표 기안 승인</option>
+			                            </select>
+		            				</dd>
+		            			</dl>
+		            		</div>
+		            	</div>
+		            	<!-- search button -->
+		            	<div class="btnsrch">
+				        	<button class="btn"><span>초기화</span></button>
+				            <button class="btn search"><span>조회</span></button>
+				        </div>
+				        <!-- //search button -->
+		            </div>
+                	<!-- //search form -->
+                	<!-- 컨텐츠 타이틀(h3) -->
+					<div class="title_area">
+						<div class="fleft">
+							<div class="total_page">
+								<span>총 건수:</span>
+								<strong>852,159 건</strong>
+							</div>
+						</div>
+						<div class="fright">
+							<button class="btn activ" title="button" onclick="initSetting.popLayer.open('layerNet')"><span>청구서 등록</span></button>
+							<button class="btn line" title="button" onclick="initSetting.popLayer.open('layerDownload')"><span>엑셀 다운로드</span></button>
+							<select class="select">
+			                	<option value="opt1">10건 보기</option>
+			                    <option value="opt2">50건 보기</option>
+			                    <option value="opt3">100건 보기</option>
+			                    <option value="opt4">500건 보기</option>
+			                </select>
+						</div>
+					</div>
+					<!-- //컨텐츠 타이틀(h3) -->
+					<!-- row :: jqGrid -->
+					<div class="grid-container glist">
+						<table id="gridNet"></table>
+						<!-- Paging List -->
+				        <div class="paging_area">
+				        	<a href="#" class="first"><span>처음페이지로 가기</span></a>
+				            <a href="#" class="prev"><span>전페이지로 가기</span></a>
+				            <strong>1</strong>
+				            <a href="#">2</a>
+				            <a href="#">3</a>
+				            <a href="#">4</a>
+				            <a href="#">5</a>
+				            <a href="#" class="next"><span>다음페이지로 가기</span></a>
+				            <a href="#" class="last"><span>마지막페이지로 가기</span></a>
+				        </div>
+				        <!--// Paging List -->
+					</div>
+					<!-- row :: jqGrid -->
+                </div>
+                <!-- //TAB1 : 망 이용요금 -->
+                
+                <!-- TAB2 : 부가정산금 -->
+                <div class="tab hidden">
+                	<!-- search form -->
+                    <div class="search_form">
+                        <div class="row_group">
+                            <div class="row">
+                                <dl class="col col_6 col_xxxl_8">
+                                    <dt>전력거래 연월</dt>
+                                    <dd>
+                                        <div class="period_box">
+                                            <select class="select">
+                                                <option value="">년</option>
+                                                <option>2024</option>
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">월</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select>
+                                            <span>~</span>
+                                            <select class="select">
+                                                <option value="">년</option>
+                                                <option>2024</option>
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">월</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="col col_2 col_xxxl_4">
+                                    <dt>과세 구분</dt>
+                                    <dd>
+                                        <select class="select">
+                                            <option value="">전체</option>
+                                            <option value="">과세</option>
+                                            <option value="">비과세</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                                <dl class="col col_2 col_xxxl_4">
+                                    <dt>대조 상태</dt>
+                                    <dd>
+                                        <select class="select">
+                                            <option value="">전체</option>
+                                            <option value="">계산서 누락</option>
+                                            <option value="">계산서 일자마감</option>
+                                            <option value="">계산서 금액 불일치</option>
+                                            <option value="">대조완료</option>
+                                            <option value="">지급일자 누락</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                                <dl class="col col_2 col_xxxl_4">
+                                    <dt>기안처리 상태</dt>
+                                    <dd>
+                                        <select class="select">
+                                            <option value="">전체</option>
+                                            <option value="">대기</option>
+                                            <option value="">반려</option>
+                                            <option value="">매입전표 기안 승인</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- search button -->
+                        <div class="btnsrch">
+                            <button class="btn"><span>초기화</span></button>
+                            <button class="btn search"><span>조회</span></button>
+                        </div>
+                        <!-- //search button -->
+                    </div>
+                    <!-- //search form -->
+                	<!-- 컨텐츠 타이틀(h3) -->
+					<div class="title_area">
+						<div class="fleft">
+							<div class="total_page">
+								<span>총 건수:</span>
+								<strong>852,159 건</strong>
+							</div>
+						</div>
+						<div class="fright">
+							<button class="btn activ" title="button" onclick="initSetting.popLayer.open('layerAdd')"><span>청구서 등록</span></button>
+							<button class="btn line" title="button" onclick="initSetting.popLayer.open('layerDownload')"><span>엑셀 다운로드</span></button>
+							<select class="select">
+			                	<option value="opt1">10건 보기</option>
+			                    <option value="opt2">50건 보기</option>
+			                    <option value="opt3">100건 보기</option>
+			                    <option value="opt4">500건 보기</option>
+			                </select>
+						</div>
+					</div>
+					<!-- //컨텐츠 타이틀(h3) -->
+					<!-- row :: jqGrid -->
+					<div class="grid-container glist">
+						<table id="gridAdd"></table>
+						<!-- Paging List -->
+				        <div class="paging_area">
+				        	<a href="#" class="first"><span>처음페이지로 가기</span></a>
+				            <a href="#" class="prev"><span>전페이지로 가기</span></a>
+				            <strong>1</strong>
+				            <a href="#">2</a>
+				            <a href="#">3</a>
+				            <a href="#">4</a>
+				            <a href="#">5</a>
+				            <a href="#" class="next"><span>다음페이지로 가기</span></a>
+				            <a href="#" class="last"><span>마지막페이지로 가기</span></a>
+				        </div>
+				        <!--// Paging List -->
+					</div>
+					<!-- row :: jqGrid -->
+                </div>
+                <!-- //TAB2 : 부가정산금 -->
+                
+                <!-- TAB3 : 전력거래수수료 -->
+                <div class="tab hidden">
+                	<!-- search form -->
+                    <div class="search_form">
+                        <div class="row_group">
+                            <div class="row">
+                                <dl class="col col_6 col_xxl_8">
+                                    <dt>전력거래 연월</dt>
+                                    <dd>
+                                        <div class="period_box">
+                                            <select class="select">
+                                                <option value="">년</option>
+                                                <option>2024</option>
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">월</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select>
+                                            <span>~</span>
+                                            <select class="select">
+                                                <option value="">년</option>
+                                                <option>2024</option>
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">월</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="col col_3 col_xxl_4">
+                                    <dt>대조 상태</dt>
+                                    <dd>
+                                        <select class="select">
+                                            <option value="">전체</option>
+                                            <option value="">계산서 누락</option>
+                                            <option value="">계산서 일자마감</option>
+                                            <option value="">계산서 금액 불일치</option>
+                                            <option value="">대조완료</option>
+                                            <option value="">지급일자 누락</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                                <dl class="col col_3 col_xxl_4">
+                                    <dt>기안처리 상태</dt>
+                                    <dd>
+                                        <select class="select">
+                                            <option value="">전체</option>
+                                            <option value="">대기</option>
+                                            <option value="">반려</option>
+                                            <option value="">매입전표 기안 승인</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- search button -->
+                        <div class="btnsrch">
+                            <button class="btn"><span>초기화</span></button>
+                            <button class="btn search"><span>조회</span></button>
+                        </div>
+                        <!-- //search button -->
+                    </div>
+                    <!-- //search form -->
+                    <!-- 컨텐츠 타이틀(h3) -->
+                    <div class="title_area">
+                        <div class="fleft">
+                            <div class="total_page">
+                                <span>총 건수:</span>
+                                <strong>852,159 건</strong>
+                            </div>
+                        </div>
+                        <div class="fright">
+                            <button class="btn activ" title="button" onclick="initSetting.popLayer.open('layerElc')"><span>청구서 등록</span></button>
+                            <button class="btn line" title="button" onclick="initSetting.popLayer.open('layerDownload')"><span>엑셀 다운로드</span></button>
+                            <select class="select">
+                                <option value="opt1">10건 보기</option>
+                                <option value="opt2">50건 보기</option>
+                                <option value="opt3">100건 보기</option>
+                                <option value="opt4">500건 보기</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- //컨텐츠 타이틀(h3) -->
+                    <!-- row :: jqGrid -->
+                    <div class="grid-container glist">
+                        <table id="gridElc"></table>
+                        <!-- Paging List -->
+                        <div class="paging_area">
+                            <a href="#" class="first"><span>처음페이지로 가기</span></a>
+                            <a href="#" class="prev"><span>전페이지로 가기</span></a>
+                            <strong>1</strong>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" class="next"><span>다음페이지로 가기</span></a>
+                            <a href="#" class="last"><span>마지막페이지로 가기</span></a>
+                        </div>
+                        <!--// Paging List -->
+                    </div>
+                    <!-- row :: jqGrid -->
+                </div>
+                <!-- //TAB3 : 전력거래수수료 -->
+                
+           	</div>
+           	<!-- //TAB BOX -->
+        </div>
+        <!-- //content -->
+        <!-- footer -->
+        <footer id="footer">
+			<span>COPYRIGHT ⓒ SK E&amp;S. ALL RIGHTS RESRVED.</span>
+        </footer>
+        <!--// footer -->
+    </div>
+    
+    <!-- Layer Popup : 부가비용 선납정보 등록 (망 이용요금) -->
+	<div id="layerNet" class="popLayer">
+		<div class="popup_wrap" style="width: 1400px;">
+			<div class="pop_header">
+				<div class="pop_title_area">
+					<h2>부가비용 선납정보 등록</h2>
+				</div>
+				<button id="popup_close" class="popup_close">닫기</button>
+			</div>
+		
+			<div class="pop_content">
+				<!-- 망 이용요금 -->
+				<div class="row">
+					<!-- search form -->
+					<div class="search_form">
+						<div class="row_group" style="width:100%;">
+							<div class="row">
+								<dl class="col col_6">
+									<dt>최종 계약번호</dt>
+									<dd>
+										<div class="flex alignc">
+											<!-- 유효성 체크박스 확인 후 'test_input' class 삭제해주세요 -->
+											<input type="text" placeholder="최종계약번호 입력" value="00098" class="test_input">
+											<button class="btn search">
+							                	<span>조회</span>
+							                </button>
+							                <input type="text" value="24-P000098" readonly>
+						                </div>
+									</dd>
+								</dl>
+								<dl class="col col_3">
+									<dt>소비 그룹계약번호</dt>
+									<dd><input type="text" value="24-P000098" readonly></dd>
+								</dl>
+								<dl class="col col_3">
+									<dt>소비 그룹계약명</dt>
+									<dd><input type="text" value="KT&G-영주" readonly></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<!-- //search form -->
+					<div class="row">
+						<!-- 전력거래연월, 입금기한 -->
+						<table>
+							<caption>망 이용요금 전력거래 연월, 입금기한 목록</caption>
+							<colgroup>
+								<col style="width:170px;" />
+								<col />
+								<col style="width:170px;" />
+								<col />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">전력거래 연월</th>
+									<td>
+										<div class="flex alignc">
+											<select class="select">
+					                			<option value="">년</option>
+					                			<option value="">2024</option>
+					                			<option value="">2025</option>
+					                			<option value="">2026</option>
+					                		</select>
+					                		<select class="select">
+					                			<option value="">월</option>
+					                			<option value="">01</option>
+					                			<option value="">02</option>
+					                			<option value="">03</option>
+					                			<option value="">04</option>
+					                			<option value="">05</option>
+					                			<option value="">06</option>
+					                			<option value="">07</option>
+					                			<option value="">08</option>
+					                			<option value="">09</option>
+					                			<option value="">10</option>
+					                			<option value="">11</option>
+					                			<option value="">12</option>
+					                		</select>
+				                		</div>
+									</td>
+									<th scope="row">입금기한</th>
+									<td><input class="date useDatepicker" id="" type="text" placeholder="YYYY-MM-DD" style="width:50%;" readonly /></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- //전력거래연월, 입금기한 -->
+						
+						<!-- 위약금,이용요금 합계 등 -->
+						<div class="table_list tableFixHead mt10">
+							<table class="list">
+								<caption>망이용요금 위약금, 이용요금합계, 전력거래량, 발전측 송전요금, 수요측 송전요금, 배전고압망, 합계</caption>
+								<colgroup>
+									<col style="width:14.28%;" />
+									<col style="width:14.28%;" />
+                                    <col style="width:14.28%;" />
+                                    <col style="width:14.28%;" />
+                                    <col style="width:14.28%;" />
+                                    <col style="width:14.28%;" />
+                                    <col style="width:14.28%;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">위약금</th>
+										<th scope="col">합계(공급가액)</th>
+										<th scope="col">부가가치세</th>
+                                        <th scope="col">총액</th>
+										<th scope="col">연체료</th>
+										<th scope="col">원단위 절사금액</th>
+										<th scope="col">청구금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="alignr"><input type="number" class="num" value="0"></td>
+										<td class="alignr">103,127</td>
+										<td class="alignr"><input type="text" class="num" value="31,630"></td>
+										<td class="alignr"><input type="text" class="num" value="23,025"></td>
+										<td class="alignr"><input type="text" class="num" value="-7"></td>
+                                        <td class="alignr"><input type="text" class="num" value="-7"></td>
+										<td class="alignr">103,127</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //위약금,이용요금 합계 등 -->
+					</div>
+					
+					<!-- 이용요금 상세내역 -->
+					<div class="row">
+						<!-- 컨텐츠 타이틀(h3) -->
+						<div class="title_area">
+							<div class="fleft">
+								<h3>이용요금 상세내역</h3>
+							</div>
+						</div>
+						<!-- //컨텐츠 타이틀(h3) -->
+						<div class="table_list tableFixHead">
+							<table class="list">
+								<caption>이용요금 상세내역 목륵</caption>
+								<colgroup>
+									<col style="width:8.333%;" />
+									<col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+                                    <col style="width:8.333%;" />
+								</colgroup>
+								<thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">개별계약번호</th>
+                                        <th scope="col" rowspan="2">전력 거래량<br>(MWh)</th>
+                                        <th scope="col" colspan="3">발전측 송전요금</th>
+                                        <th scope="col" colspan="3">수요측 송전요금</th>
+                                        <th scope="col" colspan="3">배전고압망</th>
+                                        <th scope="col" rowspan="2">합계<br>(공급가액)</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">당월 요금</th>
+                                        <th scope="col">전월 가감액</th>
+                                        <th scope="col">소계</th>
+                                        <th scope="col">당월 요금</th>
+                                        <th scope="col">전월 가감액</th>
+                                        <th scope="col">소계</th>
+                                        <th scope="col">당월 요금</th>
+                                        <th scope="col">전월 가감액</th>
+                                        <th scope="col">소계</th>
+                                    </tr>
+                                </thead>
+								<tbody>
+									<tr class="sum"><!-- 합계 row : 'sum' class 추가 -->
+                                        <td></td>
+                                        <td class="alignr">79,731</td>
+                                        <td class="alignr">150,000</td>
+                                        <td class="alignr">3,083</td>
+                                        <td class="alignr">153,000</td>
+                                        <td class="alignr">150,000</td>
+                                        <td class="alignr">3,083</td>
+                                        <td class="alignr">153,000</td>
+                                        <td class="alignr">150,000</td>
+                                        <td class="alignr">3,083</td>
+                                        <td class="alignr">153,000</td>
+                                        <td class="alignr">499,118</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23-U00023</td>
+                                        <td class="alignr"><input type="text" class="num" value="16,472"></td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="number" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr">103,123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23-U00023</td>
+                                        <td class="alignr"><input type="text" class="num" value="16,472"></td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr">103,123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23-U00023</td>
+                                        <td class="alignr"><input type="text" class="num" value="16,472"></td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr"><input type="text" class="num" value="30,000"></td>
+                                        <td class="alignr"><input type="text" class="num" value="1,630"></td>
+                                        <td class="alignr">31,630</td>
+                                        <td class="alignr">103,123</td>
+                                    </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //이용요금 상세내역 -->
+					
+					<!-- 첨부서류 -->
+					<div class="row">
+						<!-- 컨텐츠 타이틀(h3) -->
+						<div class="title_area">
+							<div class="fleft">
+								<h3>첨부서류</h3>
+							</div>
+						</div>
+						<!-- //컨텐츠 타이틀(h3) -->
+						<table>
+							<caption>첨부서류 목록</caption>
+							<colgroup>
+								<col style="width:170px;" />
+								<col />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">망 이용요금 청구서</th>
+									<td>
+										<div class="uploadForm">
+											<ul class="add__attach__list">
+												<li>
+													<span class="add__attach__file" data-ui="attach">
+														<span class="btn__attach">
+															<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">기타 첨부서류1</th>
+									<td>
+										<div class="uploadForm">
+											<ul class="add__attach__list">
+												<li>
+													<span class="add__attach__file" data-ui="attach">
+														<span class="btn__attach">
+															<label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <th scope="row">기타 첨부서류2</th>
+                                    <td>
+                                        <div class="uploadForm">
+                                            <ul class="add__attach__list">
+                                                <li>
+                                                    <span class="add__attach__file" data-ui="attach">
+                                                        <span class="btn__attach">
+                                                            <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //첨부서류 -->
+            	</div>
+            	<!-- //망 이용요금 -->
+			</div>
+	            
+			<div class="pop_footer alignc">
+				<button class="btn line popup_close"><span>취소</span></button>
+				<button class="btn activ" onclick="validChk();"><span>등록</span></button>
+			</div>
+			<!-- 유효성 체크 박스 -->
+            <!--  유효성 체크 실패 : fail class 사용 -->
+	        <div class="valid_box fail">
+	        	<span>계약번호가 존재하지 않습니다.</span> 
+	        </div>
+	        <!--  유효성 체크 성공 : success class 사용
+	   		<div class="valid_box success">
+	        	<span>성공 메세지 필요 시 사용</span>
+	        </div>
+	         -->
+	        <!-- //유효성 체크 박스 -->
+		</div>
+	</div>
+	<!-- //Layer Popup : 부가비용 선납정보 등록(망 이용요금) -->
+
+    <!-- Layer Popup : 부가비용 선납정보 등록 (부가정산금) -->
+    <div id="layerAdd" class="popLayer">
+        <div class="popup_wrap" style="width: 1400px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>부가비용 선납정보 등록(Parsing)</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+        
+            <div class="pop_content">
+                <!-- 부가정산금 -->
+                <div class="row">
+                    <div class="row">
+                        <!-- 전력거래연월, 과세구분, 입금기한 -->
+                        <table>
+                            <caption>부가정산금 전력거래연월, 과세구분, 입금기한</caption>
+                            <colgroup>
+                                <col style="width:170px;" />
+                                <col />
+                                <col style="width:170px;" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">전력거래 연월</th>
+                                    <td colspan="3">
+                                        <div class="flex alignc" style="width:30%">
+                                            <select class="select">
+                                                <option value="">년</option>
+                                                <option value="">2024</option>
+                                                <option value="">2025</option>
+                                                <option value="">2026</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">월</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                                <option value="">06</option>
+                                                <option value="">07</option>
+                                                <option value="">08</option>
+                                                <option value="">09</option>
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                                <option value="">12</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">과세구분</th>
+                                    <td>
+                                        <ul class="radio_box">
+                                            <li>
+                                                <input type="radio" id="tax1" value="tax1" name="tax" checked>
+                                                <label for="tax1">과세</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="tax2" value="tax2" name="tax">
+                                                <label for="tax2">비과세</label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <th scope="row">입금기한</th>
+                                    <td>
+                                        <input class="date useDatepicker" id="" type="text" style="width:50%;" placeholder="YYYY-MM-DD" readonly />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //전력거래연월, 과세구분, 입금기한 -->
+
+                        <!-- 차수, 공급가액, 세액, 총액, 청구서 등록(과세) -->
+                        <div class="table_list tableFixHead mt10" id="taxContent1">
+                            <table class="list">
+                                <caption>부가정산금 차수, 공급가액, 세액, 총액, 청구서 등록</caption>
+                                <colgroup>
+                                    <col style="width:15%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:40%;" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">차수</th>
+                                        <th scope="col">공급가액</th>
+                                        <th scope="col">세액</th>
+                                        <th scope="col">총액</th>
+                                        <th scope="col">청구서 등록</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <select class="select">
+                                                <option>1차</option>
+                                            </select>
+                                        </td>
+                                        <td class="alignr">233,932</td>
+                                        <td class="alignr">233,932</td>
+                                        <td class="alignr">233,932</td>
+                                        <td>
+                                            <div class="uploadForm">
+                                                <ul class="add__attach__list">
+                                                    <li>
+                                                        <span class="add__attach__file" data-ui="attach">
+                                                            <span class="btn__attach">
+                                                                <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //차수, 공급가액, 세액, 총액, 청구서 등록(과세) -->
+                        
+                        <!-- 차수, 총액, 청구서 등록(비과세) -->
+                        <div class="table_list tableFixHead mt10" id="taxContent2" style="display:none;">
+                            <table class="list">
+                                <caption>부가정산금 차수, 총액, 청구서 등록</caption>
+                                <colgroup>
+                                    <col style="width:20%;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:50%;" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">차수</th>
+                                        <th scope="col">총액</th>
+                                        <th scope="col">청구서 등록</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1차</td>
+                                        <td class="alignr">233,932</td>
+                                        <td>
+                                            <div class="uploadForm">
+                                                <ul class="add__attach__list">
+                                                    <li>
+                                                        <span class="add__attach__file" data-ui="attach">
+                                                            <span class="btn__attach">
+                                                                <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2차</td>
+                                        <td class="alignr">233,932</td>
+                                        <td>
+                                            <div class="uploadForm">
+                                                <ul class="add__attach__list">
+                                                    <li>
+                                                        <span class="add__attach__file" data-ui="attach">
+                                                            <span class="btn__attach">
+                                                                <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3차</td>
+                                        <td class="alignr">233,932</td>
+                                        <td>
+                                            <div class="uploadForm">
+                                                <ul class="add__attach__list">
+                                                    <li>
+                                                        <span class="add__attach__file" data-ui="attach">
+                                                            <span class="btn__attach">
+                                                                <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="sum"><!-- 합계 row : 'sum' class 추가 -->
+                                        <td>계</td>
+                                        <td class="alignr">100,000</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //차수, 총액, 청구서 등록(비과세) -->
+
+                    </div>
+                    
+                    <!-- 첨부서류 -->
+                    <div class="row">
+                        <!-- 컨텐츠 타이틀(h3) -->
+                        <div class="title_area">
+                            <div class="fleft">
+                                <h3>첨부서류</h3>
+                            </div>
+                        </div>
+                        <!-- //컨텐츠 타이틀(h3) -->
+                        <table>
+                            <caption>첨부서류 목록</caption>
+                            <colgroup>
+                                <col style="width:170px;" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">기타 첨부서류1</th>
+                                    <td>
+                                        <div class="uploadForm">
+                                            <ul class="add__attach__list">
+                                                <li>
+                                                    <span class="add__attach__file" data-ui="attach">
+                                                        <span class="btn__attach">
+                                                            <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기타 첨부서류2</th>
+                                    <td>
+                                        <div class="uploadForm">
+                                            <ul class="add__attach__list">
+                                                <li>
+                                                    <span class="add__attach__file" data-ui="attach">
+                                                        <span class="btn__attach">
+                                                            <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //첨부서류 -->
+                </div>
+                <!-- //부가정산금 -->
+            </div>
+                
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close"><span>취소</span></button>
+                <button class="btn activ" onclick="validChk();"><span>등록</span></button>
+            </div>
+            <!-- 유효성 체크 박스 -->
+            <!--  유효성 체크 실패 : fail class 사용 -->
+            <div class="valid_box fail">
+                <span>형식에 맞지않는 청구서입니다.</span> 
+            </div>
+            <!--  유효성 체크 성공 : success class 사용
+            <div class="valid_box success">
+                <span>성공 메세지 필요 시 사용</span>
+            </div>
+             -->
+            <!-- //유효성 체크 박스 -->
+        </div>
+
+    </div>
+    <!-- //Layer Popup : 부가비용 선납정보 등록(부가정산금) -->
+
+    <!-- Layer Popup : 부가비용 선납정보 등록 (전력거래수수료) -->
+    <div id="layerElc" class="popLayer">
+        <div class="popup_wrap" style="width: 1400px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>부가비용 선납정보 등록(Parsing)</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+        
+            <div class="pop_content">
+                <!-- 전력거래수수료 -->
+                <div class="row">
+                    <div class="row">
+                        <!-- 전력거래수수료 전력거래 연월, 입금기한 -->
+                        <table>
+                            <caption>전력거래수수료 전력거래연월, 입금기한</caption>
+                            <colgroup>
+                                <col style="width:170px;" />
+                                <col />
+                                <col style="width:170px;" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">전력거래 연월</th>
+                                    <td>
+                                        <div class="flex alignc" style="width:50%">
+                                            <select class="select">
+                                                <option value="">년</option>
+                                                <option value="">2024</option>
+                                                <option value="">2025</option>
+                                                <option value="">2026</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">월</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                                <option value="">06</option>
+                                                <option value="">07</option>
+                                                <option value="">08</option>
+                                                <option value="">09</option>
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                                <option value="">12</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th scope="row">입금기한</th>
+                                    <td><input class="date useDatepicker" id="" type="text" placeholder="YYYY-MM-DD" style="width:50%;" readonly /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //전력거래연월, 입금기한 -->
+                        
+                        <!-- 차수, 공급가액, 세액, 총액, 청구서 등록 -->
+                        <div class="table_list tableFixHead mt10">
+                            <table class="list">
+                                <caption>전력거래수수료 차수, 공급가액, 세액, 총액, 청구서 등록</caption>
+                                <colgroup>
+                                    <col style="width:15%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:40%;" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">차수</th>
+                                        <th scope="col">공급가액</th>
+                                        <th scope="col">세액</th>
+                                        <th scope="col">총액</th>
+                                        <th scope="col">청구서 등록</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <select class="select">
+                                                <option>1차</option>
+                                            </select>
+                                        </td>
+                                        <td class="alignr">233,932</td>
+                                        <td class="alignr">233,932</td>
+                                        <td class="alignr">233,932</td>
+                                        <td>
+                                            <div class="uploadForm">
+                                                <ul class="add__attach__list">
+                                                    <li>
+                                                        <span class="add__attach__file" data-ui="attach">
+                                                            <span class="btn__attach">
+                                                                <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //차수, 공급가액, 세액, 총액, 청구서 등록 -->
+                    </div>
+                    
+                    <!-- 첨부서류 -->
+                    <div class="row">
+                        <!-- 컨텐츠 타이틀(h3) -->
+                        <div class="title_area">
+                            <div class="fleft">
+                                <h3>첨부서류</h3>
+                            </div>
+                        </div>
+                        <!-- //컨텐츠 타이틀(h3) -->
+                        <table>
+                            <caption>첨부서류 목록</caption>
+                            <colgroup>
+                                <col style="width:170px;" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">기타 첨부서류1</th>
+                                    <td>
+                                        <div class="uploadForm">
+                                            <ul class="add__attach__list">
+                                                <li>
+                                                    <span class="add__attach__file" data-ui="attach">
+                                                        <span class="btn__attach">
+                                                            <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기타 첨부서류2</th>
+                                    <td>
+                                        <div class="uploadForm">
+                                            <ul class="add__attach__list">
+                                                <li>
+                                                    <span class="add__attach__file" data-ui="attach">
+                                                        <span class="btn__attach">
+                                                            <label class="fileButton">파일선택<input type="file" class="fileInput" accept=".jpg, .jpeg, .bmp, .gif, .png, .tif, .pdf, .hwp, .doc"></label>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //첨부서류 -->
+                </div>
+                <!-- //전력거래수수료 -->
+            </div>
+                
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close"><span>취소</span></button>
+                <button class="btn activ" onclick="validChk();"><span>등록</span></button>
+            </div>
+            <!-- 유효성 체크 박스 -->
+            <!--  유효성 체크 실패 : fail class 사용 -->
+            <div class="valid_box fail">
+                <span>형식에 맞지 않는 청구서입니다.</span> 
+            </div>
+            <!--  유효성 체크 성공 : success class 사용
+            <div class="valid_box success">
+                <span>성공 메세지 필요 시 사용</span>
+            </div>
+             -->
+            <!-- //유효성 체크 박스 -->
+        </div>
+    </div>
+    <!-- //Layer Popup : 부가비용 선납정보 등록(전력거래수수료) -->
+
+    <!-- 알림 Layer Popup : 엑셀 다운로드 사유 입력 -->
+    <div id="layerDownload" class="popLayer">
+        <div class="popup_wrap alert" style="width: 360px;">
+            <div class="pop_header">
+                <div class="pop_title_area">
+                    <h2>엑셀 다운로드 사유 입력</h2>
+                </div>
+                <button id="popup_close" class="popup_close">닫기</button>
+            </div>
+            
+            <div class="pop_content">
+                <p class="notice_memo npadding alignc mb20">개인정보가 포함된 파일은 다운로드 사유 입력이 필요합니다.</p>
+                <textarea placeholder="다운로드 사유 입력" rows="5"></textarea>
+            </div>
+            
+            <div class="pop_footer alignc">
+                <button class="btn line popup_close">
+                    <span>취소</span>
+                </button>
+                <button class="btn activ" id="" onclick="location.href='링크경로삽입'">
+                    <span>저장</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- // 알림 Layer Popup : 엑셀 다운로드 사유 입력 -->
+	
+	<script>
+    	//유효성 체크
+    	function validChk(){
+    		//유효성 체크 박스 visible
+    		$('.valid_box').addClass('on');
+    		$('.popLayer').addClass('message');
+    		
+    		//해당 input에 focus
+    		$('.test_input').focus();
+    	}
+    </script>
+
+    <script>
+        $('input[name="tax"]').change(function() {
+            if( $("input[name='tax']:checked").val() == 'tax1' ){
+                $('#taxContent1').show();
+                $('#taxContent2').hide();
+            }else if( $("input[name='tax']:checked").val() == 'tax2' ){ 
+                $('#taxContent2').show();
+                $('#taxContent1').hide();
+            }
+        });
+    </script>
+    
+    <script>
+  		/* jq grid : 망이용요금 */
+  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+  		
+  		var gridNet = $('#gridNet');
+        $(function () {
+        	gridNet.jqGrid({
+                colModel: [
+                	{
+                    	label:'전력거래 연월',
+                    	name:'labela',
+                    	index:'labela',
+                    	align:'center',
+                    	width:'130px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'최종 계약 번호',
+                    	name:'labelb',
+                    	index:'labelb',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'소비 그룹계약 번호',
+                    	name:'labelc',
+                    	index:'labelc',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'소비 그룹계약 명',
+                    	name:'labeld',
+                    	index:'labeld',
+                    	align:'center',
+                    	width:'250px',
+						formatter: function(cellvalue, options, rowdata){
+							var link = '';
+							link +='<a href="./직접PPA_부가비용선납_상세(망이용요금).html">'+cellvalue+'</a>';
+							return link;
+						},
+                    },
+                    {
+                    	label:'공급가액',
+                    	name:'labele',
+                    	index:'labele',
+                    	align:'right',
+                    	width:'230px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'세액',
+                    	name:'labelf',
+                    	index:'labelf',
+                    	align:'right',
+                    	width:'230px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	
+                    },
+                    {
+                    	label:'총액',
+                    	name:'labelg',
+                    	index:'labelg',
+                    	align:'right',
+                    	width:'230px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	
+                    },
+                    {
+                    	label:'입금기한',
+                    	name:'labelh',
+                    	index:'labelh',
+                    	align:'center',
+                    	width:'130px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'금액확정 여부',
+                    	name:'labeli',
+                    	index:'labeli',
+                    	align:'center',
+                    	width:'100px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	cellattr: function (rowId, val, rawObject, cm, rdata) {
+
+							if(val == '미확정') {
+								css = ' style="color: #e67831;" '; //미확정일 때 color
+							} else {
+								css = ' style="color: #444444;" ';
+							}
+							return css;
+						},
+                    },
+                    {
+                    	label:'세금계산서 발행일자',
+                    	name:'labelj',
+                    	index:'labelj',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	
+                    },
+                    {
+                    	label:'대조상태',
+                    	name:'labelk',
+                    	index:'labelk',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'E-acc기안 처리 상태',
+                    	name:'labell',
+                    	index:'labell',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'정산연월',
+                    	name:'labelm',
+                    	index:'labelm',
+                    	align:'center',
+                    	width:'130px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'전표번호',
+                    	name:'labeln',
+                    	index:'labeln',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                ],
+                
+                data: [
+                    {
+                    	labela:"2023-12",
+                    	labelb:"23-P0000023",
+                    	labelc:"23-G0000023",
+                    	labeld:"LG이노텍 2.4WW",
+                    	labele:"청구금액 절사로 인해, 확인 필요",
+                    	labelf:"청구금액 절사로 인해, 확인 필요",
+                    	labelg:"549.820",
+                    	labelh:"2024-12-12",
+                    	labeli:"미확정",
+                    	labelj:"2024-12-12",
+                    	labelk:"계산서 일자마감",
+                    	labell:"매입전표 기안 승인",
+                    	labelm:"2024-01",
+                    	labeln:"1234323412",
+                    },
+                    {
+                    	labela:"2023-12",
+                    	labelb:"23-P0000023",
+                    	labelc:"23-G0000023",
+                    	labeld:"KT&G - 군위",
+                    	labele:"5454.12345",
+                    	labelf:"5454.12345",
+                    	labelg:"549.820",
+                    	labelh:"2024-12-12",
+                    	labeli:"확정",
+                    	labelj:"2024-12-12",
+                    	labelk:"계산서 누락",
+                    	labell:"대기",
+                    	labelm:"2024-01",
+                    	labeln:"1234323412",
+                    },
+                ],
+
+                datatype: "local", // 로컬에서 테스트용
+                height: "345px", // 그리드의 높이. 최대 10개의 데이터가 출력되도록 345px로 설정한다.
+                autowidth: true,
+                shrinkToFit: false, // 가로스크롤 하기 위해 필요한 옵션 : false
+                cellEdit: false,
+                //multiselect: true, // 첫 셀에 체크박스를 생성
+                //multiselectWidth: 40, // 첫 셀에 체크박스 width
+                emptyrecode: "No records to view",
+                //rownumbers: true, // 줄번호 사용
+				//rownumWidth: 40,// 로우넘버 셀의 넓이
+                scroll: true
+            });
+        	
+        	// 헤더 셀 병합
+			gridNet.jqGrid('setGroupHeaders', {
+				useColSpanStyle: true,
+				groupHeaders: [
+					{
+						startColumnName: 'labelj', // 합쳐지는셀의 시작 셀 name
+						numberOfColumns: 2, // 시작 셀 부터 몇개의 셀 합병.
+						titleText: '계산서 대조현황' // 합쳐진 셀의 이름.
+					},
+					{
+						startColumnName: 'labell', // 합쳐지는셀의 시작 셀 name
+						numberOfColumns: 3, // 시작 셀 부터 몇개의 셀 합병.
+						titleText: '정산현황' // 합쳐진 셀의 이름.
+					},
+				]
+			});
+            
+        });
+    </script>
+    
+    <script>
+  		/* jq grid : 부가정산금 */
+  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+  		
+  		var gridAdd = $('#gridAdd');
+        $(function () {
+        	gridAdd.jqGrid({
+                colModel: [
+                	{
+                    	label:'전력거래 연월',
+                    	name:'labela',
+                    	index:'labela',
+                    	align:'center',
+                    	width:'130px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'차수',
+                    	name:'labelb',
+                    	index:'labelb',
+                    	align:'center',
+                    	width:'130px',
+                    },
+                    {
+                    	label:'과세구분',
+                    	name:'labelc',
+                    	index:'labelc',
+                    	align:'center',
+                    	width:'130px',
+                    	formatter: function(cellvalue, options, rowdata){
+							var link = '';
+							link +='<a href="./직접PPA_부가비용선납_상세(부가정산금).html">'+cellvalue+'</a>';
+							return link;
+						},
+                    },
+                    {
+                    	label:'공급가액',
+                    	name:'labeld',
+                    	index:'labeld',
+                    	align:'right',
+                    	width:'230px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'세액',
+                    	name:'labele',
+                    	index:'labele',
+                    	align:'right',
+                    	width:'230px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	
+                    },
+                    {
+                    	label:'총액',
+                    	name:'labelf',
+                    	index:'labelf',
+                    	align:'right',
+                    	width:'230px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	
+                    },
+                    {
+                    	label:'입금기한',
+                    	name:'labelg',
+                    	index:'labelg',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'금액확정 여부',
+                    	name:'labelh',
+                    	index:'labelh',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	cellattr: function (rowId, val, rawObject, cm, rdata) {
+
+							if(val == '미확정') {
+								css = ' style="color: #e67831;" '; //미확정일 때 color
+							} else {
+								css = ' style="color: #444444;" ';
+							}
+							return css;
+						},
+                    },
+                    {
+                    	label:'세금계산서 발행일자',
+                    	name:'labeli',
+                    	index:'labeli',
+                    	align:'center',
+                    	width:'150px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    	
+                    },
+                    {
+                    	label:'대조상태',
+                    	name:'labelj',
+                    	index:'labelj',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'기안 처리 상태',
+                    	name:'labelk',
+                    	index:'labelk',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                    {
+                    	label:'정산연월',
+                    	name:'labell',
+                    	index:'labell',
+                    	align:'center',
+                    	width:'130px',
+                    	sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                    	label:'전표번호',
+                    	name:'labelm',
+                    	index:'labelm',
+                    	align:'center',
+                    	width:'150px',
+                    },
+                ],
+                
+                data: [
+                    {
+                    	labela:"2023-12",
+                    	labelb:"후차",
+                    	labelc:"비과세",
+                    	labeld:"5454.2342343",
+                    	labele:"0",
+                    	labelf:"546,123",
+                    	labelg:"2024-12-12",
+                    	labelh:"미확정",
+                    	labeli:"2024-12-12",
+                    	labelj:"계산서 일자마감",
+                    	labelk:"매입전표 기안 승인",
+                    	labell:"2024-01",
+                    	labelm:"1234323412",
+                    },
+                ],
+
+                datatype: "local", // 로컬에서 테스트용
+                height: "345px", // 그리드의 높이. 최대 10개의 데이터가 출력되도록 345px로 설정한다.
+                autowidth: true,
+                shrinkToFit: false, // 가로스크롤 하기 위해 필요한 옵션 : false
+                cellEdit: false,
+                //multiselect: true, // 첫 셀에 체크박스를 생성
+                //multiselectWidth: 40, // 첫 셀에 체크박스 width
+                emptyrecode: "No records to view",
+                //rownumbers: true, // 줄번호 사용
+				//rownumWidth: 40,// 로우넘버 셀의 넓이
+                scroll: true
+            });
+        	
+        	// 헤더 셀 병합
+			gridAdd.jqGrid('setGroupHeaders', {
+				useColSpanStyle: true,
+				groupHeaders: [
+					{
+						startColumnName: 'labeli', // 합쳐지는셀의 시작 셀 name
+						numberOfColumns: 2, // 시작 셀 부터 몇개의 셀 합병.
+						titleText: '계산서 대조현황' // 합쳐진 셀의 이름.
+					},
+					{
+						startColumnName: 'labelk', // 합쳐지는셀의 시작 셀 name
+						numberOfColumns: 3, // 시작 셀 부터 몇개의 셀 합병.
+						titleText: '정산현황' // 합쳐진 셀의 이름.
+					},
+				]
+			});
+            
+        });
+    </script>
+
+    <script>
+        /* jq grid : 전력거래수수료 */
+        // 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+        
+        var gridElc = $('#gridElc');
+        $(function () {
+            gridElc.jqGrid({
+                colModel: [
+                    {
+                        label:'전력거래 연월',
+                        name:'labela',
+                        index:'labela',
+                        align:'center',
+                        width:'130px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                        label:'차수',
+                        name:'labelb',
+                        index:'labelb',
+                        align:'center',
+                        width:'130px',
+                    },
+                    {
+                        label:'공급가액',
+                        name:'labelc',
+                        index:'labelc',
+                        align:'right',
+                        width:'230px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                        label:'세액',
+                        name:'labeld',
+                        index:'labeld',
+                        align:'right',
+                        width:'230px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                        
+                    },
+                    {
+                        label:'총액',
+                        name:'labele',
+                        index:'labele',
+                        align:'right',
+                        width:'230px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                        
+                    },
+                    {
+                        label:'입금기한',
+                        name:'labelf',
+                        index:'labelf',
+                        align:'center',
+                        width:'150px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                        label:'금액확정 여부',
+                        name:'labelg',
+                        index:'labelg',
+                        align:'center',
+                        width:'150px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                        cellattr: function (rowId, val, rawObject, cm, rdata) {
+
+                            if(val == '미확정') {
+                                css = ' style="color: #e67831;" '; //미확정일 때 color
+                            } else {
+                                css = ' style="color: #444444;" ';
+                            }
+                            return css;
+                        },
+                    },
+                    {
+                        label:'세금계산서 발행일자',
+                        name:'labelh',
+                        index:'labelh',
+                        align:'center',
+                        width:'150px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                        
+                    },
+                    {
+                        label:'대조상태',
+                        name:'labeli',
+                        index:'labeli',
+                        align:'center',
+                        width:'150px',
+                    },
+                    {
+                        label:'기안 처리 상태',
+                        name:'labelj',
+                        index:'labelj',
+                        align:'center',
+                        width:'150px',
+                    },
+                    {
+                        label:'정산연월',
+                        name:'labelk',
+                        index:'labelk',
+                        align:'center',
+                        width:'130px',
+                        sorttype: 'number', // 숫자일경우 소트를 위해 타입 지정
+                    },
+                    {
+                        label:'전표번호',
+                        name:'labell',
+                        index:'labell',
+                        align:'center',
+                        width:'150px',
+                    },
+                ],
+                
+                data: [
+                    {
+                        labela:"2023-12",
+                        labelb:"후차",
+                        labelc:"5454.2342343",
+                        labeld:"0",
+                        labele:"546,123",
+                        labelf:"2024-12-12",
+                        labelg:"미확정",
+                        labelh:"2024-12-12",
+                        labeli:"계산서 일자마감",
+                        labelj:"매입전표 기안 승인",
+                        labelk:"2024-01",
+                        labell:"1234323412",
+                    },
+                ],
+
+                datatype: "local", // 로컬에서 테스트용
+                height: "345px", // 그리드의 높이. 최대 10개의 데이터가 출력되도록 345px로 설정한다.
+                autowidth: true,
+                shrinkToFit: false, // 가로스크롤 하기 위해 필요한 옵션 : false
+                cellEdit: false,
+                //multiselect: true, // 첫 셀에 체크박스를 생성
+                //multiselectWidth: 40, // 첫 셀에 체크박스 width
+                emptyrecode: "No records to view",
+                //rownumbers: true, // 줄번호 사용
+                //rownumWidth: 40,// 로우넘버 셀의 넓이
+                scroll: true
+            });
+            
+            // 헤더 셀 병합
+            gridElc.jqGrid('setGroupHeaders', {
+                useColSpanStyle: true,
+                groupHeaders: [
+                    {
+                        startColumnName: 'labelh', // 합쳐지는셀의 시작 셀 name
+                        numberOfColumns: 2, // 시작 셀 부터 몇개의 셀 합병.
+                        titleText: '계산서 대조현황' // 합쳐진 셀의 이름.
+                    },
+                    {
+                        startColumnName: 'labelj', // 합쳐지는셀의 시작 셀 name
+                        numberOfColumns: 3, // 시작 셀 부터 몇개의 셀 합병.
+                        titleText: '정산현황' // 합쳐진 셀의 이름.
+                    },
+                ]
+            });
+            
+        });
+    </script>
+</body>
+</html>
