@@ -677,6 +677,8 @@ table.dboard tbody td > span {
 	background-size:56px;
 }
 .stlmn__list .case .case__num{
+	display:inline-block;
+	vertical-align:middle;
 	color:#60b810;
 }
 .stlmn__list .amount{
