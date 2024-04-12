@@ -193,8 +193,8 @@ a.btn:disabled, button.btn:disabled{opacity:.5; color:#444; border-color:#444; b
 /* ========================================
 										Title
 ======================================== */
-.title_area h2{position:relative; padding-left:10px; background:none;}
-.title_area h2::before{position:absolute; left:0; top:4px; width:4px; height:24px; background:#55A30F; content:'';}
+.title_area h2{position:relative; padding-left:15px; background:none;}
+.title_area h2::before{position:absolute; left:0; top:6px; width:4px; height:26px; background:#55A30F; content:'';}
 .title_area h2 + ul.location{border-color:#dddddd}
 .title_area h3{color:#2D5905}
 .title_area h3 + .total_page::before, .title_area h3 + .legendbox::before{border-color:#ddd}
