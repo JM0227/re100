@@ -186,3 +186,7 @@ a:hover {
     background: #008cff;
     color: #fff;
 }
+strong, span{
+    display:inline-block;
+    vertical-align:middle;
+}
