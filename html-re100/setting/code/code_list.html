@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../static/assets/css/theme_green.css" />
 </head>
 <body><!-- dashboard :: class="dashbd" -->
-	<header id="header">
+    <header id="header">
     <div>
         <h1 class="logo">
             <a href="../../main/dashboard/메인.html" class="">
@@ -431,9 +431,9 @@
     </div>
     </header>
     <div id="container">
-    	<!-- content -->
+        <!-- content -->
         <div id="content">
-        	<!-- title_area -->
+            <!-- title_area -->
             <div class="title_area">
                 <div class="fleft">
                     <h2>코드관리</h2>
@@ -447,156 +447,156 @@
             <!--// title_area -->
             <!-- row::2분할 화면 -->
             <div class="row">
-            	<!-- left -->
-            	<div class="col col-6">
-            		<!-- 공통코드 -->
-            		<div class="row">
-	            		<!-- title_area(h3) -->
-						<div class="title_area">
-							<div class="fleft">
-								<h3>공통 코드</h3>
-							</div>
-							<div class="fright">
-								<button class="btn line" title="button" onclick="initSetting.popLayer.open('layerAddComm')"><span>추가</span></button>
-							</div>
-						</div>
-						<!--// title_area(h3) -->
-						<!-- row :: jqGrid -->
-						<div class="grid-container glist">
-							<table id="grid"></table>
-							<!-- Paging List -->
-					        <div class="paging_area">
-					        	<a href="#" class="first"><span>처음페이지로 가기</span></a>
-					            <a href="#" class="prev"><span>전페이지로 가기</span></a>
-					            <strong>1</strong>
-					            <a href="#">2</a>
-					            <a href="#">3</a>
-					            <a href="#">4</a>
-					            <a href="#">5</a>
-					            <a href="#" class="next"><span>다음페이지로 가기</span></a>
-					            <a href="#" class="last"><span>마지막페이지로 가기</span></a>
-					        </div>
-					        <!--// Paging List -->
-						</div>
-						<!-- row :: jqGrid -->
-            		</div>
-            		<!-- //공통코드 -->
-            		<!-- 상세코드 -->
-            		<div class="row">
-	            		<!-- title_area(h3) -->
-						<div class="title_area">
-							<div class="fleft">
-								<h3>상세 코드</h3>
-							</div>
-							<div class="fright">
-								<button class="btn line" title="button" onclick="initSetting.popLayer.open('layerAddDetail')"><span>추가</span></button>
-							</div>
-						</div>
-						<!--// title_area(h3) -->
-						<!-- row :: jqGrid -->
-						<div class="grid-container glist">
-							<table id="grid2"></table>
-							<!-- Paging List -->
-					        <div class="paging_area">
-					        	<a href="#" class="first"><span>처음페이지로 가기</span></a>
-					            <a href="#" class="prev"><span>전페이지로 가기</span></a>
-					            <strong>1</strong>
-					            <a href="#">2</a>
-					            <a href="#">3</a>
-					            <a href="#">4</a>
-					            <a href="#">5</a>
-					            <a href="#" class="next"><span>다음페이지로 가기</span></a>
-					            <a href="#" class="last"><span>마지막페이지로 가기</span></a>
-					        </div>
-					        <!--// Paging List -->
-						</div>
-						<!-- row :: jqGrid -->
-            		</div>
-            		<!-- //상세코드 -->
-            	</div>
-            	<!-- //left -->
-            	<!-- right -->
-            	<div class="col col-6">
-            		<!-- title_area(h3) -->
-					<div class="title_area">
-						<div class="fleft">
-							<h3>상세 내용</h3>
-						</div>
-						<div class="fright">
-							<button class="btn line" title="button" onclick="initSetting.popLayer.open('layerDel')"><span>삭제</span></button>
-						    <button class="btn activ" title="button" onclick="initSetting.popLayer.open('layerEdit')"><span>수정</span></button>
-						</div>
-					</div>
-					<!--// title_area(h3) -->
-					<table>
-						<caption>코드 상세 내용 목록</caption>
-						<colgroup>
-							<col style="width:150px;" />
-							<col />
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><strong class="aster">공통 코드명</strong></th>
-								<td>
-									<input id="" name="" type="text" placeholder="" style="width:50%;">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="aster">공통 코드</strong></th>
-								<td>
-									<input id="" name="" type="text" placeholder="" style="width:50%;" readonly>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="aster">상세 코드명</strong></th>
-								<td>
-									<input id="" name="" type="text" placeholder="" style="width:50%;" readonly>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="aster">상세 코드</strong></th>
-								<td>
-									<input id="" name="" type="text" placeholder="" style="width:50%;" readonly>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">설명</th>
-								<td>
-									<textarea class="code" rows="9"></textarea>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">사용여부</th>
-								<td>
-									<ul class="radio_box">
-										<li>
-											<input type="radio" id="g1" name="radio1" checked>
-											<label for="g1">사용</label>
-										</li>
-										<li>
-											<input type="radio" id="g2" name="radio1">
-											<label for="g2">미사용</label>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-            	</div>
-            	<!-- //right -->
+                <!-- left -->
+                <div class="col col-6">
+                    <!-- 공통코드 -->
+                    <div class="row">
+                        <!-- title_area(h3) -->
+                        <div class="title_area">
+                            <div class="fleft">
+                                <h3>공통 코드</h3>
+                            </div>
+                            <div class="fright">
+                                <button class="btn line" title="button" onclick="initSetting.popLayer.open('layerAddComm')"><span>추가</span></button>
+                            </div>
+                        </div>
+                        <!--// title_area(h3) -->
+                        <!-- row :: jqGrid -->
+                        <div class="grid-container glist">
+                            <table id="grid"></table>
+                            <!-- Paging List -->
+                            <div class="paging_area">
+                                <a href="#" class="first"><span>처음페이지로 가기</span></a>
+                                <a href="#" class="prev"><span>전페이지로 가기</span></a>
+                                <strong>1</strong>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#" class="next"><span>다음페이지로 가기</span></a>
+                                <a href="#" class="last"><span>마지막페이지로 가기</span></a>
+                            </div>
+                            <!--// Paging List -->
+                        </div>
+                        <!-- row :: jqGrid -->
+                    </div>
+                    <!-- //공통코드 -->
+                    <!-- 상세코드 -->
+                    <div class="row">
+                        <!-- title_area(h3) -->
+                        <div class="title_area">
+                            <div class="fleft">
+                                <h3>상세 코드</h3>
+                            </div>
+                            <div class="fright">
+                                <button class="btn line" title="button" onclick="initSetting.popLayer.open('layerAddDetail')"><span>추가</span></button>
+                            </div>
+                        </div>
+                        <!--// title_area(h3) -->
+                        <!-- row :: jqGrid -->
+                        <div class="grid-container glist">
+                            <table id="grid2"></table>
+                            <!-- Paging List -->
+                            <div class="paging_area">
+                                <a href="#" class="first"><span>처음페이지로 가기</span></a>
+                                <a href="#" class="prev"><span>전페이지로 가기</span></a>
+                                <strong>1</strong>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#" class="next"><span>다음페이지로 가기</span></a>
+                                <a href="#" class="last"><span>마지막페이지로 가기</span></a>
+                            </div>
+                            <!--// Paging List -->
+                        </div>
+                        <!-- row :: jqGrid -->
+                    </div>
+                    <!-- //상세코드 -->
+                </div>
+                <!-- //left -->
+                <!-- right -->
+                <div class="col col-6">
+                    <!-- title_area(h3) -->
+                    <div class="title_area">
+                        <div class="fleft">
+                            <h3>상세 내용</h3>
+                        </div>
+                        <div class="fright">
+                            <button class="btn line" title="button" onclick="initSetting.popLayer.open('layerDel')"><span>삭제</span></button>
+                            <button class="btn activ" title="button" onclick="initSetting.popLayer.open('layerEdit')"><span>수정</span></button>
+                        </div>
+                    </div>
+                    <!--// title_area(h3) -->
+                    <table>
+                        <caption>코드 상세 내용 목록</caption>
+                        <colgroup>
+                            <col style="width:150px;" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><strong class="aster">공통 코드명</strong></th>
+                                <td>
+                                    <input id="" name="" type="text" placeholder="" style="width:50%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong class="aster">공통 코드</strong></th>
+                                <td>
+                                    <input id="" name="" type="text" placeholder="" style="width:50%;" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong class="aster">상세 코드명</strong></th>
+                                <td>
+                                    <input id="" name="" type="text" placeholder="" style="width:50%;" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong class="aster">상세 코드</strong></th>
+                                <td>
+                                    <input id="" name="" type="text" placeholder="" style="width:50%;" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">설명</th>
+                                <td>
+                                    <textarea class="code" rows="7"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사용여부</th>
+                                <td>
+                                    <ul class="radio_box">
+                                        <li>
+                                            <input type="radio" id="g1" name="radio1" checked>
+                                            <label for="g1">사용</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="g2" name="radio1">
+                                            <label for="g2">미사용</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //right -->
             </div> 
             <!-- //row::2분할 화면 -->         
         </div>
         <!-- //content -->
         <!-- footer -->
         <footer id="footer">
-			<span>COPYRIGHT ⓒ SK E&amp;S. ALL RIGHTS RESRVED.</span>
+            <span>COPYRIGHT ⓒ SK E&amp;S. ALL RIGHTS RESRVED.</span>
         </footer>
         <!--// footer -->
     </div>
     
     <!-- Layer Popup  : 공통코드 추가 -->
-	<div id="layerAddComm" class="popLayer">
+    <div id="layerAddComm" class="popLayer">
         <div class="popup_wrap" style="width:800px;">
             <div class="pop_header">
                 <div class="pop_title_area">
@@ -606,73 +606,73 @@
             </div>
             
             <div class="pop_content">
-            	<div class="row">
-            		<!-- 컨텐츠 타이틀(h3) -->
-					<div class="title_area">
-						<div class="fleft">
-							<h3>공통코드 입력</h3>
-						</div>
-					</div>
-					<!-- //컨텐츠 타이틀(h3) -->
-					<table>
-						<caption>공통코드 입력 리스트</caption>
-						<colgroup>
-							<col style="width:140px;" />
-							<col />
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><strong class="aster">공통 코드명</strong></th>
-								<td>
-									<!-- 유효성체크 박스 확인 후 'test_input' class 삭제해주세요. -->
-									<input type="text" class="test_input" style="width:50%;">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="aster">공통 코드</strong></th>
-								<td>
-									<input type="text" style="width:50%;">
-									<button class="btn list normal">
-					                	<span>중복조회</span>
-					                </button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">설명</th>
-								<td>
-									<textarea rows="5"></textarea>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-            	</div>
+                <div class="row">
+                    <!-- 컨텐츠 타이틀(h3) -->
+                    <div class="title_area">
+                        <div class="fleft">
+                            <h3>공통코드 입력</h3>
+                        </div>
+                    </div>
+                    <!-- //컨텐츠 타이틀(h3) -->
+                    <table>
+                        <caption>공통코드 입력 리스트</caption>
+                        <colgroup>
+                            <col style="width:140px;" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><strong class="aster">공통 코드명</strong></th>
+                                <td>
+                                    <!-- 유효성체크 박스 확인 후 'test_input' class 삭제해주세요. -->
+                                    <input type="text" class="test_input" style="width:50%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong class="aster">공통 코드</strong></th>
+                                <td>
+                                    <input type="text" style="width:50%;">
+                                    <button class="btn list normal">
+                                        <span>중복조회</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">설명</th>
+                                <td>
+                                    <textarea rows="5"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             
             <div class="pop_footer alignc">
                 <button class="btn line popup_close">
-                	<span>취소</span>
+                    <span>취소</span>
                 </button>
                 <button class="btn activ" onclick="validChk();">
-                	<span>확인</span>
+                    <span>확인</span>
                 </button>
             </div>
             <!-- 유효성 체크 박스 -->
             <!--  유효성 체크 실패 : fail class 사용 -->
-	        <div class="valid_box fail">
-	        	<span>공통 코드명을 입력해주세요.</span> 
-	        </div>
-	        <!--  유효성 체크 성공 : success class 사용
-	   		<div class="valid_box success">
-	        	<span>성공 메세지 필요 시 사용</span>
-	        </div>
-	         -->
-	        <!-- //유효성 체크 박스 -->
+            <div class="valid_box fail">
+                <span>공통 코드명을 입력해주세요.</span> 
+            </div>
+            <!--  유효성 체크 성공 : success class 사용
+            <div class="valid_box success">
+                <span>성공 메세지 필요 시 사용</span>
+            </div>
+             -->
+            <!-- //유효성 체크 박스 -->
         </div>
     </div>
-	<!-- //Layer Popup  : 공통코드 추가 -->
-	
-	<!-- Layer Popup  : 상세코드 추가 -->
-	<div id="layerAddDetail" class="popLayer">
+    <!-- //Layer Popup  : 공통코드 추가 -->
+    
+    <!-- Layer Popup  : 상세코드 추가 -->
+    <div id="layerAddDetail" class="popLayer">
         <div class="popup_wrap" style="width:800px;">
             <div class="pop_header">
                 <div class="pop_title_area">
@@ -682,78 +682,78 @@
             </div>
             
             <div class="pop_content">
-            	<div class="row">
-            		<!-- 컨텐츠 타이틀(h3) -->
-					<div class="title_area">
-						<div class="fleft">
-							<h3>상세코드 입력</h3>
-						</div>
-					</div>
-					<!-- //컨텐츠 타이틀(h3) -->
-					<table>
-						<caption>상세코드 입력 리스트</caption>
-						<colgroup>
-							<col style="width:140px;" />
-							<col />
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><strong class="aster">공통 코드</strong></th>
-								<td>
-									<input type="text" style="width:50%;" readonly>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="aster">상세 코드명</strong></th>
-								<td>
-									<!-- 유효성체크 박스 확인 후 'test_input' class 삭제해주세요. -->
-									<input type="text" class="test_input" style="width:50%;">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="aster">상세 코드</strong></th>
-								<td>
-									<input type="text" style="width:50%;">
-									<button class="btn list normal">
-					                	<span>중복조회</span>
-					                </button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">설명</th>
-								<td>
-									<textarea rows="5"></textarea>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-            	</div>
+                <div class="row">
+                    <!-- 컨텐츠 타이틀(h3) -->
+                    <div class="title_area">
+                        <div class="fleft">
+                            <h3>상세코드 입력</h3>
+                        </div>
+                    </div>
+                    <!-- //컨텐츠 타이틀(h3) -->
+                    <table>
+                        <caption>상세코드 입력 리스트</caption>
+                        <colgroup>
+                            <col style="width:140px;" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><strong class="aster">공통 코드</strong></th>
+                                <td>
+                                    <input type="text" style="width:50%;" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong class="aster">상세 코드명</strong></th>
+                                <td>
+                                    <!-- 유효성체크 박스 확인 후 'test_input' class 삭제해주세요. -->
+                                    <input type="text" class="test_input" style="width:50%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong class="aster">상세 코드</strong></th>
+                                <td>
+                                    <input type="text" style="width:50%;">
+                                    <button class="btn list normal">
+                                        <span>중복조회</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">설명</th>
+                                <td>
+                                    <textarea rows="5"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             
             <div class="pop_footer alignc">
                 <button class="btn line popup_close">
-                	<span>취소</span>
+                    <span>취소</span>
                 </button>
                 <button class="btn activ" onclick="validChk();">
-                	<span>확인</span>
+                    <span>확인</span>
                 </button>
             </div>
             <!-- 유효성 체크 박스 -->
             <!--  유효성 체크 실패 : fail class 사용 -->
-	        <div class="valid_box fail">
-	        	<span>상세 코드명을 입력해주세요.</span> 
-	        </div>
-	        <!--  유효성 체크 성공 : success class 사용
-	   		<div class="valid_box success">
-	        	<span>성공 메세지 필요 시 사용</span>
-	        </div>
-	         -->
-	        <!-- //유효성 체크 박스 -->
+            <div class="valid_box fail">
+                <span>상세 코드명을 입력해주세요.</span> 
+            </div>
+            <!--  유효성 체크 성공 : success class 사용
+            <div class="valid_box success">
+                <span>성공 메세지 필요 시 사용</span>
+            </div>
+             -->
+            <!-- //유효성 체크 박스 -->
         </div>
     </div>
-	<!-- //Layer Popup  : 상세코드 추가 -->
-	
-	<!-- 알림 Layer Popup : 삭제 -->
+    <!-- //Layer Popup  : 상세코드 추가 -->
+    
+    <!-- 알림 Layer Popup : 삭제 -->
     <div id="layerDel" class="popLayer">
         <div class="popup_wrap alert" style="width: 360px;">
             <div class="pop_header">
@@ -764,25 +764,25 @@
             </div>
             
             <div class="pop_content">
-            	<p class="notice_memo npadding alignc">
-            		공통코드(<span class="col_green">0000</span>)정보를 삭제할 경우 하위 상세코드의 삭제처리도 이루어집니다. 이후 복원이 불가하며 기존 데이터에 영향이 있을 수 있습니다.<br>
-            		삭제하시겠습니까?
-            	</p>
+                <p class="notice_memo npadding alignc">
+                    공통코드(<span class="col_green">0000</span>)정보를 삭제할 경우 하위 상세코드의 삭제처리도 이루어집니다. 이후 복원이 불가하며 기존 데이터에 영향이 있을 수 있습니다.<br>
+                    삭제하시겠습니까?
+                </p>
             </div>
             
             <div class="pop_footer alignc">
                 <button class="btn line popup_close">
-                	<span>취소</span>
+                    <span>취소</span>
                 </button>
                 <a href="" class="btn activ" id="">
-                	<span>확인</span>
+                    <span>확인</span>
                 </a>
             </div>
         </div>
     </div>
     <!-- // 알림 Layer Popup : 삭제 -->
-	
-	<!-- 알림 Layer Popup : 수정 -->
+    
+    <!-- 알림 Layer Popup : 수정 -->
     <div id="layerEdit" class="popLayer">
         <div class="popup_wrap alert" style="width: 360px;">
             <div class="pop_header">
@@ -793,18 +793,18 @@
             </div>
             
             <div class="pop_content">
-            	<p class="notice_memo npadding alignc">
-            		공통코드(<span class="col_green">0000</span>)정보를 수정할 경우 기존 데이터에 영향이 있을 수 있습니다.<br>
-            		저장하시겠습니까?
-            	</p>
+                <p class="notice_memo npadding alignc">
+                    공통코드(<span class="col_green">0000</span>)정보를 수정할 경우 기존 데이터에 영향이 있을 수 있습니다.<br>
+                    저장하시겠습니까?
+                </p>
             </div>
             
             <div class="pop_footer alignc">
                 <button class="btn line popup_close">
-                	<span>취소</span>
+                    <span>취소</span>
                 </button>
                 <a href="" class="btn activ" id="">
-                	<span>확인</span>
+                    <span>확인</span>
                 </a>
             </div>
         </div>
@@ -812,121 +812,121 @@
     <!-- // 알림 Layer Popup : 수정 -->
     
     <script>
-    	//유효성 체크
-    	function validChk(){
-    		//유효성 체크 박스 visible
-    		$('.valid_box').addClass('on');
-    		$('.popLayer:visible').addClass('message');
-    		
-    		//해당 input에 focus
-    		$('.test_input').focus();
-    	}
+        //유효성 체크
+        function validChk(){
+            //유효성 체크 박스 visible
+            $('.valid_box').addClass('on');
+            $('.popLayer:visible').addClass('message');
+            
+            //해당 input에 focus
+            $('.test_input').focus();
+        }
     </script>
     
     <script>
-  		/* jq grid - 공통 코드 */
-  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
-  		
-  		var grid = $('#grid');
+        /* jq grid - 공통 코드 */
+        // 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+        
+        var grid = $('#grid');
         $(function () {
-        	grid.jqGrid({
+            grid.jqGrid({
                 colModel: [
-                	{
-                    	label:'No',
-                    	name:'labela',
-                    	index:'labela',
-                    	align:'center',
-                    	width:'40px',
+                    {
+                        label:'No',
+                        name:'labela',
+                        index:'labela',
+                        align:'center',
+                        width:'40px',
                     },
                     {
-                    	label:'공통 코드',
-                    	name:'labelb',
-                    	index:'labelb',
-                    	align:'center',
-                    	width:'100px',
+                        label:'공통 코드',
+                        name:'labelb',
+                        index:'labelb',
+                        align:'center',
+                        width:'100px',
                     },
                     {
-                    	label:'공통 코드명',
-                    	name:'labelc',
-                    	index:'labelc',
-                    	align:'center',
-                    	width:'250px',                   	
+                        label:'공통 코드명',
+                        name:'labelc',
+                        index:'labelc',
+                        align:'center',
+                        width:'250px',                      
                     },
                     {
-                    	label:'사용여부',
-                    	name:'labeld',
-                    	index:'labeld',
-                    	align:'center',
-                    	width:'80px',                   	
+                        label:'사용여부',
+                        name:'labeld',
+                        index:'labeld',
+                        align:'center',
+                        width:'80px',                       
                     },
                 ],
                 
                 data: [
                     {
-                    	labela:"1",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"1",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"2",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"2",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"3",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"3",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"4",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"4",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"5",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"5",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"6",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"6",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"7",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"7",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"8",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"8",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"9",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"9",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"10",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"10",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                     {
-                    	labela:"11",
-                    	labelb:"CO009",
-                    	labelc:"사업자구분",
-                    	labeld:"Y",
+                        labela:"11",
+                        labelb:"CO009",
+                        labelc:"사업자구분",
+                        labeld:"Y",
                     },
                 ],
 
@@ -939,7 +939,7 @@
                 multiselectWidth: 40, // 첫 셀에 체크박스 width
                 emptyrecode: "No records to view",
                 //rownumbers: true, // 줄번호 사용
-				//rownumWidth: 40,// 로우넘버 셀의 넓이
+                //rownumWidth: 40,// 로우넘버 셀의 넓이
                 scroll: true
             });
             
@@ -947,57 +947,57 @@
     </script>
     
     <script>
-  		/* jq grid - 상세 코드 */
-  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
-  		
-  		var grid2 = $('#grid2');
+        /* jq grid - 상세 코드 */
+        // 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+        
+        var grid2 = $('#grid2');
         $(function () {
-        	grid2.jqGrid({
+            grid2.jqGrid({
                 colModel: [
-                	{
-                    	label:'No',
-                    	name:'labela',
-                    	index:'labela',
-                    	align:'center',
-                    	width:'40px',
+                    {
+                        label:'No',
+                        name:'labela',
+                        index:'labela',
+                        align:'center',
+                        width:'40px',
                     },
                     {
-                    	label:'공통 코드',
-                    	name:'labelb',
-                    	index:'labelb',
-                    	align:'center',
-                    	width:'100px',
+                        label:'공통 코드',
+                        name:'labelb',
+                        index:'labelb',
+                        align:'center',
+                        width:'100px',
                     },
                     {
-                    	label:'상세 코드명',
-                    	name:'labelc',
-                    	index:'labelc',
-                    	align:'center',
-                    	width:'250px',                   	
+                        label:'상세 코드명',
+                        name:'labelc',
+                        index:'labelc',
+                        align:'center',
+                        width:'250px',                      
                     },
                     {
-                    	label:'상세 코드',
-                    	name:'labeld',
-                    	index:'labeld',
-                    	align:'center',
-                    	width:'100px',                   	
+                        label:'상세 코드',
+                        name:'labeld',
+                        index:'labeld',
+                        align:'center',
+                        width:'100px',                      
                     },
                     {
-                    	label:'사용여부',
-                    	name:'labele',
-                    	index:'labele',
-                    	align:'center',
-                    	width:'80px',                   	
+                        label:'사용여부',
+                        name:'labele',
+                        index:'labele',
+                        align:'center',
+                        width:'80px',                       
                     },
                 ],
                 
                 data: [
                     {
-                    	labela:"1",
-                    	labelb:"CO009",
-                    	labelc:"해외거래처",
-                    	labeld:"05",
-                    	labele:"Y",
+                        labela:"1",
+                        labelb:"CO009",
+                        labelc:"해외거래처",
+                        labeld:"05",
+                        labele:"Y",
                     }, 
                 ],
 
@@ -1010,11 +1010,11 @@
                 multiselectWidth: 40, // 첫 셀에 체크박스 width
                 emptyrecode: "No records to view",
                 //rownumbers: true, // 줄번호 사용
-				//rownumWidth: 40,// 로우넘버 셀의 넓이
+                //rownumWidth: 40,// 로우넘버 셀의 넓이
                 scroll: true
             });
-        	
-        	$(window).resize(function() {
+            
+            $(window).resize(function() {
                 $("#grid2").jqGrid('setGridWidth', $(".grid-container").width());
             });
             
@@ -1022,7 +1022,7 @@
     </script>
     
     <script>
-    	//footer script : 그리드 스크립트 하단에 위치
+        //footer script : 그리드 스크립트 하단에 위치
         $(document).ready(function() {
             fixedFooter();
 
