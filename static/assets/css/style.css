@@ -382,8 +382,6 @@ table.chartTooltip tbody td {
 	font-size:16px;
 }
 .card__header h6 span {
-	display:inline-block;
-	vertical-align:middle;
 	font-weight:400;
 }
 .card__header h6 span.num {
@@ -438,12 +436,12 @@ table.chartTooltip tbody td {
 	position:relative;
 	margin-left:15px;
 	padding-left:35px;
-	font-size:14px;
+	font-size:16px;
 	font-weight:400;
 	vertical-align:middle;
-	color:#888888;
-	background:url('../images/ico_calendar_green.svg') no-repeat 15px center;
-	background-size:14px;
+	color:#444;
+	background:url('../images/ico_calendar_black.png') no-repeat 15px -1px;
+	background-size:16px;
 }
 .card__header .month::before{
 	position:absolute;
@@ -748,9 +746,7 @@ table.dboard tbody td > span {
 	margin-top:10px;
 }
 .request__list .request__box .num{
-	display:inline-block;
 	margin-right:5px;
-	vertical-align:middle;
 	font-weight:700;
 	color:#2D5905;
 }
@@ -762,10 +758,11 @@ table.dboard tbody td > span {
 .request__list .request__box > span:last-child::after{
 	position: absolute;
     right:0; 
-    top: 2px; 
+    top: 50%; 
     content: '';
     width: 8px;
     height: 8px;
+    margin-top:-4px;
     border-top: 2px solid #000;
     border-right: 2px solid #000;
     transform: rotate(45deg);

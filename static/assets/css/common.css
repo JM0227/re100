@@ -15,8 +15,8 @@
 										Form Tag
 ======================================== */
 /* input, select, textarea, label */
-input, select, textarea {width: 100%; height: 35px; border: 1px solid #bfcad5; border-radius: 4px; font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif; font-size: 14px; letter-spacing:-0.5px; text-indent: 10px; outline: 0; background-color: #ffffff;}
-textarea {display: block;height: auto;min-height: 35px;width: 100%;padding: 10px;text-indent: 0px;}
+input, select, textarea {width: 100%; height: 30px; border: 1px solid #bfcad5; border-radius: 4px; font-family: "Noto Sans KR", "Malgun Gothic", "맑은고딕", sans-serif; font-size: 15px; letter-spacing:-0.5px; text-indent: 10px; outline: 0; background-color: #ffffff;}
+textarea {display: block;height: auto;min-height: 30px;width: 100%;padding: 10px;text-indent: 0px;}
 textarea.templete{padding:13.5px 10px;}
 textarea.code{padding:8px 10px;}
 input::placeholder,
@@ -136,7 +136,7 @@ input.alignr {padding-right: 10px; text-align: right;}
 										Button
 ======================================== */
 a.btn,
-button.btn {display: inline-block; min-width: 64px; height: 35px; padding-left: 16px; padding-right: 16px; box-sizing: border-box; border-radius: 4px; border: 1px solid #6b7c9b; font-weight: 700; font-size: 14px; color: #444444; text-align: center; align-items: baseline; vertical-align: bottom; line-height:35px; text-decoration: none; cursor: pointer; background-color: #ffffff; transform:rotate(0.03deg);}
+button.btn {display: inline-block; min-width: 64px; height: 30px; padding-left: 16px; padding-right: 16px; box-sizing: border-box; border-radius: 4px; border: 1px solid #6b7c9b; font-weight: 700; font-size: 15px; color: #444444; text-align: center; align-items: baseline; vertical-align: bottom; line-height:30px; letter-spacing:-0.5px; text-decoration: none; cursor: pointer; background-color: #ffffff; transform:rotate(0.03deg);}
 .btn.icontxt {padding-left: 40px; font-weight: 400; background-repeat: no-repeat; background-position: 19px center;}
 .btn.icon {width: 15px; min-width: 15px; height: 16px; border: none; background: none; vertical-align: middle; background-repeat: no-repeat; background-position: center center;}
 .btn.icon.square {width: 30px; min-width: 30px; height: 30px; padding: 0px; border-radius: 4px; border: 1px solid #6b7c9b;}
@@ -386,7 +386,7 @@ ul.hsection > li a.logout:hover {background-image: url("../images/btn_ico_logout
 .title_area ul.location li {float: left; height: 14px; font-size: 13px; color: #888888; line-height: 14px; transform:skew(-0.05deg);}
 .title_area ul.location li + li {padding-left: 27px; background: url("../images/bg_location_arrow.svg") no-repeat 12px 4px;}
 .title_area ul.location li:last-child {color: #444444;}
-.title_area h2 {display: inline-block; padding-left: 23px; font-weight: 700; font-size: 24px; line-height: 1.6em; vertical-align: middle; background: url("../images/ico_title_bull_h2.svg") no-repeat left 7px;}
+.title_area h2 {display: inline-block; padding-left: 23px; font-weight: 700; font-size: 25px; line-height: 1.6em; vertical-align: middle; background: url("../images/ico_title_bull_h2.svg") no-repeat left 7px;}
 .title_area h3 {display: flex; min-height: 30px; font-weight: 700; font-size: 16px; color: #385c9b; align-items: center;}
 .title_area h3.half {font-weight: 700; font-size: 16px; color: #444444;}
 .title_area h4 {font-weight: 700; font-size: 15px; color: #385c9b;}
@@ -464,7 +464,7 @@ table td .row + .row {margin-top: 5px;}
 .tableFixHead table.list thead {position: sticky; top: 0px; background-color: #d7dce3; z-index:1;}
 table.list {table-layout: fixed; width: 100%; font-size: 12px;}
 table.list thead {width: calc(100% - 17px);}
-table.list thead th {position: relative; height: 40px; padding: 4px 8px; box-sizing: border-box; border: 1px solid #d7dce3; border-top: 0;font-size: 14px; font-weight: 700; color: #444444; vertical-align: middle; line-height: 1.5em; word-break: keep-all; background-color: #ebf0f5;}
+table.list thead th {position: relative; height: 34px; padding: 4px 8px; box-sizing: border-box; border: 1px solid #d7dce3; border-top: 0;font-size: 14px; font-weight: 700; color: #444444; vertical-align: middle; line-height: 1.5em; word-break: keep-all; background-color: #ebf0f5;}
 table.list thead th:first-child,
 table.list tbody td:first-child {border-left: 0px;}
 table.list thead th:last-child,
@@ -477,7 +477,7 @@ table.list thead tr.tfoot td.alignl {text-align: left; padding: 4px 10px;}
 table.list thead tr.tfoot td.alignr {text-align: right; padding: 4px 10px;}
 table.list tbody {overflow-y: scroll;}
 table.list tbody th:first-child {border-left: 0px;}
-table.list tbody td {height: 40px; overflow: hidden; border: 1px solid #d7dce3; line-height: 1.5em; text-align: center; text-overflow: ellipsis; white-space: nowrap; line-height: 1em; vertical-align: middle;}
+table.list tbody td {height: 34px; overflow: hidden; border: 1px solid #d7dce3; line-height: 1.5em; text-align: center; text-overflow: ellipsis; white-space: nowrap; line-height: 1em; vertical-align: middle;}
 table.list tbody td.alignl {text-align: left;}
 table.list tbody td.alignr {text-align: right;}
 table.list tbody td a {color: #444444; text-decoration: underline; text-underline-position: under;}
@@ -582,13 +582,13 @@ table.taxbill.content tbody td strong {font-size: 13px;}
 .glist .ui-widget-header .ui-state-default {border: 1px solid #d7dce3; color: #444444; background: #ebf0f5;}
 .glist .ui-jqgrid .ui-jqgrid-htable {table-layout: fixed;/* width: 100% !important;*/}
 .glist .ui-jqgrid .ui-jqgrid-htable.autoH{table-layout:auto;}
-.glist .ui-jqgrid .ui-jqgrid-labels th {height:40px; padding: 0px; font-size: 14px; line-height: 22px; letter-spacing:-1px; vertical-align: middle;} /*height: 22px; padding: 3px 1px;*/
+.glist .ui-jqgrid .ui-jqgrid-labels th {height:34px; padding: 0px; font-size: 15px; line-height: 22px; letter-spacing:-1px; vertical-align: middle;} /*height: 22px; padding: 3px 1px;*/
 .glist .ui-jqgrid .ui-jqgrid-htable thead th.bggray,
 .glist .ui-jqgrid .ui-jqgrid-htable thead th.nonActive,
 .glist .ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-sortable.nonActive {background: #e7e7e7 !important;}
 .glist .ui-jqgrid .jqg-first-row-header th {height:  0px; padding:  0px;}
 .glist .ui-jqgrid .jqg-second-row-header th {height: 32px !important;}
-.glist .ui-jqgrid tr.jqgrow td {height: 40px; padding: 0 8px; border-color: #cad3dc; font-size: 14px; vertical-align: middle;}
+.glist .ui-jqgrid tr.jqgrow td {height: 34.4px; padding: 0 8px; border-color: #cad3dc; font-size: 15px; vertical-align: middle;}
 .glist .ui-jqgrid .ui-jqgrid-bdiv .jqgrid-rownum:first-child {border-top: none;}
 .glist .ui-jqgrid .ui-icon-asc {margin-top: -11px;}
 .glist .ui-jqgrid .ui-icon-desc {margin-top: -4px;}
@@ -596,7 +596,7 @@ table.taxbill.content tbody td strong {font-size: 13px;}
 .glist .ui-jqgrid-btable .ui-widget-content {border: none;}
 .glist .ui-jqgrid-btable td {text-overflow: ellipsis;}
 .glist .ui-jqgrid tr.ui-row-ltr td {border-color: #cad3dc;}
-.glist .ui-jqgrid .ui-jqgrid-htable th div {position: static; display: flex; min-height: 40px; margin: auto auto; text-align: center; line-height: 1.3em; vertical-align: middle; justify-content: center; align-content: center; align-items: center;}
+.glist .ui-jqgrid .ui-jqgrid-htable th div {position: static; display: flex; min-height: 34px; margin: auto auto; text-align: center; line-height: 1em; vertical-align: middle; justify-content: center; align-content: center; align-items: center;}
 .glist .ui-jqgrid table td input[type="text"],
 .glist .ui-jqgrid table td select {width: 100% !important; box-sizing: border-box;}
 .glist .ui-jqgrid input[type="radio"],
@@ -808,7 +808,7 @@ ul.tablist + .tab.npad,
 .search_form .col.col_11{flex:0 0 auto; width:91.66666667%;}
 .search_form .col.col_12{flex:0 0 auto; width:100%;}
 .search_form .col dt, .search_form .col dd{padding:2px 0; line-height:34px;}
-.search_form .col dt{flex:0 0 auto; min-width:130px; padding:3px 10px; font-size: 14px; letter-spacing:-1px; font-weight: 700; letter-spacing:-1px; text-align:right;}
+.search_form .col dt{flex:0 0 auto; min-width:130px; padding:3px 10px; font-size: 15px; letter-spacing:-1px; font-weight: 700; letter-spacing:-1px; text-align:right;}
 .search_form .col dt > span{display:inline-block;line-height:1.5}
 .search_form .col dd{flex:1 1 auto;}
 .search_form .col dd span{display: inline-block; font-size: 13px; line-height:30px; vertical-align: middle;}
@@ -855,7 +855,7 @@ ul.tablist + .tab.npad,
 .search_form table.search tbody td {padding: 0px; border: 0px; letter-spacing: 0; word-spacing: 0; text-align: left; vertical-align: middle; background-color: transparent;}
 .search_form table.search tbody td + th {padding:0 10px;}
 .search_form table.search tbody td + td {padding-left: 10px;}
-.search_form table.search tbody th {padding-right: 10px; text-align:right; font-size: 13px; font-weight: 700;}
+.search_form table.search tbody th {padding-right: 10px; text-align:right; font-size: 15px; font-weight: 700;}
 .search_form table.search tbody td {font-size: 0; letter-spacing: 0; word-spacing: 0;}
 .search_form table.search tbody td span {display: inline-block; font-size: 13px; line-height:30px; vertical-align: middle;}
 
@@ -936,8 +936,8 @@ ul.tablist + .tab.npad,
 .file_layout {width: 100%; height:calc(100vh - 297px); padding: 16px 20px 20px; box-sizing: border-box; border: solid 1px #cad3dc; background-color: #ebf0f5;}
 ul.file_list{max-height:72px; padding: 4px 0 4px; margin-bottom: 15px; overflow-y:auto;}
 ul.file_list::after {content: ''; display: block; clear: both;}
-ul.file_list li {float:left; width: 50%; min-height: 18px; margin-top: 8px; letter-spacing: 0; word-spacing: 0; vertical-align: bottom;}
-ul.file_list li > strong.title {position: relative; display: inline-block; width:150px; padding-left:10px; padding-right: 10px; font-size: 13px; font-weight: 700; vertical-align: bottom; background: url("../images/bg_bull_01.svg") no-repeat 0 6px; letter-spacing:-1px;}
+ul.file_list li {display:flex; float:left; width: 50%; min-height: 18px; margin-top: 8px; letter-spacing: 0; word-spacing: 0; vertical-align: bottom;}
+ul.file_list li > strong.title {position: relative; display: inline-block; width:170px; padding-left:10px; padding-right: 10px; font-size: 13px; font-weight: 700; vertical-align: bottom; background: url("../images/bg_bull_01.svg") no-repeat 0 6px; letter-spacing:-1px;}
 ul.file_list li:nth-child(1),
 ul.file_list li:nth-child(2) {margin-top: 0px;}
 ul.file_list li .cont{display:inline-block; width:calc(100% - 170px);}
