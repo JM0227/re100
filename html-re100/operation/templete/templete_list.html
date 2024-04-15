@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../static/assets/css/theme_green.css" />
 </head>
 <body><!-- dashboard :: class="dashbd" -->
-	<header id="header">
+    <header id="header">
     <div>
         <h1 class="logo">
             <a href="../../main/dashboard/메인.html" class="">
@@ -431,9 +431,9 @@
     </div>
     </header>
     <div id="container">
-    	<!-- content -->
+        <!-- content -->
         <div id="content">
-        	<!-- title_area -->
+            <!-- title_area -->
             <div class="title_area">
                 <div class="fleft">
                     <h2>템플릿 관리</h2>
@@ -446,200 +446,200 @@
             </div>
             <!--// title_area -->
             <!-- search form -->
-			<div class="search_form small">
-				<div class="row_group">
-			    <div class="row">
-			    	<dl class="col col_3 col_xl_6">
-			        	<dt>발신자(계열사)</dt>
-			            <dd>
-			            	<select class="select">
-			            		<option>레이풀시스템</option>
-			            	</select>
-			            </dd>
-			        </dl>
-			        <dl class="col col_3 col_xl_6">
-			        	<dt>발송타입</dt>
-			            <dd>
-			            <select class="select">
-			            	<option>전체</option>
-			            	<option>SMS</option>
-			            	<option>E-Mail</option>
-			            </select>
-			            </dd>
-			        </dl>
-			        <dl class="col col_6 col_xl_12">
-			        	<dt>제목+내용</dt>
-			            <dd>
-			            	<input id="" name="" type="text" placeholder="">
-			            </dd>
-			    	</dl>
-				</div>
-			</div>
-			<!-- search button -->
-			<div class="btnsrch">
-				<button class="btn"><span>초기화</span></button>
-				<button class="btn search"><span>조회</span></button>
-			</div>
-			<!-- //search button -->
-			</div>
-			<!-- //search form --> 
-			<!-- row : 2분할 화면 -->
-			<div class="row">
-				<!-- left -->
-			    <div class="col col-6">
-			    	<!-- title_area(h3) -->
-					<div class="title_area">
-						<div class="fleft">
-							<h3>템플릿 목록</h3>
-						</div>
-						<div class="fright">
-							<button class="btn line" title="button"><span>삭제</span></button>
-						</div>
-					</div>
-					<!--// title_area(h3) -->
-					<!-- row :: jqGrid -->
-					<div class="grid-container glist">
-						<table id="grid"></table>
-					</div>
-					<!-- row :: jqGrid -->
-					<p class="memo_txt col_deepGreen mt5">
-	                	* 자주 사용하는 내용을 저장하여 SMS, E-Mail 발송 시 편집하여 사용할 수 있습니다.</span>
-	                </p>
-			    </div>
-			    <!-- //left -->
-			    <!-- right -->
-			    <div class="col col-6">
-			    	<!-- title_area(h3) -->
-					<div class="title_area">
-						<div class="fleft">
-							<h3>템플릿 상세내용</h3>
-						</div>
-						<div class="fright">
-							<button class="btn activ" title="button"><span>신규등록</span></button>
-						    <button class="btn activ" title="button"><span>수정</span></button>
-						</div>
-					</div>
-					<!--// title_area(h3) -->
-					<table>
-						<caption>템플릿 상세 내용 </caption>
-						<colgroup>
-							<col style="width:150px;" />
-							<col />
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><strong class="aster">제목</strong></th>
-								<td>
-									<input id="" name="" type="text" placeholder="제목 입력">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="aster">내용</strong></th>
-								<td>
-									<textarea id="" class="templete" name="" rows="20" placeholder="내용 입력"></textarea>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-			    </div>
-				<!-- //right -->
-			</div>
-			<!-- //row : 2분할 화면 -->         
+            <div class="search_form small">
+                <div class="row_group">
+                <div class="row">
+                    <dl class="col col_3 col_xl_6">
+                        <dt>발신자(계열사)</dt>
+                        <dd>
+                            <select class="select">
+                                <option>레이풀시스템</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl class="col col_3 col_xl_6">
+                        <dt>발송타입</dt>
+                        <dd>
+                        <select class="select">
+                            <option>전체</option>
+                            <option>SMS</option>
+                            <option>E-Mail</option>
+                        </select>
+                        </dd>
+                    </dl>
+                    <dl class="col col_6 col_xl_12">
+                        <dt>제목+내용</dt>
+                        <dd>
+                            <input id="" name="" type="text" placeholder="">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- search button -->
+            <div class="btnsrch">
+                <button class="btn"><span>초기화</span></button>
+                <button class="btn search"><span>조회</span></button>
+            </div>
+            <!-- //search button -->
+            </div>
+            <!-- //search form --> 
+            <!-- row : 2분할 화면 -->
+            <div class="row">
+                <!-- left -->
+                <div class="col col-6">
+                    <!-- title_area(h3) -->
+                    <div class="title_area">
+                        <div class="fleft">
+                            <h3>템플릿 목록</h3>
+                        </div>
+                        <div class="fright">
+                            <button class="btn line" title="button"><span>삭제</span></button>
+                        </div>
+                    </div>
+                    <!--// title_area(h3) -->
+                    <!-- row :: jqGrid -->
+                    <div class="grid-container glist">
+                        <table id="grid"></table>
+                    </div>
+                    <!-- row :: jqGrid -->
+                    <p class="memo_txt col_deepGreen mt5">
+                        * 자주 사용하는 내용을 저장하여 SMS, E-Mail 발송 시 편집하여 사용할 수 있습니다.</span>
+                    </p>
+                </div>
+                <!-- //left -->
+                <!-- right -->
+                <div class="col col-6">
+                    <!-- title_area(h3) -->
+                    <div class="title_area">
+                        <div class="fleft">
+                            <h3>템플릿 상세내용</h3>
+                        </div>
+                        <div class="fright">
+                            <button class="btn activ" title="button"><span>신규등록</span></button>
+                            <button class="btn activ" title="button"><span>수정</span></button>
+                        </div>
+                    </div>
+                    <!--// title_area(h3) -->
+                    <table>
+                        <caption>템플릿 상세 내용 </caption>
+                        <colgroup>
+                            <col style="width:150px;" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><strong class="aster">제목</strong></th>
+                                <td>
+                                    <input id="" name="" type="text" placeholder="제목 입력">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong class="aster">내용</strong></th>
+                                <td>
+                                    <textarea id="" class="templete" name="" rows="15" placeholder="내용 입력"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //right -->
+            </div>
+            <!-- //row : 2분할 화면 -->         
         </div>
         <!-- //content -->
         <!-- footer -->
         <footer id="footer">
-			<span>COPYRIGHT ⓒ SK E&amp;S. ALL RIGHTS RESRVED.</span>
+            <span>COPYRIGHT ⓒ SK E&amp;S. ALL RIGHTS RESRVED.</span>
         </footer>
         <!--// footer -->
     </div>
     
     <script>
-  		/* jq grid */
-  		// 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
-  		
-  		var grid = $('#grid');
+        /* jq grid */
+        // 그리드 id는 반드시 grid 접두어로 시작해야한다.(스크립트로 처리된 기능이 있으므로)
+        
+        var grid = $('#grid');
         $(function () {
-        	grid.jqGrid({
+            grid.jqGrid({
                 colModel: [
                     {
-                    	label:'No',
-                    	name:'labela',
-                    	index:'labela',
-                    	align:'center',
-                    	width:'40px',
+                        label:'No',
+                        name:'labela',
+                        index:'labela',
+                        align:'center',
+                        width:'40px',
                     },
                     {
-                    	label:'발송타입',
-                    	name:'labelb',
-                    	index:'labelb',
-                    	align:'center',
-                    	width:'100px',
+                        label:'발송타입',
+                        name:'labelb',
+                        index:'labelb',
+                        align:'center',
+                        width:'100px',
                     },
                     {
-                    	label:'템플릿명',
-                    	name:'labelc',
-                    	index:'labelc',
-                    	align:'center',
-                    	width:'200px',                   	
-						formatter: function(cellvalue, options, rowdata){
-							var link = '';
-							link +='<a href="">'+cellvalue+'</a>';
-							return link;
-						}
+                        label:'템플릿명',
+                        name:'labelc',
+                        index:'labelc',
+                        align:'center',
+                        width:'200px',                      
+                        formatter: function(cellvalue, options, rowdata){
+                            var link = '';
+                            link +='<a href="">'+cellvalue+'</a>';
+                            return link;
+                        }
                     },
                 ],
                 
                 data: [
                     {
-                    	labela:"1",
-                    	labelb:"SMS",
-                    	labelc:"SMS 템플릿",
+                        labela:"1",
+                        labelb:"SMS",
+                        labelc:"SMS 템플릿",
                     },
                     {
-                    	labela:"2",
-                    	labelb:"E-Mail",
-                    	labelc:"E-Mail 템플릿",
+                        labela:"2",
+                        labelb:"E-Mail",
+                        labelc:"E-Mail 템플릿",
                     },
                     {
-                    	labela:"3",
-                    	labelb:"SMS",
-                    	labelc:"SMS 템플릿",
+                        labela:"3",
+                        labelb:"SMS",
+                        labelc:"SMS 템플릿",
                     },
                     {
-                    	labela:"4",
-                    	labelb:"E-Mail",
-                    	labelc:"E-Mail 템플릿",
+                        labela:"4",
+                        labelb:"E-Mail",
+                        labelc:"E-Mail 템플릿",
                     },
                     {
-                    	labela:"5",
-                    	labelb:"SMS",
-                    	labelc:"SMS 템플릿",
+                        labela:"5",
+                        labelb:"SMS",
+                        labelc:"SMS 템플릿",
                     },
                     {
-                    	labela:"6",
-                    	labelb:"E-Mail",
-                    	labelc:"E-Mail 템플릿",
+                        labela:"6",
+                        labelb:"E-Mail",
+                        labelc:"E-Mail 템플릿",
                     },
                     {
-                    	labela:"7",
-                    	labelb:"SMS",
-                    	labelc:"SMS 템플릿",
+                        labela:"7",
+                        labelb:"SMS",
+                        labelc:"SMS 템플릿",
                     },
                     {
-                    	labela:"8",
-                    	labelb:"E-Mail",
-                    	labelc:"E-Mail 템플릿",
+                        labela:"8",
+                        labelb:"E-Mail",
+                        labelc:"E-Mail 템플릿",
                     },
                     {
-                    	labela:"9",
-                    	labelb:"SMS",
-                    	labelc:"SMS 템플릿",
+                        labela:"9",
+                        labelb:"SMS",
+                        labelc:"SMS 템플릿",
                     },
                     {
-                    	labela:"10",
-                    	labelb:"E-Mail",
-                    	labelc:"E-Mail 템플릿",
+                        labela:"10",
+                        labelb:"E-Mail",
+                        labelc:"E-Mail 템플릿",
                     },
                 ],
 
@@ -652,7 +652,7 @@
                 multiselectWidth: 40, // 첫 셀에 체크박스 width
                 emptyrecode: "No records to view",
                 //rownumbers: true, // 줄번호 사용
-				//rownumWidth: 40,// 로우넘버 셀의 넓이
+                //rownumWidth: 40,// 로우넘버 셀의 넓이
                 scroll: true
             });
             
